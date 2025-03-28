@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple card layout</title>
+    <style>
+        *{
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+        }
+        .card-container{
+            text-align: center;
+        }
+        .card{
+            display:inline-block;
+            width: 200px;
+            margin:10px;
+            padding: 20px;
+            box-sizing: content-box;
+            border: 1px solid #ff0000;
+            border-radius : 10px; 
+            background: rgb(68, 144, 220);
+        }
+        .card h3{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Card Layout</h1>
+    <div class="card-container">
+        <div class="card">
+            <h3>card1</h3>
+            <p>content inside card1</p>
+        </div>
+        <div class="card">
+            <h3>card2</h3>
+            <p>content inside card2</p>
+
+        </div>
+        <div class="card">
+            <h3>card3</h3>
+            <p>content inside card3</p>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
