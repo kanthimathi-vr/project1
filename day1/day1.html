@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1</title>
+</head>
+<style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    h2{
+        font-size: 24px;
+        color:blue;
+    }
+    .highlight{
+        background-color: yellow;
+        color:black;
+    }
+    #cta{
+        background-color: green;
+        color:white;
+
+    }
+    a:[target=_blank]{
+        color:purple;
+    }
+    h1,h2,h3{
+        font-weight:bold;
+        color:red;
+    }
+    div p{
+        color:blue;
+    }
+    ul>li{
+        color:blueviolet;
+    }
+    h1 + p{
+       color:brown;
+       font-style: italic;
+    }
+    button:hover{
+        background-color: pink;
+    } 
+    tr:nth-child(odd){
+       background-color: orange;
+    }
+    h1::before{
+        content:"★";
+    }
+    li::after{
+        content:"Done";
+        color:blue;
+    }
+</style>
+<body>
+    <h2>Heading </h2>
+    <p class="highlight">This is a paragraph with class highlighted<br>and styled it with a yellow background.
+    </p><br>
+    <button id="cta">submit</button><br>
+    <a href="">visit us</a><br>
+    <a href="" target="_blank">google me</a><br>
+    <h1>Vetri Solutions </h1>
+    <h2>Vetri Solutions </h2>
+    <h3>Vetri Solutions</h3><br>
+    <div>
+        <p>This para has decendent selector.</p>
+    </div>
+    <ul>
+        <li>apple</li>
+        <li>mango</li>
+        <li>orange</li>
+        <li>Pineapple</li>
+    </ul><br>
+ 
+     <h1>Vetri Solutions</h1>
+     <p>This is adjacent Sibling selector</p>
+     <p>This is adjacent Sibling selector</p><br>
+
+     <button> Home</button>
+     <button> About Us</button>
+     <button> Contact</button>
+<br>
+    <table border="1px"><br>
+        <tr>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>87</td>
+        </tr>
+        <tr>
+            <td>Raji</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>Anita</td>
+            <td>75</td>
+        </tr>
+        <tr>
+            <td>Viji</td>
+            <td>93</td>
+        </tr>
+    </table>
+
+    <h1>Vetri Solutions</h1>
+    <ul>
+        <li> List first element  </li>
+        <li>List second element  </li>
+    </ul>
+</body>
+</html>

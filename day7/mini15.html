@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Gallery</title>
+    <style>
+        *
+        {margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    .row{
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px;
+            justify-content: center;
+       
+
+    }
+    img{
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px;
+            transition: transform 0.3 ease; */
+        }
+    .img:hover{
+            transform:scale(1.1);
+    }
+    </style>
+</head>
+<body>
+    <h1>
+        Image  flexbox Gallery
+    </h1>
+    <!-- <div class="container"> -->
+        <div class="row">
+            <img src="./images/image1.jpg" alt="">
+            <img src="./images/image2.jpg" alt="">
+            <img src="./images/image3.jpg" alt="">
+            <img src="./images/image4.jpg" alt="">
+            <img src="./images/image1.jpg" alt="">
+            <img src="./images/image2.jpg" alt="">
+            <img src="./images/image3.jpg" alt="">
+            <img src="./images/image4.jpg" alt="">
+       </div>
+    </div>
+    
+</body>
+</html>

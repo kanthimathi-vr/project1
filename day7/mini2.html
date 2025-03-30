@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title><style>
+        body{
+            margin:0;
+            font-family: 'Courier New', Courier, monospace;
+            background: rgb(235, 235, 150);
+            padding: 20px;
+
+        }
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px;
+            justify-content: center;
+        }
+        .gallery img{
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px;
+            transition: transform 0.3 ease;
+        }
+        .gallery omg:hover{
+            transform:scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Image gallery</h1>
+    <div class="gallery">
+        <img src="#" alt="image1">
+        <img src="#" alt="image2">
+        <img src="#" alt="image3">
+        <img src="#" alt="image4">
+        <img src="#" alt="image5">
+    </div>
+</body>
+</html>

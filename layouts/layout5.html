@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout5</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 90%;
+            border: 2px solid black;
+            height: 400px;
+        }
+        .row{
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+        }
+        .row1{
+            height: 50%;
+            border: 2px solid red;
+            display: flex;
+         }
+        .row2{
+            height: 50%;
+            border: 2px solid red;
+            display: flex;
+        }
+        .col1{
+            width: 50%;
+            border: 2px solid rgb(24, 212, 78);
+            display: flex;
+        }
+        .col2{
+            width: 50%;
+            border: 2px solid rgb(22, 218, 68);
+
+        }
+        .col3{
+            width: 50%;
+            border: 2px solid rgb(24, 212, 78);
+           
+
+        }
+        .col4{
+            width: 50%;
+            border: 2px solid rgb(22, 218, 68);
+            display: flex;
+        }
+        .child1{
+            width: 40%;
+            border: 2px solid purple;
+
+        }
+        .child2{ 
+            width:60%;
+            border: 2px solid purple;
+            
+        }
+        .child3{
+            height: 100%;
+            border: 2px solid purple;
+            
+        }
+        .child4{
+            height: 100%;
+            border: 2px solid purple;
+            
+        }
+        .child5{
+            width: 40%;
+            border: 2px solid purple;
+            
+        }
+        .child6{
+            width: 60%;
+            border: 2px solid purple;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="row1">
+                <div class="col1">
+                    <div class="child1"> </div>
+                    <div class="child2"> </div>
+                </div>
+                <div class="col2">
+                    <div class="child3"> </div>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="col3">
+                    <div class="child4"> </div>
+                  
+                </div>
+                <div class="col4">
+                    <div class="child5"> </div>
+                    <div class="child6"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

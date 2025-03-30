@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do list</title>
+    <style>
+        *
+        {
+            background-color: lightgray;
+            color:black;
+        }
+        header{
+            background-color: white;
+            color:black;
+        }
+        section{
+            background-color: lightblue;
+            color:black;
+
+        }
+        ul li{
+            background-color: lightgreen;
+            color:black;
+        }
+        ul li:nth-child(odd){
+            background-color: lightcoral;
+
+        }
+        ul li.completed::after{
+            content:"✓";
+            color:darkgreen;
+
+        }
+        ul li:hover{
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My To-Do List</h1>
+    </header>
+    <section>
+        <ul>
+            <li class="completed"> Complete homework</li>
+            <li>Go for a walk</li>
+            <li class="completed">Read a book</li>
+            <li>Practice coding</li>
+            <li class="completed">Call a friend</li>
+            
+        </ul>
+    </section>
+</body>
+</html>

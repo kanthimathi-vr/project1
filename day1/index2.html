@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index2</title>
+    <style>
+        *{
+            background-color: rgb(74, 70, 70);
+            color:white;
+        }
+        
+        section{
+            background-color: rgb(74, 70, 70);
+            color:white;
+
+        }
+        ul {
+            list-style-type: none;
+        }
+        ul li{
+
+            background-color: rgb(74, 70, 70);
+            color:white;
+        }
+        ul li.red{
+            background-color: rgb(74, 70, 70);
+            color:red;
+
+        }
+       ul li.completed::before{ 
+            content:"🌐"
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <ul   >
+            <li class="completed">Home</li>
+            <li class="completed">About</li>
+            <li class="completed">Services</li>
+            <li class= "completed" style=" color:red">External link</li>
+            <li class ="completed">Contact</li>
+        </ul>
+    </section>
+</body>
+</html>
