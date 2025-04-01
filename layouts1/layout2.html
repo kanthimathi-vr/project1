@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width:90%;
+            border: 2px solid black;
+            height: 200px;
+
+        }
+        .row{
+            display: flex;
+            height: 200px;
+            justify-content: space-around;
+
+        }
+        .col1{
+            width: 30%;
+            border: 2px solid red;
+            
+        }
+        .col2{
+            width: 40%;
+            border: 2px solid green;
+
+        }
+        .col3{
+            width: 30%;
+            border: 2px solid blue;
+        }
+        .child1{
+            height: 60%;
+            border: 2px solid purple;
+            /* height: 100px; */
+        }
+        .child2{
+            height: 40% ;
+            border: 2px solid purple;
+            /* height: 100px; */
+        }
+        .child3{
+            border:2px solid purple;
+
+        }
+        .child4{
+            height:50%;
+            border: 2px solid black;
+        }
+        .child5{
+            height:50%;
+            border: 2px solid black;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #tiger{
+            height: 190px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col1">
+               
+                <div class="child1"><img src="./assests/images/image1.jpg" alt="" ></div>
+                <div class="child2"><img src="./assests/images/image2.jpg" alt=""></div>
+            </div>
+            <div class="col2">
+                <div class="child3"><img src="./assests/images/image3.jpg" id="tiger" alt="" ></div>
+            </div>
+            <div class="col3">
+                <div class="child4"><img src="./assests/images/image4.jpg" alt=""></div>
+                <div class="child5"><img src="./assests/images/image2.jpg" alt=""></div>
+            </div>
+          
+        </div>
+    </div>
+    
+</body>
+</html>

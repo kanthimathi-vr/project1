@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{ width:90%;
+            border: 2px solid black;}
+        .row{ display: flex;
+            flex-direction: column;
+            align-items: center;}
+        .row1{
+            width: 100%;
+            border: 2px solid red;
+            display: flex;
+        }
+        .row2{
+            width:100%;
+            border: 2px solid green;
+            display: flex;}
+        .col1{
+            width:40%;
+            border: 2px solid blue;
+        }
+        .col2{
+            width: 60%;
+            border: 2px solid blue;
+        }
+        .col3{
+            width: 20%;
+            border: 2px solid blue;
+        }
+        .col4{
+            width: 40%;
+            border: 2px solid blue;
+        }
+        .col5{
+            width: 40%;
+            border: 2px solid blue;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;}
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="row1">
+                <div class="col1"><img src="./assests/images/apple.jpg" alt=""  ></div>
+                <div class="col2"><img src="./assests/images/orange.jpg" alt=""   ></div>
+
+            </div>
+            <div class="row2">
+                <div class="col3"><img src="./assests/images/apple.jpg"   alt="" ></div>
+                <div class="col4"><img src="./assests/images/grapes.jpg" alt="" ></div>
+                <div class="col5"><img src="./assests/images/duck.jpg" alt="" ></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
