@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css104</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        
+        .container{display: flex; flex-wrap:wrap;width : 80%; background-color: pink; gap: 10px; height: 250px;  border: 2px solid black;}
+
+        .child1{ height: 105px; border: 2px solid red;}
+        .child2{ height: 105px; border: 2px solid red;}
+        .child3{ height: 105px; border: 2px solid red;}
+
+        .apple{ width: 100px;height: 100px; object-fit: cover;}
+        .orange{ width: 100px;height: 100px; object-fit: cover;}
+        .papaya{width: 100px; height:100px;object-fit:cover;}
+
+        h1{
+            text-align: center;
+            background-color: rgb(102, 3, 71);
+            color:white;
+            width: 50%;
+            margin-left: 40px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Gallery</h1>
+    <div class="container">
+       
+        
+        <div class="child1"><img src="./assests/images/apple.jpg" class="apple" alt=""></div>
+        <div class="child2"><img src="./assests/images/orange.jpg" class="orange" alt=""></div>
+        <div class="child3"><img src="./assests/images/papaya.jpg" class="papaya" alt=""></div>
+        <div class="child1"><img src="./assests/images/apple.jpg" class="apple" alt=""></div>
+        <div class="child2"><img src="./assests/images/orange.jpg" class="orange" alt=""></div>
+        <div class="child3"><img src="./assests/images/papaya.jpg" class="papaya" alt=""></div>
+    </div>
+    
+</body>
+</html>

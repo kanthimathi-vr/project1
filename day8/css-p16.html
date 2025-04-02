@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-p16</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{background-color: rgb(208, 210, 87);}
+        .container{width: 80%; margin-left: 50px; margin-top: 50px; background-color: rgb(139, 220, 146); align-items: center;  height: 400px; border: 2px solid rgb(6, 87, 23);}
+        .row{display: flex;flex-wrap: wrap; gap: 10px;flex-basis: 150px; margin: 20px; }
+
+        .c1{width: 30%;background-color: aliceblue;border-radius: 10px ;box-shadow: 3px 3px 3px gray;}
+        .c2{width: 30%; background-color: aliceblue; border-radius: 10px;box-shadow: 3px 3px 3px gray;}
+        .c3{width: 30%;background-color: aliceblue; border-radius: 10px; box-shadow: 3px 3px 3px gray;}
+
+        .headphone{width: 100%;height: 100px; object-fit: cover; }
+        .earbuds{width: 100%;height: 100px; object-fit: cover;}
+        .smartwatch{width: 100%;height: 100px; object-fit: cover;}
+        p{text-align: center;}
+        h3{text-align: center;}
+        .price{ width: 30px;  align-self: center; color:red;}
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Our Products</h1>
+        <div class="row">
+            <div class="c1"  style="display:flex; flex-direction: column;"><br>
+                <img src="./assests/images/headphone.jpg" class="headphone" alt="product1">
+                 <h3><b>Featured Headphones</b></h3>
+                <div class="para"> <p>High quality sound with noise cancellation</p></div>
+                <div class="price"><p>₹199</p></div>
+            </div>
+            <div class="c2"  style="display:flex; flex-direction: column;"><br>
+                <img src="./assests/images/wirelessearbuds.jpg" class="earbuds" alt="product2">
+                <h3><b>Wireless earbuds</b></h3>
+                <div class="para"> <p>Compact with powerful sound</p></div>
+                <div class="price"><p>₹799</p></div>
+            </div>
+            <div class="c3" style="display:flex; flex-direction: column;"><br>
+                <img src="./assests/images/smartwatch.jpg" class="smartwatch" alt="product3">
+                <h3><b>Smartwatch</b></h3>
+                <div class="para"><p>Track fitness and notifications</p></div>
+                <div class="price"><p>₹1999</p></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

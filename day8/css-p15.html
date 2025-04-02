@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csss-p15</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{background-color: rgb(181, 223, 96); }
+
+        .container{width:80%;border:2px solid red;}
+        .row{flex-basis: 100px;flex-wrap: wrap;gap: 20px; background-color: rgb(154, 221, 235); box-shadow: 5px 3px 3px red; height: 400px;}
+
+        .c1{width:100px;box-shadow: 3px 3px 3px brown; background-color: rgb(206, 135, 146);}
+        .c2{width: 100px;box-shadow: 3px 3px 3px brown; background-color: rgb(206, 135, 146);}
+        .c3 { width: 100px; box-shadow: 3px 3px 3px brown; background-color: rgb(206, 135, 146);}
+        .c4{width: 100px; box-shadow: 3px 3px 3px brown; background-color: rgb(206, 135, 146);}
+        .c5{ width : 100px; box-shadow: 3px 3px 3px brown; background-color: rgb(206, 135, 146);}
+
+        .food1{width: 100%; height: 100px;object-fit: cover;}
+        .food2{width: 100%; height: 100px;object-fit: cover;}
+        .pizza{width: 100%; height: 100px;object-fit: cover;}
+        .burger{width: 100%; height:  100px;object-fit: cover;}
+        .paneer{width: 100%; height: 100px;object-fit: cover;}
+
+        h1{background-color: brown;color:white;width:60%;border-radius: 20px;text-align: center;}
+
+        button{background-color: green; border-radius: 5px; text-align: center;width:80px;}
+        button:hover{color:white;background-color: purple;}
+    </style>
+</head>
+<body>
+    <h1>Responsive Card Layout</h1>
+    <div class="container">
+        <div class="row" style="display: flex;">
+           
+            <div class="c1">
+                <img src="./assests/images/food1.jpg" class="food1" alt="">
+                <p>Veg plater</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="c2">
+                <img src="./assests/images/food2.jpg" class="food2" alt="">
+                <p>Non-veg plater</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="c3">
+                <img src="./assests/images/burger.jpg" class="burger" alt="">
+                <p>customised burger with added cheese</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="c4">
+                <img src="./assests/images/paneer.jpg" class="paneer" alt="">
+                <p>Protein rich paneer</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="c5">
+                <img src="./assests/images/pizza.jpg" class="pizza" alt="">
+                <p>Healthy pizza with more veges</p>
+                <button>Add to cart</button>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
