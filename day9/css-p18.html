@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-p18</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+        header{background-color: blue;color: wheat;}
+        a{ color: white;text-decoration: none; }
+        a:hover{color:purple;}
+        h3,p{line-height: 2;}
+      
+
+        .container{display: flex; width: 95%;border: 2px solid rgb(20, 20, 136); gap: 1px;}
+        .row1{border:2px solid black;  width:35%;height:400px;  background-color: blue;color:white ; }
+        
+        .column{display: grid; grid-template-columns: minmax(100px,250px) minmax(100px,250px) minmax(100px,250px);gap: 5px;}
+        .c1,.c2,.c3{border: 2px solid purple;box-shadow: 2px 2px 2px purple;}
+
+    </style>
+</head>
+<body>
+    <header><h1>Dashboard</h1></header>
+    <div class="container">
+        <div class="row1">
+            <div><a href="#">🏠Home</a></div>
+            <div><a href="#">📊Analytics</a></div>
+            <div><a href="#">⚙Settings</a></div>
+            <div><a href="#">🔓Logout</a></div>
+        </div>
+        <div class="row2">
+            <h3>Welcome to the Dashboard</h3><p>This is a responsive dashboard layout using css grid</p>
+            <div class="column">
+            
+               <div class="c1">📈sales Report</div>
+               <div class="c2">👥User Statistics</div>
+               <div class="c3">💰Revenue</div>
+        </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

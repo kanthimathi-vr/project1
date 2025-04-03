@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css112</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .gridcontainer{display: grid;grid-template-columns: repeat(3,1fr); grid-template-rows: 150px 150px 150px; border:2px solid green;padding: 10px;  background-color: rgb(89, 240, 124);gap:10px;}
+
+        .photo1{width: 200px;height: 100px;object-fit: cover;}
+        .photo2{width: 200px;height: 100px;object-fit: cover;}
+        .photo3{width: 200px;height: 100px;object-fit: cover;}
+        .photo4{width: 200px;height: 100px;object-fit: cover;}
+        .photo5{width: 200px;height: 100px;object-fit: cover;}
+        .photo6{width: 200px;height: 100px;object-fit: cover;}
+
+        p{text-align: center;}
+        img{border-radius: 10px;}
+    </style>
+</head>
+<body>
+    <h1>Photo Gallery</h1>
+    <div class="gridcontainer">
+        <div class="c1"> <img src="./assests/images/photo1.jpg" class="photo1" alt=""><p>photo1</p></div>
+        <div class="c2"> <img src="./assests/images/photo2.jpg" class="photo2" alt=""><p>photo2</p></div>
+        <div class="c3"><img src="./assests/images/photo3.jpg" class="photo3" alt=""><p>photo3</p></div>
+        <div class="c4"><img src="./assests/images/photo4.webp" class="photo4" alt=""><p>photo4</p></div>
+        <div class="c5"> <img src="./assests/images/photo5.jpg" class="photo5" alt=""><p>photo5</p></div>
+        <div class="c6"> <img src="./assests/images/photo6.jpg" class="photo6" alt=""><p>photo6</p></div>
+    </div>
+</body>
+</html>

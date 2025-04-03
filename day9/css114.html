@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css114</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .head{background-color: purple;}
+        header{text-align: center;color:white;}
+        .content{background-color: rgb(213, 185, 185);}
+        .footer{background-color: black;color:white;}
+
+
+        .gridcontainer{display: grid;grid-template-columns: auto;grid-template-rows: 50px 300px 25px;}
+    </style>
+
+</head>
+<body>
+    <div class="gridcontainer">
+        <div  class="head">
+            <header><h1>Grid container</h1></header>
+        </div>
+        <div  class="content"><p>Diiferent row heights for header ,footer ,content using grid-template-rows.</p></div>
+        <div class="footer"><footer><p>@2025.All Rights Reserved</p></footer></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssmini2-Pricing Table</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .gridcontainer{display: grid;grid-template-columns: minmax(100px,200px)minmax(100px,200px) minmax(100px,200px); gap: 10px;
+             height: 200px; border: 2px solid blue;background-color: lightgray;}
+
+
+        .basic,.standard,.premium{ text-align: center;margin: 20px; width: 100%; border-radius: 10px; background-color: white;border: 2px solid gray;gap:10px;}
+
+        header{background-color: black;color:white;text-align: center;}
+        p{color:green}
+        h4{background-color: blue;color: white;text-align: center;}
+        ul{
+            list-style-type: none;
+        }
+        .footer{background-color: black;color:white; text-align: center;}
+   
+    </style>
+</head>
+<body>
+    <div>
+        <header><h1>Pricing Plans</h1></header>
+    </div>
+    <div class="gridcontainer">
+        <div class="basic">
+            <h4>Basic</h4>
+            <p>₹999/month</p>
+            <ul>
+                <li>✓10GB Storage</li>
+                <li>✓Email Support</li>
+                <li>☓Custom Domain</li>
+            </ul>
+            <button>Choose Plan</button>
+
+        </div>
+        <div class="standard">
+            <h4>Standard</h4>
+            <p>₹1999/month</p>
+            <ul>
+                <li>✓50GB Storage</li>
+                <li>✓Priority Support</li>
+                <li>✓Custom Domain</li>
+            </ul>
+            <button>Choose Plan</button>
+
+        </div>
+        <div class="premium">
+            <h4>Premium</h4>
+            <p>₹2999/month</p>
+            <ul>
+                <li>✓Unlimited Storage</li>
+                <li>✓24/7 Support</li>
+                <li>✓Custom Domain & Analytics</li>
+            </ul>
+            <button>Choose Plan</button>
+
+        </div>
+    </div>
+    <div class="footer"><footer>@2025.All Rights Reserved.</footer></div>
+</body>
+</html>

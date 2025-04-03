@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css111</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .gridcontainer{display: grid;grid-template-columns: repeat(3,1fr);border:2px solid red;background-color: rgb(240, 149, 89);gap:10px;}
+
+        .food1{width: 200px;height: 100px;object-fit: cover;}
+        .pizza{width: 200px;height: 100px;object-fit: cover;}
+        .burger{width: 200px;height: 100px;object-fit: cover;}
+        .paneer{width: 200px;height: 100px;object-fit: cover;}
+        .food2{width: 200px;height: 100px;object-fit: cover;}
+        .plater{width: 200px;height: 100px;object-fit: cover;}
+
+        p{text-align: center;}
+        img{border-radius: 10px;}
+    </style>
+</head>
+<body>
+    <h1>grid with uniform layout</h1>
+    <div class="gridcontainer">
+        <div class="c1"> <img src="./assests/images/food1.jpg" class="food1" alt=""><p>Food</p></div>
+        <div class="c2"> <img src="./assests/images/pizza.jpg" class="pizza" alt=""><p>Pizza</p></div>
+        <div class="c3"><img src="./assests/images/burger.jpg" class="burger" alt=""><p>Burger</p></div>
+        <div class="c4"><img src="./assests/images/paneer.jpg" class="paneer" alt=""><p>paneer</p></div>
+        <div class="c5"> <img src="./assests/images/food2.jpg" class="food2" alt=""><p>Plater</p></div>
+        <div class="c6"> <img src="./assests/images/plater.jpg" class="plater" alt=""><p>Paneer</p></div>
+    </div>
+</body>
+</html>
