@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css128</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{background-color: rgb(119, 222, 217);}
+        .gridcontainer{display:grid; grid-template-columns:repeat(3,1fr);width: 80%; gap: 10px; border: 2px solid red;background-color: rgb(183, 188, 47);}
+
+
+        p{text-align: center; width: 80%; background-color: rgb(23, 172, 90);border-radius: 10px;}
+
+        img{border-radius: 10px;box-shadow: 3px 3px 3px green;}
+        .banana{width: 100px;height: 100px;object-fit: cover;}
+        .mango{width: 100px;height: 100px;object-fit: cover;}
+        .papaya{width: 100px;height: 100px;object-fit: cover;}
+        .grapes{width: 100px;height: 100px;object-fit: cover;}
+        .apple{width: 100px;height: 100px;object-fit: cover;}
+        .strawberry{width: 100px;height: 100px;object-fit: cover;}
+        h1{background-color: rgb(94, 25, 162);color:white;width: 50%;border-radius: 10px;text-align: center;margin-left: 50px;}
+    </style>
+</head>
+<body>
+    <h1> Gridlayout-column:repeat() </h1>
+    <div class="gridcontainer">
+        <div class="c1"><img src="./assests/images/banana.jpg" class="banana" alt=""><p>Banana</p></div>
+        <div class="c2"><img src="./assests/images/mango.jpg" class="mango" alt=""><p>Mango</p></div>
+        <div class="c3"><img src="./assests/images/papaya.jpg" class="papaya" alt=""><p>Papaya</p></div>
+        <div class="c4"><img src="./assests/images/grapes.jpg" class="grapes" alt=""><p>Grapes</p></div>
+        <div class="c5"><img src="./assests/images/apple.jpg" class="apple" alt=""><p>Apple</p></div>
+        <div class="c6"><img src="./assests/images/strawberry.jpg" class="strawberry" alt=""><p>Strawberry</p></div>
+    </div>
+
+    
+</body>
+</html>

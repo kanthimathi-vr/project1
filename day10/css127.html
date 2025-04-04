@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css127</title><style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .layout{display: grid;grid-template-columns: 1fr 1fr 1fr;grid-template-rows: auto 200px auto;
+             
+             border: 2px solid rgb(4, 57, 21);}
+        .header{grid-column: 1/4; background-color: rgb(12, 71, 29);color: white;}
+        .side{background-color: rgb(35, 181, 110);color: white;}
+        .content{border:20px solid rgb(3, 43, 3);}
+        .footer{grid-column: 1/4; background-color: black;color:white}
+         
+        li{list-style-type: none;}
+
+    </style>
+</head>
+<body>
+    <h1> Dashboard layout </h1>
+    <div class="layout">
+        <div class="header">
+            <h1>My Blog</h1>
+        </div>
+        <div class="side">
+            <li>Home</li>
+            <li>About us</li>
+            <li>Contact</li>
+        </div>
+        <div class="cont">
+            <p>This is the content area.</p>
+
+        </div>
+        <div class="footer">
+            <p>@2025 .All Rights reserved.</p>
+
+        </div>   
+     </div>
+</body>
+</html>

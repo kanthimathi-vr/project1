@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project22</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+        header{background-color: blue;color: wheat; text-align: center; }
+        a{ color: white;text-decoration: none;}
+        a:hover{color:purple;}
+        h3,p{line-height: 2;}
+      
+
+        .container{display: grid;grid-template-columns: 1fr 2fr; width: 95%;border: 2px solid rgb(20, 20, 136); gap: 1px;}
+        .row1{border:2px solid black;  height:400px;  background-color: blue;color:white ; }
+        
+        .column{display: grid; grid-template-columns: minmax(100px,250px) minmax(100px,250px) minmax(100px,250px);gap: 5px;}
+        .c1,.c2,.c3{border: 2px solid rgb(62, 59, 62); background-color: rgb(188, 185, 185); box-shadow: 2px 2px 2px purple;}
+
+        .d1,.d2,.d3{background-color: gray;border-radius: 5px; text-align: center; padding: 3px; margin-top: 10px;}
+        
+    </style>
+</head>
+<body>
+    <header><h1>Dashboard</h1></header>
+    <div class="container">
+        <div class="row1">
+            <div class="d1"><a href="#">Home</a></div><br>
+            <div class="d2"><a href="#">Reports</a></div><br>
+            <div class="d3"><a href="#">Settings</a></div>
+          
+        </div>
+        <div class="row2">
+            <h3>Main Content</h3>
+            <div class="column">
+            
+               <div class="c1">Card1</div>
+               <div class="c2">Card2</div>
+               <div class="c3">Card3</div>
+        </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

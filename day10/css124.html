@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css124</title>
+    <style>
+    *{margin: 0;padding: 0;box-sizing: border-box;}
+    body{display: grid; grid-template-rows: auto 300px auto; }
+
+    .layout{display: grid;grid-template-columns: 1fr 2fr;}
+    .header{background-color: blue;color: white;}
+    .side{background-color: rgb(57, 57, 213); color: white;}
+    .footer{background-color: rgb(32, 32, 37);color: white;}
+
+        
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <h1>My Blog</h1>
+    </div>
+    <div class="layout">
+       
+        <div class="side">
+            <li>Home</li><li>About us</li><li>Contact</li>
+        </div>
+        <div class="cont">
+            <p>This is the content area.</p>
+
+        </div>
+    </div>
+        <div class="footer">
+            <p>@2025 .All Rights reserved.</p>
+
+          
+         </div>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css121</title><style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .layout{display: grid;grid-template-columns: 1fr 1fr 1fr;grid-template-rows: auto 200px auto;
+             grid-template-areas:
+              "header header header"
+             "cont cont cont"
+             "footer footer footer"; 
+             border: 2px solid blue;}
+        .header{grid-area: header; background-color: blue;color: white;}
+        .content{grid-area: cont;}
+        .footer{grid-area: footer; background-color: black;color:white}
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="layout">
+        <div class="header">
+            <h1>My Blog</h1>
+        </div>
+        <div class="cont">
+            <p>This is the content area.</p>
+
+        </div>
+        <div class="footer">
+            <p>@2025 .All Rights reserved.</p>
+
+        </div>   
+     </div>
+</body>
+</html>
