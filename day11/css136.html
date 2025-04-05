@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css136</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+        .container{width: 80%;border: 2px solid blue; position: relative;}
+
+
+        .box1{ position: absolute;left: 10px;top: 20px; z-index: 2; width: 50px;height: 100px;background-color: rgb(184, 21, 91);}
+        .box2{position: relative;z-index: 1; width: 150px;height: 200px;background-color: rgb(227, 97, 16);}
+        
+    </style>
+</head>
+<body>
+    <h1>z-index</h1>
+    <div class="container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+       
+    </div>
+    
+</body>
+</html>

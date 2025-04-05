@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css138</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .container{width: 80%;border: 2px solid blue;}
+        .box1{position: relative;z-index: 1;}
+        .box2{position: absolute;z-index: 2; left: 150px;top: 230px;}
+
+        img{width: 100%;object-fit: cover;height: auto;}
+        p:hover{transform: scale(1.5);}
+    </style>
+</head>
+<body>
+    <h1>Absolute positioning with z-index</h1>
+    <div class="container">
+        <div class="box1">
+            <img src="./images/apple.jpg" alt="image1">
+        </div>
+        <div class="box2">
+            <p><strong>Welcome My Blog</strong></p>
+        </div>
+    </div>
+    
+</body>
+</html>
