@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout2</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .container{width: 80%;border: 2px solid green;box-shadow: 5px 2px 2px green;}
+        .row1{display: grid;grid-template-columns: repeat(3,1fr);
+                 grid-template-rows: auto;}
+        h1{text-align: center;background-color: rgb(101, 176, 176);}
+        .apple{width: 100%;height: 200px;object-fit: cover;}
+        .banana{width: 100%;height: 400px;object-fit: cover; grid-row:span 2 ;}
+        .grapes{width: 100%;height: 200px;object-fit: cover;}
+        .strawberry{width: 100%;height: 200px;object-fit: cover;}
+        .mango{width: 100%;height: 200px;object-fit: cover;}
+    
+    </style>
+</head>
+<body>
+    <h1>Layout2</h1>
+    <div class="container">
+        <div class="row1">
+            <img src="./assests/images/apple.jpg" class="apple" alt="">
+            <img src="./assests/images/banana1.jpg" class="banana" alt="">
+       
+            <img src="./assests/images/grapes.jpg" class="grapes" alt="">
+            <img src="./assests/images/strawberry.jpg" class="strawberry" alt="">
+            <img src="./assests/images/mango.jpg" class="mango" alt="">
+        </div> 
+    </div>
+</body>
+</html>
