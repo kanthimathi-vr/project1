@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css154</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+        button{
+            margin: 30px;padding: 50px;
+            background-color: rgb(231, 231, 37);border: 3px solid rgb(165, 183, 47);
+            border-radius: 20px;box-shadow: 3px 2px 2px rgb(127, 237, 127);
+            transition: filter 5s ease;
+        }
+        button:hover{
+            background-color: rgb(198, 136, 48);border: 2px solid red;box-shadow: 5px 2px 2px red;
+
+            filter: sepia(70%);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sepia filter to button</h1>
+    <button>Click Submit</button>
+    
+</body>
+</html>

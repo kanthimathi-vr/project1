@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css147</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        nav{
+            
+            width: 50%;height: 150px;border: 2px solid black;
+            text-align: center;padding: 30px;
+            background: radial-gradient(circle,yellow, orange, red);
+            transition: filter 2s ease;
+        }
+        a{text-decoration: none; }
+       
+        nav:hover{
+            filter: brightness(70%);
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>nav with blur</h1>
+    <nav>
+        
+        <a href="#">Home</a><br>
+        <a href="#">About</a><br>
+        <a href="#">Contact</a>
+    </nav>
+</body>
+</html>

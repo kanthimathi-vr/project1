@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css152</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing:border-box ;}
+
+
+        .para{
+            width: 50%;
+            height: 250px;
+
+            animation: slide-in 3s ease forwards;
+            transform-origin: top left;
+
+            background-color: lightpink;
+            border-radius: 20px;
+            margin: 20px;padding: 10px;
+        }
+
+        @keyframes slide-in{
+            from{transform: translateX(-100%) scale(0.8); opacity: 0.5;}
+            to{ transform: translateX(0) scale(1); opacity: 1;}
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Smooth fading text</h1>
+    <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse numquam officia reprehenderit iste illum eius sapiente cumque ut eligendi, libero magnam laboriosam provident accusantium consectetur quibusdam rerum iusto ab tempora, mollitia dolorum recusandae amet magni voluptatibus expedita? Minima, error dolorem?</div>
+
+
+</body>
+</html>

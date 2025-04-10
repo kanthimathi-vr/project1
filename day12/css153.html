@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css153</title><style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+
+        .para{
+            width: 50%;
+            background-color: lightcoral;border-radius: 20px;
+            box-shadow: 3px 2px 2px ;
+            margin: 10px;padding: 10px;
+           
+        }
+        .para:hover{
+            animation: slide-in 2s ease forwards; 
+            transform-origin: top left;        
+
+        }
+        @keyframes slide-in{
+            from{transform: translateX(0) scale(1); opacity: 0.5;}
+            to{ transform: translateX(250px) scale(1); opacity: 1;}
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Hover effect with slide in</h1>
+    <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis aperiam fugit quisquam eos accusantium incidunt. Reprehenderit adipisci vitae ipsum laborum. Consequuntur facere exercitationem assumenda corporis alias officia deleniti sit!</div>
+    
+</body>
+</html>

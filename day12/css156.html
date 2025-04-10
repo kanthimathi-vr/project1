@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css156</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .shadow{
+            width: 60%;
+            padding: 50px;height: 200px;text-align: center;
+            background: radial-gradient(circle,pink,lightblue,lightcoral);
+            border-radius: 20px;
+            transition:filter 5s ease;
+       
+        }
+        .shadow:hover{
+            filter: drop-shadow(50px 20px 10px blue);
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>shadow filter</h1>
+    <div class="shadow"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, eius aliquam? Quidem aut sed ad vel unde in culpa dignissimos ducimus commodi officia porro, ratione aliquid, omnis soluta ipsum reprehenderit!</p></div>
+
+    
+</body>
+</html>
