@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css164</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+       
+        @media (min-width:320px){ 
+          .head{background-color: brown; font-style: italic; color : white;border-radius: 10px;}
+          .side{display: none;}
+          .content{width: 100%; font-style: italic;   background-color: rgb(241, 146, 146);}
+          .foot{background-color: black; font-style: italic; color: white;}
+        }
+        @media (min-width:620px){
+            .head{background-color: rgb(43, 237, 62); font-style: normal; color: white;border-radius: 10px;}
+            .side{background-color: rgb(191, 247, 180);}
+            .content{width: 100%; font-style: normal; background-color: rgb(130, 241, 135);}
+          .foot{background-color: black;color: white;}
+          
+        }
+        @media (min-width:1024px){
+            .head{background-color: rgb(123, 4, 75); font-style: italic; color: white;border-radius: 10px;}
+            .side{background-color: rgb(250, 151, 189);}
+            .content{width: 100%; font-style: italic; background-color: rgb(237, 112, 191);}
+          .foot{background-color: black; font-style: italic; color: white;}
+         
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="head"> <h1>WELCOME ALL</h1></div>
+          <div class="col" style="display: flex;height: 200px;">
+            <div class="side" >
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="content"> <p>Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Iste, nisi. Ratione iure voluptatem officiis sapiente nulla quae odit voluptatum iusto eum. Fugit sunt tenetur et quos magnam cupiditate unde consequatur, dolorem dolorum, pariatur rerum quasi minus excepturi. Magni, minima? Explicabo.</p>
+            </div>
+          </div> 
+             <div class="foot">
+            <footer>All Rights Reserved.</footer>
+           </div>
+          
+        
+        </div>
+    </div>
+    
+</body>
+</html>

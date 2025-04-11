@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css167</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .page{background-color: lightblue;}
+        .head{background-color: blue;color: white;}
+        .footer{background-color: black;color: white;}
+
+
+
+        @media (min-width:320px) and (max-width:600px){ 
+            
+        }
+        @media (min-width:601px) and (max-width:1024px){
+            .col{display: flex;gap: 50px;}
+           
+        }
+        @media (min-width:1025px) {
+            .col{display: flex;gap: 50px;}
+           
+          
+        } 
+    
+
+    </style>
+</head>
+<body>
+    <div class="page">
+    <div class="head"><h1>My Blog</h1></div>
+    <div class="col">
+    <div class="content" style="  margin: 30px ; border: 1px solid gray;box-shadow: 2px 2px 2px gray;width: 50%;border-radius: 10px;padding: 6px;">
+        <h4>About</h4>
+        <p> I am a Web Designer, and I'm very passionate and dedicated to my work.
+                     With 3 years experience as a professional Web Designer, I have acquired the skills and
+                      knowledge necessary to make your project a success. I enjoy every step of the design process,
+                       from discussion and collaboration. Thanks a lot for your attention and your trust!</p>
+    </div>
+
+    <div class="creative" style="  margin: 30px ; border: 1px solid gray;box-shadow: 2px 2px 2px gray;width: 50%;border-radius: 10px;padding: 6px;" >
+        <h4>Creative Design</h4>
+        <ul style="margin: 20px;"><li>Figma Design</li>
+        <li>PSD Design</li><li>Sketch Design</li></ul>
+    </div>
+    <div class="Web Developement" style="margin: 30px; border: 1px solid  gray; box-shadow: 2px 2px 2px gray;width: 50%;border-radius: 10px;padding: 6px; ">
+        <h4>Web Developement</h4>
+        <ul  style="margin: 20px;"><li>HTML Websites</li>
+        <li>Wordpress Websites</li><li>NFT & Websites</li></ul></div>
+    </div>    
+     <div class="footer">
+        <p>All Rights Reserved.</p>
+     </div>
+    </div>
+
+</body>
+</html>

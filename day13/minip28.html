@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project28</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .page{background-color: rgb(248, 195, 230); width: 95%;}
+        .head{background-color: rgb(105, 11, 105);color: white;border-radius: 20px;box-shadow: 5px 5px 5px;transition:  transform 2s ease;}
+        .head:hover{transform: scale(1.2);}
+        img{width: 100%;height: 200px;}
+        .footer{background-color: black;color: white;}
+
+
+
+        @media (min-width:320px) and (max-width:600px){ 
+            .content{width: 70%;}
+            .b1,.b2{ margin: 10px; width: 60%;}
+           
+            .features{font-family: Arial, Helvetica, sans-serif;width: 70%;}
+            .description{font-family: Arial, Helvetica, sans-serif;width: 70%;} 
+        }
+        @media (min-width:601px) and (max-width:1024px){
+            .content{width: 80%; transition: transform 2s ease;}
+            .content:hover{transform: scale(1.3);}
+            .new{display: flex;}
+            .b1,.b2{width: 70%;padding: 5px;}
+            .b1:hover{background-color: purple;color:white;}
+            .b2:hover{background-color: purple;color:white;}
+
+            .features{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;transition: transform 2s ease; }
+            .description{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; transition: transform 2s ease; }
+            
+            .features:hover{transform: scale(1.3);}
+            .description:hover{transform: scale(1.3);}
+        }
+        @media (min-width:1025px) {
+            .page{background-color: rgb(183, 230, 245); width: 95%;}
+        .head{background-color: rgb(13, 89, 124);color: white;}
+
+           
+            .content{width: 80%; transition: transform 2s ease;}
+            .content:hover{transform: scale(1.3);}
+            .column{display: flex;}
+            .new{display: flex;}
+            .b1,.b2{width: 70%;padding: 5px;}
+            .b1:hover{background-color: rgb(13, 133, 176);color:white; box-shadow:3px 3px 3px blue;}
+            .b2:hover{background-color: rgb(33, 127, 195);color:white;box-shadow:3px 3px 3px blue;}
+
+            .features{font-family: Georgia, 'Times New Roman', Times, serif;transition: transform 2s ease; width: 50%;}
+            .description{font-family:  Georgia, 'Times New Roman', Times, serif; transition: transform 2s ease;width: 50%; }
+            
+            .features:hover{transform: scale(1.3);}
+            .description:hover{transform: scale(1.3);}
+           
+          
+        } 
+    
+
+    </style>
+</head>
+<body>
+    <div class="page">
+    <div class="head"><h1>Responsive Landing page</h1></div>
+        <div class="column">
+            <div class="content" style="  margin: 30px ; border: 1px solid gray;box-shadow: 2px 2px 2px gray;border-radius: 10px;padding: 6px;">
+                <h4>APPLE WATCH</h4>
+            <img src="./images/watch.jpg" alt="product">
+            </div>
+
+            <div class="new" >
+
+                <div class="features" style="  margin: 30px ; border: 1px solid gray;box-shadow: 2px 2px 2px gray;border-radius: 10px;padding: 6px;" >
+                    <h4>Special Features</h4>
+                    <ul style="margin: 20px;"><li>   Memory Storage Capacity:32 GB</li>
+                    <li> Special Feature	Sleep Monitor, Sedentary Reminder</li>
+                    <li> Connectivity Technology:Wi-Fi 4 (802.11n)</li>
+                    <li>Bluetooth 5.3</li>
+                        <li>Battery Cell Composition:Lithium Ion </li></ul>
+                </div>
+                <div class="description" style="margin: 30px; border: 1px solid  gray; box-shadow: 2px 2px 2px gray;border-radius: 10px;padding: 6px; ">
+                    <h4>Description</h4>
+                    <ul  style="margin: 20px;"><li>Size: 40mm
+                        <li>Style Name: Sport Band</li>
+                    <li>Pattern Name: S/M - Band fits 130 </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="button" style="width: 100%;height: 100px; align-items: center;">
+                <button  class="b1" style="width: 80%;border-radius: 5px;padding: 5px;box-shadow: 2px 2px 2px purple;">Add to Cart</button><br>
+                <button  class="b2" style="width: 80%; border-radius: 5px;padding: 5px;box-shadow: 2px 2px 2px purple; " >Buy Now</button>
+            </div> 
+  
+
+           
+     <div class="footer">
+        <p>All Rights Reserved.</p>
+     </div>
+    </div>
+
+</body>
+</html>

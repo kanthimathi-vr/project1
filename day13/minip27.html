@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project27</title><style>
+
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{background-color: rgb(122, 241, 114);}
+        .container{width: 90%; background-color: rgb(112, 235, 101);}
+        .row{display: flex;flex-wrap: wrap; gap: 10px;margin: 10px;padding: 20px; justify-content: space-around;}
+        .card1{width: 100%;box-shadow: 3px 3px 3px gray;border-radius: 10px; transition: transform 2s ease;}
+        .card1:hover{transform: scale(1.2);}
+        h3,p{text-align: center;}
+        p{color: red;}
+
+        h1{text-align: center;box-shadow: 2px 5px 2px ;transition: transform 2s ease; color: white; background-color: rgb(43, 193, 1);border-radius: 10px;width: 90%;padding: 3px;}
+        h1:hover{transform: scale(1.2);}
+
+        img{ width: 100%; height: 200px;object-fit: cover;border-radius: 10px;}
+        
+
+        @media (min-width:320px){ .card1{ width: 100%;}
+           
+        }
+        @media (min-width:620px){ .card1{width: 45%;}
+           
+        }
+        @media (min-width:1024px){ .card1{width: 30%;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Gallery</h1>
+    <div class="container">
+      
+        <div class="row">
+            
+              <div class="card1">
+                
+                <img src="./images/banana1.jpg" alt="">
+                <h3>Banana</h3>
+                <p>₹199</p>
+             
+            </div>
+            <div class="card1">
+                <img src="./images/papaya.jpg" alt="">
+                <h3>papaya</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/strawberry.jpg" alt="">
+                <h3>strawberry</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/orange.jpg" alt="">
+                <h3>banana</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/grapes.jpg" alt="">
+                <h3>APPLE</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/mango.jpg" alt="">
+                <h3>Mango</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/strawberry.jpg" alt="">
+                <h3>Strawberry</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/banana.jpg" alt="">
+                <h3>Banana</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/apple.jpg" alt="">
+                <h3>APPLE</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/orange.jpg" alt="">
+                <h3>APPLE10</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/papaya.jpg" alt="">
+                <h3>Papaya</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/grapes.jpg" alt="">
+                <h3>Grapes</h3>
+                <p>₹199</p>
+            </div>
+        
+        </div>
+    </div>
+    
+</body>
+</html>

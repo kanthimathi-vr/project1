@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css161</title><style>
+
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{background-color: rgb(244,241,68);}
+        .container{width: 90%; background-color: rgb(244, 241, 68);}
+        .row{display: flex;flex-wrap: wrap; gap: 10px;margin: 10px;padding: 20px; justify-content: space-around;}
+        .card1{width: 100%;}
+        h3,p{text-align: center;}
+        p{color: red;}
+
+        h1{text-align: center;background-color: yellow;border-radius: 10px;width: 90%;padding: 3px;}
+        
+
+        img{ width: 100%; height: 200px;object-fit: cover;}
+
+        @media (min-width:320px){ .card1{ width: 100%;}
+           
+        }
+        @media (min-width:620px){ .card1{width: 45%;}
+           
+        }
+        @media (min-width:1024px){ .card1{width: 30%;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Gallery</h1>
+    <div class="container">
+      
+        <div class="row">
+            
+              <div class="card1">
+                
+                <img src="./images/banana.jpg" alt="">
+                <h3>APPLE1</h3>
+                <p>₹199</p>
+             
+            </div>
+            <div class="card1">
+                <img src="./images/banana.jpg" alt="">
+                <h3>APPLE2</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/banana.jpg" alt="">
+                <h3>APPLE3</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/banana.jpg" alt="">
+                <h3>APPLE4</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/banana.jpg" alt="">
+                <h3>APPLE5</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/banana.jpg" alt="">
+                <h3>APPLE6</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/banana.jpg" alt="">
+                <h3>APPLE7</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/banana.jpg" alt="">
+                <h3>APPLE8</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/banana.jpg" alt="">
+                <h3>APPLE9</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/banana.jpg" alt="">
+                <h3>APPLE10</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/banana.jpg" alt="">
+                <h3>APPLE11</h3>
+                <p>₹199</p>
+            </div>
+            <div class="card1">
+                <img src="./images/banana.jpg" alt="">
+                <h3>APPLE12</h3>
+                <p>₹199</p>
+            </div>
+        
+        </div>
+    </div>
+    
+</body>
+</html>

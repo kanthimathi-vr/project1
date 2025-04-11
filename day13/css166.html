@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css166</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .row{width: 60%; margin: 20px;padding: 20px; border-radius: 20px;background-color: rgb(155, 245, 155);}
+        .head{background-color: darkgreen;color: white; }
+        img{width: 100%;height: 200px;}
+        .content p{color: red;}
+        .b1,.b2{width: 300px;height: 30px;border-radius: 10px;gap: 10px;}
+
+
+        @media (min-width:320px) and (max-width:600px){ 
+            .b1,.b2{width: 100px;}
+            img{display: none;}
+
+        }
+        @media (min-width:601px) and (max-width:1024px){
+            .b1:hover{background-color: red;box-shadow: 5px 5px 2px red ;color: white;}
+            .b2:hover{background-color: red;box-shadow: 5px 5px 2px red ;color: white;}
+            img{filter: opacity(0.8);}
+           
+        }
+        @media (min-width:1025px) {
+            .b1:hover{background-color: rgb(43, 14, 208);box-shadow: 5px 5px 2px blueviolet ;color: white;}
+            .b2:hover{background-color: rgb(62, 82, 214);box-shadow: 5px 5px 2px blueviolet ;color: white;}
+            img{filter: opacity(1);}
+           
+          
+        } 
+    
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="head"><h1>Hover effect for desktop only</h1></div>
+
+    <div class="content">
+        <img src="./images/gardenlaptop.jpg" alt="Product">
+        <h3>Laptop</h3>
+        <p>₹20,000</p>
+    </div>
+    <div class="button">
+        <button class="b1">Add to cart</button><br><br>
+        <button class="b2">Buy Now</button>
+    </div>
+</div>
+    
+</body>
+</html>
