@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Project15</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{background: linear-gradient(to bottom,rgb(123, 123, 241),rgb(47, 47, 180));}
+        .row{position: relative;}
+        .backimg{ opacity: 0.2; height: 400vh;object-fit: cover; position: absolute;top: 0;left: 0;}
+        .baimg{height: 200vh;width: 90%;}
+        .fixed{position: fixed;top: 0;left: 0;border-radius: 10px; width: 90%; background-color: blue;color: white;}
+
+        a{text-decoration: none;color: white;margin: 10px;margin-left: 30px;}
+        .time{display: flex; gap: 30px;padding: 50px;border: 2px sold blue;}
+        .c1{width: 20%;background-color: white;height: 70px;border-radius: 40px;text-align: center;padding: 20px;}
+
+
+        .col3{display: flex;gap: 30px;margin: 10px; background-color: rgb(153, 153, 235);height: 250px;}
+        .c2{border-radius: 5px; width: 30%; box-shadow: 2px 2px 2px gray;padding: 40px; margin:5px;height: 230px; border: 1px solid lightgray;}
+       .p1{width: 100%;height: 100px;object-fit: cover;border-radius: 100px;}
+        
+        @media (min-width:320px){ 
+           
+           
+        }
+        @media (min-width:620px){ 
+
+           
+        }
+        @media (min-width:1024px){ 
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="backimg"><img class="baimg" src="./images/images/banana.jpg" alt=""></div> -->
+        <div class="row">
+            <div class="fixed">
+                <div class="head">
+                    <header><h1>Event Registration Page</h1></header>
+                </div>
+                <div class="nav" style="display: flex;gap: 50px;">
+                    <a href="#home">Home</a>
+                    <a href="#details">Details</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="col1" style=" width: 90%; margin-top: 150px; border-radius: 10px;box-shadow: 2px 2px 2px white; border: 2px solid white;">
+
+                    <div class="card">
+
+                        <div class="time"><h4>Count Down Timer:</h4><br><br>
+                        <div class="c1"><h5>10</h5>
+                            <p>Days</p>
+                        </div>
+                        <div class="c1"><h5>7</h5><p>Hours</p></div>
+                        <div class="c1"><h5>35</h5><p>Minutes</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col5" style="border: 2px solid white;width: 90%;margin-top: 50px;border-radius: 10px;box-shadow: 2px 2px 2px white;">
+                    <p style="height: 300px;margin: 20px;padding: 30px;">Description about seminar</p>
+                </div>
+              
+                    <div class="col4"  style="width: 90%;padding: 30px;margin-top: 50px;">
+                        <fieldset style="width: 100%; border-radius: 10px;box-shadow: 2px 2px  2px white;">
+                            <legend style="background-color: rgb(239, 241, 93);margin: 17px;font-size: large;">Registration Form:</legend>
+                        <div id="comment"  style=" margin: 30px; text-align: left; color: black;font-size: 26px;" >
+                            <label for="name">Name:</label>
+                            <input type="text" placeholder="Name"><br>
+                            <label for="mailid">Mail id:</label>
+                            <input type="text" placeholder="xyz@gmail.com"><br>
+                            <label for="event">Event Name:</label>
+                            <input type="text" placeholder="choose event"><br>
+                          
+                            <button style="padding: 2px;margin: 10px; background-color: rgb(217, 228, 109);">Register now</button>
+                        </div>
+                    </fieldset>
+                </div>
+           
+                <div class="col3 " style="  width: 90%; margin-top: 50px; border-radius: 10px;box-shadow: 2px 2px 2px white; border: 2px solid white;"  >
+                    <div class="c2" >
+                        <img class="p1" src="./images/speaker1.jpg" alt="">
+                        <p>Emma watson</p><p>Web Designer</p>
+                    </div>  <div class="c2">
+                        <img class="p1" src="./images/speaker2.jpg" alt="">
+                        <p>Harry Potter</p><p>Data Analyst</p>
+                    </div>  <div class="c2">
+                        <img class="p1" src="./images/speaker3.jpg" alt="">
+                        <p>Charles Nickson</p><p>Artificial Intelligence</p>
+                    </div>
+                </div>
+            </div>
+            <div class="foot" style="margin: 10px; padding: 5px; background-color: blue;color: white;width: 90%;"><p>All rights reserved. </p></div>
+        </div>
+    </div>
+    
+</body>
+</html>

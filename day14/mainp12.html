@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Project12</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{background-color: rgb(230, 102, 230);}
+        .row{position: relative;}
+        
+        .fixed{position: fixed;top: 0;left: 0; width: 90%;border-radius: 20px;text-align: center; background-color: rgb(161, 9, 144);color: white;}
+
+        a{text-decoration: none;color: white;margin: 10px;margin-left: 30px;}
+        .row1{display: grid;grid-template-columns: 1fr 1fr 1fr; gap: 10px;}
+      img{ width: 100%; height: 100px;border-radius: 6px;margin: 5px; object-fit: cover; transition: transform 2s ease;}
+      img:hover{transform: scale(1.1);}
+        @media (min-width:320px){ 
+           .row1{grid-template-columns: repeat(1,1fr);}
+           
+        }
+        @media (min-width:620px){ 
+            .row1{grid-template-columns: repeat(2,1fr);}
+           
+        }
+        @media (min-width:1024px){ 
+            .row1{grid-template-columns: repeat(3,1fr);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="backimg"><img class="baimg" src="./images/images/banana.jpg" alt=""></div> -->
+        <div class="row">
+            <div class="fixed">
+                <div class="head">
+                    <header><h1>Responsive Grid Portfolio</h1></header>
+                </div>
+                <div class="nav" style="display: flex;gap: 20px;">
+                    <a href="#home">Home</a>
+                    <a href="#details">Mobile</a>
+                    <a href="#contact">Tablet</a>
+                    <a href="#contact">Laptop</a>
+                    
+                </div>
+            </div>
+            <div class="col1" style=" margin-top: 100px;width: 90%; height: 700px;">
+                <div class="row1" >
+                    <img src="./images/icecream1.webp" class="apple" alt="">
+                    <img src="./images/icecream3.jpg" class="banana" alt="">
+                    <img src="./images/icecream4.webp" class="grapes" alt="">
+                    <img src="./images/icecream5.webp" class="strawberry" alt="">
+                    <img src="./images/icecreamback.jpg" class="mango" alt="">
+                    <img src="./images/icecream1.webp" alt="">
+                    <img src="./images/icecream2.jpg" alt="">
+                    <img src="./images/icecream3.jpg" alt="">
+                    <img src="./images/icecream6.jpg" alt="">
+                </div> 
+            </div>
+
+            <div class="foot" style="padding: 5px;background-color: purple;margin-top: 30px;width: 90%;"><p style="color: white;">All Rights Reserved.</p></div>
+        </div>
+    </div>
+    
+</body>
+</html>

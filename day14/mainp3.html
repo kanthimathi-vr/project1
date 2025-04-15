@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Project3</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{scroll-behavior: smooth;}
+        .container{width: 90%;}
+
+        .row{position: relative;}
+        .backimg{ opacity: 0.2; height: 100vh;object-fit: cover; position: absolute;top: 0;left: 0;}
+        .baimg{height:  150vh;width:  95%;}
+        .fixed{position: fixed;top: 0;left: 0;width: 95%; background: linear-gradient(to left,rgb(228, 55, 84),rgb(212, 128, 142));}
+       a{text-decoration: none;color: brown;font-style: italic;margin: 10px;}
+       
+        .c1{width: 90%;box-shadow: 5px 2px 2px purple;}
+
+        .ca1{width: 100%;height: 200px;object-fit: cover;}
+        .ca1{ animation: slide-in 2s ease forwards;transform-origin: left center;}
+        
+          @keyframes slide-in{ 
+            from{transform: translateX(-100%) scale(0.8);opacity: 0;}
+            to{transform: translateX(0) scale(1); opacity: 1;}
+        }  
+        .col2{display: flex;flex-wrap: wrap;gap: 10px;}
+        .card{width: 30%; text-align: center;height: 200px;  box-shadow: 2px 2px 2px purple;border-radius: 5px;transition: transform 2s ease;}
+        .card:hover{transform: scale(1.1);}
+        .ca2,.ca3,.ca4,.ca5,.ca6,.ca7{width: 100%;height: 100px;object-fit: cover;}
+        button{padding: 3px;border-radius: 8px;background-color: purple;color: white;}
+        button:hover{color: purple;background-color: white;}
+        .foot{color: white;background-color: purple;}
+       
+        @media (min-width:320px){ .card{width: 100%;}
+           
+           
+        }
+        @media (min-width:620px){ .card{width: 40%;}
+
+
+           
+        }
+        @media (min-width:1024px){ 
+            .card{width: 30%;}
+           
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="backimg"><img class="baimg" src="./images/icecreamback.jpg" alt=""></div>
+        <div class="row">
+            <div class="fixed">
+                <div class="head">
+                    <header><h1>Animated Landing Page</h1></header>
+                </div>
+                <div class="nav" style="display: flex;gap: 25px;">
+                    <a href="#home">Home</a>
+                    <a href="#details">Products</a>
+                    <a href="#contact">Cart</a>
+                    <a href="#">Services</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="col1" style="margin: 20px; margin-top: 80px;">
+                    <div class="c1"><img  class="ca1" src="./images/icecream1.webp" alt=""></div>
+                </div>
+                <div class="col2">
+                    <div class="card" ><img src="images/icecream2.jpg" class="ca2" alt=""><h5>Icecream</h5><p>₹299</p><button>Add to Cart</button></div>
+                   <div class="card"><img src="images/icecream3.jpg"  class="ca3" alt=""><h5>Icecream</h5><p>₹299</p><button>Add to Cart</button></div>
+                    <div class="card"><img src="images/icecream4.webp"  class="ca4" alt=""><h5>Icecream</h5><p>₹299</p><button>Add to Cart</button></div>
+                    <div class="card"><img src="images/icecream5.webp"  class="ca5" alt=""><h5>Icecream</h5><p>₹299</p><button>Add to Cart</button></div>
+                    <div class="card"><img src="images/icecream6.jpg" class="ca6"  alt=""><h5>Icecream</h5><p>₹299</p><button>Add to Cart</button></div>
+                    <div class="card"><img src="images/icecreamback.jpg" class="ca7" alt=""><h5>Icecream</h5><p>₹299</p><button>Add to Cart</button></div>
+                </div> 
+                <div class="col3"></div>
+            </div>
+            <br>
+            <div class="foot"><footer><p>All Rights Reserved.</p></footer></div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- 
+<div class="c2">two<img  class="ca2" src="./images/icecream2.jpg" alt=""></div>
+<div class="c3">three<img  class="ca3" src="./images/icecream3.jpg" alt=""></div>
+<div class="c4">four<img class="ca4" src="./images/icecream4.webp" alt=""></div>
+<div class="c5">five<img  class="ca5" src="./images/icecream5.webp" alt=""></div>
+<div class="c6">six<img  class="ca6" src="./images/icecream6.jpg" alt=""></div> -->

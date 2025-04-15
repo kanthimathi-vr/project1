@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Project12</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{background-color: rgb(230, 102, 230);}
+        .row{position: relative;}
+        
+        .fixed{position: fixed;top: 0;left: 0; width: 90%;border-radius: 20px;text-align: center; background-color: rgb(161, 9, 144);color: white;}
+
+        a{text-decoration: none;color: white;margin: 10px;margin-left: 30px;}
+        .row1{display: grid;grid-template-columns: 1fr 1fr 1fr; gap: 10px;}
+      img{ width: 100%; height: 100px;border-radius: 6px;margin: 5px; object-fit: cover; transition: transform 2s ease;}
+      img:hover{transform: scale(1.1);}
+
+
+      .col3{display: flex;gap: 5px;margin: 10px; background-color: rgb(235, 153, 212);height: 300px;}
+        .c2{border-radius: 5px; width: 30%;background-color: rgb(179, 45, 182); box-shadow: 2px 2px 2px gray;padding: 40px; margin:5px;height: 230px; border: 1px solid lightgray;}
+       .p1{width: 100%;height: 100px;object-fit: cover;border-radius: 100px;}
+        
+        @media (min-width:320px){ 
+           .row1{grid-template-columns: repeat(1,1fr); overflow: hidden;}
+           
+        }
+        @media (min-width:620px){ 
+            .row1{grid-template-columns: repeat(2,1fr);overflow: hidden;}
+           
+        }
+        @media (min-width:1024px){ 
+            .row1{grid-template-columns: repeat(3,1fr); overflow: hidden;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="backimg"><img class="baimg" src="./images/images/banana.jpg" alt=""></div> -->
+        <div class="row">
+            <div class="fixed">
+                <div class="head">
+                    <header><h1>Travel Agency</h1></header>
+                </div>
+                <div class="nav" style="display: flex;gap: 20px;">
+                    <a href="#home">Home</a>
+                    <a href="#details">Places</a>
+                    <a href="#contact">Packages</a>
+                    <a href="#contact">Contact</a>
+                    
+                </div>
+            </div>
+            <div class="col1" style=" margin-top: 100px;width: 90%; height: 100px;">
+                <div class="row1" >
+                    <img src="./images/travel1.jpg" class="apple" alt="">
+                    <img src="./images/travel2.jpg" class="banana" alt="">
+                    <img src="./images/travel3.jpg" class="grapes" alt="">
+                    <img src="./images/travel4.jpg" class="strawberry" alt="">
+                    <img src="./images/travel5.jpg" class="mango" alt="">
+                    <img src="./images/travel6.jpg" alt="">
+                    <img src="./images/travel7.webp" alt="">
+                    <img src="./images/travel8.jpg" alt="">
+                    <img src="./images/travel10.jpg" alt="">
+                </div> 
+            </div>
+            <div class="col3 " style="  width: 90%; margin-top: 500px; border-radius: 10px;box-shadow: 2px 2px 2px white; border: 2px solid white;"  >
+                <div class="c2" >
+                    <img class="p1" src="./images/travel10.jpg" alt="">
+                    <p>Singapore</p><p>Package Details</p><p>₹30,000</p>
+                </div>  <div class="c2">
+                    <img class="p1" src="./images/travel5.jpg" alt="">
+                    <p>Dubai</p><p>Package Details</p><p>₹60,000</p>
+                </div>  <div class="c2">
+                    <img class="p1" src="./images/travel4.jpg" alt="">
+                    <p>Maldives</p><p>Package Details</p><p>₹60,000</p>
+                </div>
+            </div>
+
+            <div class="col4"  style="width: 90%;padding: 30px;margin-top: 20px;">
+                <fieldset style="width: 100%; border-radius: 10px;box-shadow: 2px 2px  2px white;">
+                    <legend style="background-color: rgb(106, 10, 81); color: white; margin: 17px;font-size: large;">Contact Us:</legend>
+                <div id="comment"  style=" margin: 30px; text-align: left; color: black;font-size: 26px;" >
+                    <label for="name">Name:</label>
+                    <input type="text" placeholder="Name"><br>
+                    <label for="mailid">Mail id:</label>
+                    <input type="text" placeholder="xyz@gmail.com"><br>
+                    <label for="event">Place</label>
+                    <input type="text" placeholder="choose package"><br>
+                  
+                    <button style="padding: 2px;margin: 10px;color: white; background-color: rgb(128, 9, 86);">Get Package</button>
+                </div>
+            </fieldset>
+        </div>
+            <div class="foot" style="padding: 5px;background-color: purple;margin-top: 30px;width: 90%;"><p style="color: white;">All Rights Reserved.</p></div>
+        </div>
+    </div>
+    
+</body>
+</html>

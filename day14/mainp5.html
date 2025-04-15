@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project27</title><style>
+
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{background-color: rgb(243, 119, 214);}
+        .page{position: relative;}
+        .back{width: 90%;opacity: 0.3;}
+        .fixed{position: fixed;top: 0;left: 0;}
+
+
+
+        .container{width: 90%; background-color: rgb(245, 158, 223);}
+        .row{display: flex;flex-wrap: wrap; gap: 10px;margin: 10px;padding: 20px; justify-content: space-around;}
+        .card1{width: 100%;box-shadow: 3px 3px 3px gray;border-radius: 10px; transition: transform 2s ease;}
+        .card1:hover{transform: scale(1.2);}
+        h3,p{text-align: center;}
+        p{color: red;}
+
+        h1{text-align: center;box-shadow: 2px 5px 2px rgb(228, 149, 228) ;transition: transform 2s ease; color: white; background-color: rgb(182, 19, 117);border-radius: 10px;width: 90%;padding: 3px;}
+        h1:hover{transform: scale(1.2);}
+
+        img{ width: 100%; height: 200px;object-fit: cover;border-radius: 10px;}
+        
+
+        @media (min-width:320px){ .card1{ width: 100%;}
+           
+        }
+        @media (min-width:620px){ .card1{width: 45%;}
+           
+        }
+        @media (min-width:1024px){ .card1{width: 30%;}
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="page"> 
+        <div class="home">
+           
+        <div class="fixed" style="width: 50%;">
+                    <div class="head"><header> <h1 style="width: 230%;">Photography</h1></header></div>
+                
+                    <div class="nav">
+                        <a href="#home">Home</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#comment">comment</a>
+                    </div>
+            </div>
+        </div>
+    
+    
+    
+    
+        <div class="container">
+        
+            <div class="row">
+                
+                <div class="card1">
+                    
+                    <img src="./images/images/photo1.jpg" alt="">
+                   
+                    <p>Photo1</p>
+                
+                </div>
+                <div class="card1">
+                    <img src="./images/images/photo2.jpg" alt="">
+                
+                    <p>Photo2</p>
+                </div>
+                <div class="card1">
+                    <img src="./images/images/photo3.jpg" alt="">
+                   
+                    <p>photo3</p>
+                </div>
+                <div class="card1">
+                    <img src="./images/images/photo4.webp" alt="">
+                
+                    <p>Photo4</p>
+                </div>
+                <div class="card1">
+                    <img src="./images/images/photo5.jpg" alt="">
+               
+                    <p>Photo5</p>
+                </div>
+                <div class="card1">
+                    <img src="./images/images/photo6.jpg" alt="">
+                 
+                    <p>Photo6</p>
+                </div>
+                <div class="card1">
+                    <img src="./images/images/photo1.jpg" alt="">
+                    
+                    <p>Photo7</p>
+                </div>
+                <div class="card1">
+                    <img src="./images/images/photo2.jpg" alt="">
+                
+                    <p>Photo8</p>
+                </div>
+                <div class="card1">
+                    <img src="./images/images/photo3.jpg" alt="">
+                 
+                    <p>Photo9</p>
+                </div>
+                <div class="card1">
+                    <img src="./images/images/photo4.webp" alt="">
+                 
+                    <p>Photo10</p>
+                </div>
+                <div class="card1">
+                    <img src="./images/images/photo5.jpg" alt="">
+                 
+                    <p>Photo11</p>
+                </div>
+                <div class="card1">
+                    <img src="./images/images/photo6.jpg" alt="">
+                
+                    <p>Phot12</p>
+                </div>
+            
+            </div>
+        </div>
+        <div class="comment" style="margin: 20px;">
+            <label for="comment"><p style="text-align: left; color: black;font-size: 26px;">Comment:</p>
+                <textarea id="Address" name="Address" rows="10" cols="50" placeholder="Add comment here"></textarea>
+            </label><br>
+            <button style="border-radius: 10px;padding: 6px;width: 85%;"> Submit Comment</button>
+        </div>
+        <div class="foot" style="background-color: blueviolet;"><p style="color: white;text-align: left;margin: 10px;">All rights reserved.</p></div>
+
+</div>
+</body>
+</html>
