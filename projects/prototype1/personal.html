@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal care-face,hair care</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;font-family: Arial, Helvetica, sans-serif;}
+        .ncontainer{background-color: #6B8E23; font-size: 20px; color: black;}
+    
+    .navlogo{width: 100%; height: 20px; object-fit: cover;}
+
+    ul{list-style-type: none;}
+    a{color: black;text-decoration: none;}
+    .nav{display: flex;gap: 10px;padding: 5px;background-color: #6B8E23;}
+ 
+
+    .dropdown{display: none;position: absolute;top: 105px;left: 380px;background-color: #6B8E23;box-shadow: 2px 2px 2px;border-radius: 3px;}
+    .nav:hover .dropdown{display: block;}
+    .dropdownlist{padding: 5px;}
+
+    @media (min-width:320px){ 
+        .ncontainer{width: 100%;font-size: 10px;}
+        .nav{gap: 8px;padding: 5px;}
+        .navlogo{width: 100%;}
+        .dropdown{top: 30px;left: 50px;}
+  }
+  @media (min-width:620px){
+   
+    .ncontainer{width: 100%;font-size: 18px;}
+    .nav{gap: 20px;padding: 10px;}
+    .navlogo{height: 70px;object-fit: cover;}
+    .dropdown{left: 170px;}
+
+     
+  }
+  @media (min-width:1024px){ 
+     
+      .ncontainer{width: 100%;font-size: larger;}
+      .nav{gap: 50px;margin-left: 50px;padding-top: 30px;}
+      .navlogo{height: 100px;object-fit: cover;}
+      .dropdown{left: 270px;top: 130px;}
+  } 
+
+
+        .cacol1{display: flex;}
+    
+        .cacard2{width: 100%;}
+        .face{width: 100%;height: 150px;object-fit: cover;}
+        a{text-decoration: none;color: black;}
+
+        .cacol2{display: flex;gap: 20px;}
+        .cacategory{border: 2px solid #6B8E23;}
+        .cacategory{width: 25%;}
+        aside{margin: 15px;}
+        ul{margin: 10px;}
+        .caprod{width: 75%;}
+
+        .caprod1{display: grid;grid-template-columns: repeat(3,1fr); gap: 20px;}.caprod1tea{padding: 10px; text-align: center;}
+        .caprod2{display:  grid;grid-template-columns: repeat(3,1fr);gap: 20px;}.caprod2tea{padding: 10px; text-align: center;}
+        .caprod3{display: grid;grid-template-columns: repeat(3,1fr);gap: 20px;flex-wrap: wrap;}.caprod3tea{padding: 10px; text-align: center;}
+        .faceimg{width: 80%;height: 80px;object-fit: cover;}
+       .caprod button{border-radius: 5px;padding :3px ;background-color:  #6B8E23;}
+        
+        .caprod1tea{border: 2px solid #6B8E23;}
+        .caprod2tea{border: 2px solid #6B8E23;}
+        .caprod3tea{border: 2px solid #6B8E23;}
+
+        
+        @media (min-width:320px){ 
+            .cacategory{width: 40%;}
+            .caprod{width: 60%;}
+            .cacard2{width: 100%;}
+           
+         .caprod1{grid-template-columns: repeat(1,1fr);}
+         .caprod2{grid-template-columns: repeat(1,1fr);align-items: center;}
+         .caprod3{grid-template-columns: repeat(1,1fr);}
+
+      }
+      @media (min-width:620px){
+       
+        .caprod1{grid-template-columns: repeat(2,1fr);}
+         .caprod2{grid-template-columns: repeat(2,1fr);}
+         .caprod3{grid-template-columns: repeat(2,1fr);}
+
+      }
+      @media (min-width:1024px){ 
+        .caprod1{grid-template-columns: repeat(3,1fr);}
+         .caprod2{grid-template-columns: repeat(3,1fr);}
+         .caprod3{grid-template-columns: repeat(3,1fr);}
+
+        
+      }
+    
+    
+        .footer{background-color: #6B8E23 ;color: white; font-size: medium;}
+        .frow{display: flex;gap: 30px;line-height: 1.3;}
+       
+        .fcol1{margin-top: 25px;width: 30%; }
+        ul{list-style-type: none;}
+        .fcol11{margin: 15px; margin-top: 5px;}
+        .fcol{margin-top: 25px;width: 50%;}
+        .fcol2{margin-left: 35px;}
+        .fcol3{margin-top: 70px;line-height: 1.5;}
+    
+        .flogo{width: 90%;height: 100%;object-fit: cover;}
+        .fimg{border-radius: 100%;width: 20px;height: 20px;object-fit: cover;}
+    
+    
+        @media (min-width:320px){ 
+            *{font-size: 6px;}
+                .frow{width: 100%; gap: 0;line-height: 1.4;}
+                .fcol1{margin-top: 5px;}
+                .fcol{margin-top: 5px;}
+                .fcol2{margin-left: 5px;}
+                .fcol3{margin-top: 5px;line-height: 1;}
+                .flogo{width: 100%;height: 80px;}
+                .fimg{width: 10px;height: 10px;}
+
+         
+      }
+      @media (min-width:620px){
+       
+        *{font-size: 10px;line-height: 1.4;}
+         
+      }
+      @media (min-width:1024px){ 
+        *{font-size: 20px;}
+        .flogo{height: 200px;}
+        
+      }
+    
+    
+    
+    </style>
+</head>
+<body>
+
+
+
+    <div class="ncontainer">
+        <nav>
+              <ul>
+                <div class="nav">
+                    <div class="nav1`"><img  class="navlogo" src="./assests/images/MN__2_-removebg-preview.png" alt=""></div>
+                    <div class="nav1"> <li><a href="#">Shop By Category <select name="shop" id="shop" ></select></a></li>
+                            <div class="dropdown">
+                                <div class="dropdownlist">
+                                    <ul>
+                                        <li><a href="tea.html">Tea & Infusion</a></li><hr>
+                                        <li><a href="health.html">Health & Wellness</a></li><hr>
+                                        <li><a href="staple.html">Staple & Packed food</a></li><hr>
+                                        <li><a href="pulses.html">Pulses & Dhals</a></li><hr>
+                                        <li><a href="personal.html">Personal Care</a></li><hr>
+                                        <li><a href="detox.html">Detox</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                   </div>
+                   
+                   
+                   <div class="nav1">  <li><a href="#">Track Order</a></li></div>
+                   <div class="nav1"> <li><a href="./about.html">About Us</a></li></div>
+                   <div class="nav1"><li><a href="./contactus.html">Contact Us</a></li></div>
+                   <div class="nav1"><li><a href="#">Support</a></li></div>
+                   <div class="nav1"> <li><a href="#">Cart</a></li></div>
+                
+                </div></ul>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
+
+
+    <div class="facecarecontainer">
+        <div class="carow">
+            <div class="cacol1" >
+               
+                <div class="cacard2"><img class="face" src="./assests/images/Personal Care.png" alt="personal care"></div>
+            </div><br>
+            <div class="cacol2">
+                <div class="cacategory">
+                    <aside>
+                        <h4><u>Categories</u></h4><br>
+                        <input type="radio" name="tea" value="Tea&Infusion"><a href="tea.html"> Teas & Infusion</a>
+                        <ul>
+                            <li>Green Tea</li>
+                            <li>Wellness Tea</li>
+                            <li>Infusions</li>
+                        </ul>
+                        <input type="radio" name="tea1" value="Health&Wellness"><a href="health.html">Health & Wellness</a>
+                        <ul>
+                            <li>Condition Supplies</li>
+                            <li>Daily Nutrition</li>
+                        </ul>
+                        <input type="radio" name="tea" value="Staple&Packed Food"><a href="staple.html"></a>Staple & Packed Food</a>
+                       <br> <input type="radio" name="tea" value="Pulses & Dhals"><a href="pulses.html"></a>Pulses & Dhals</a>
+                        <br><input type="radio" name="tea" value="Personal Care"><a href="personal.html"></a>Personal Care</a>
+                        <ul>
+                            <li>Body Care</li>
+                            <li>Face Care</li>
+                            <li>Hair Care</li>
+                        </ul>
+                        <input type="radio" name="tea" value="Detox"><a href="detox.html"></a> Detox</a>
+                    </aside>
+                </div>
+                <div class="caprod"><br><h4 style="text-align: center;">BODY CARE</h4><br>
+                    <div class="caprod1">
+                        <div class="caprod1tea"><img class="faceimg" src="./assests/images/Beauty 1.png" alt=""><h4>ORGANIC ROSE GERANIUM BODY OIL</h4><p>₹750.00</p><button>ADD TO CART</button><br><br></div>
+                        <div class="caprod1tea"><img class="faceimg" src="./assests/images/Beauty 2.png" alt=""><h4>ORGANIC BODY MIST</h4><p>₹369.00</p><button>ADD TO CART</button><br><br></div>
+                        <div class="caprod1tea"><img class="faceimg" src="./assests/images/Beauty 3.png" alt=""><h4>ORGANIC MEN'S BODY OIL</h4><p>₹230.00</p><button>ADD TO CART</button><br><br></div>
+                    </div><br><hr> <br><h4 style="text-align: center;">FACE CARE</h4><br>
+                    <div class="caprod2">
+                        <div class="caprod2tea"><img class="faceimg" src="./assests/images/Beauty 4.png" alt=""><h4>ORGANIC FACE SERUM </h4><p>₹249.00</p><button>ADD TO CART</button><br><br></div>
+                        <div class="caprod2tea"><img class="faceimg" src="./assests/images/Beauty 5.png" alt=""><h4>KUMKUMADHI FACE SERUM</h4><p>₹250.00</p><button>ADD TO CART</button><br><br></div>
+                        <div class="caprod2tea"><img  class="faceimg" src="./assests/images/Beauty 6.png" alt=""><h4>ORGANIC NEEM FACE WASH</h4><p>₹299.00</p><button>ADD TO CART</button><br><br></div>
+                    </div> <br><hr> <br> <h4 style="text-align: center;" >HAIR CARE</h4><br>
+                     <div class="caprod3">
+                        <div class="caprod3tea"><img  class="faceimg" src="./assests/images/Beauty 7.png" alt=""><h4>ORGANIC BHRINGRAJ HAIR OIL</h4><p>₹350.00</p><button>ADD TO CART</button><br><br></div>
+                        <div class="caprod3tea"><img class="faceimg" src="./assests/images/Beauty 8.png" alt=""><h4>ORGANIC RADIANCE HAIR OIL</h4><p>250.00</p><button>ADD TO CART</button><br><br></div>
+                        <div class="caprod3tea"><img class="faceimg" src="./assests/images/Beauty 9.png" alt=""><h4>ORGANIC HAIR SHAMPOO</h4><p>₹265.00</p><button>ADD TO CART</button><br><br></div>
+                        
+                    </div><hr>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="fcontainer">
+            <div class="frow">
+                <div class="fcol11">
+                    <img src="./assests/images/MN-removebg-preview (1).png" class="flogo" alt="">
+                </div>
+                <div class="fcol1">
+                    <h4><u>INFORMATION</u></h4>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Contact Us</li>
+                        <li>Terms & Conditions</li>
+                        <li>Terms of Service</li>
+                        <li>Vision &  Mission</li>
+                        <li>FAQs</li>
+                    </ul>
+                </div>
+                <div class="fcol">
+                    <div class="fcol2">
+                        <h4><u>POLICY</u></h4>
+                        <ul>
+                            <li>Privacy Policy</li>
+                            <li>Vision &  Mission</li>
+                            <li>Our Herb</li>
+                            <li>Track your Order</li>
+                            
+                        </ul>
+                     </div>
+                     <div class="fcol3">
+                        <p style="margin-left: 8px;">Follow Us @ <img src="./assests/images/Youtube.png" class="fimg" alt="">
+                            <img src="./assests/images/Whatsapp.png" class="fimg" alt="">
+                            <img src="./assests/images/Instagram.png" class="fimg" alt="">
+                            <img src="./assests/images/Facebook.png" class="fimg" alt="">
+                            <img src="./assests/images/Twitter.png" class="fimg" alt="">
+                        </p>
+                        <p style="color: #FFD700;">Copyright 2025 MN Organic India Pvt.Ltd.</p>
+                     </div>
+                </div>
+                <div class="fcol1">
+                    <h4 style="text-align: center;"><u>CONTACT US:</u></h4>
+                        <ul>
+                            <li>info@mnorganicproducts.com</li>
+                            <br><li>+91 9123456789</li>
+                            <br><li><p>MN ORGANIC INDIA Pvt. Ltd.<br>Unit No.123,7th Floor,Tower-B,<br>XXX Towers ABC Nagar<br>Chennai-xxxxxx</p></li>
+                            <li>Track your Order</li>
+                            
+                        </ul>
+                </div>
+                <div class="fcol1"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

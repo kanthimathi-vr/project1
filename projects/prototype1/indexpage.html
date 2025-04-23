@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Main page</title><style>
+        *{margin: 0;padding: 0;box-sizing: border-box;font-family: Arial, Helvetica, sans-serif;}
+
+        .ncontainer{background-color: #6B8E23; font-size: 20px; color: black;}
+    
+        .navlogo{width: 100%; height: 20px; object-fit: cover;}
+
+        ul{list-style-type: none;}
+        a{color: black;text-decoration: none;}
+        .nav{display: flex;gap: 10px;padding: 5px;background-color: #6B8E23;}
+     
+
+        .dropdown{display: none;position: absolute;top: 105px;left: 380px;background-color: #6B8E23;box-shadow: 2px 2px 2px;border-radius: 3px;}
+        .nav:hover .dropdown{display: block;}
+        .dropdownlist{padding: 5px;}
+
+        @media (min-width:320px){ 
+            .ncontainer{width: 100%;font-size: 10px;}
+            .nav{gap: 8px;padding: 5px;}
+            .navlogo{width: 100%;}
+            .dropdown{top: 30px;left: 50px;}
+      }
+      @media (min-width:620px){
+       
+        .ncontainer{width: 100%;font-size: 18px;}
+        .nav{gap: 20px;padding: 10px;}
+        .navlogo{height: 70px;object-fit: cover;}
+        .dropdown{left: 170px;}
+
+         
+      }
+      @media (min-width:1024px){ 
+         
+          .ncontainer{width: 100%;font-size: larger;}
+          .nav{gap: 50px;margin-left: 50px;padding-top: 30px;}
+          .navlogo{height: 100px;object-fit: cover;}
+          .dropdown{left: 270px;top: 130px;}
+      } 
+
+
+
+
+
+
+
+
+
+
+
+
+        .mrow{background-color: #FFD700;}
+        .mrow p{display: inline-block;gap: 50px;margin-left: 550px;padding: 10px;text-align: center;}
+        
+        .mrow1{display: flex;}
+        .mrow11{width: 50%;}.mrow12{width: 50%;}
+        .mrow11img{height: 100%;object-fit: cover;width: 100%;}
+        .mrow12img{width: 100%;height: 100%;object-fit: cover;}
+        
+        .mrow2{display: flex;gap: 20px;}
+        .mcard21{width: 30%; border-radius: 8px;}
+        .mcard21img{width: 100%;height: 100px;object-fit: cover;border-radius: 5px;}
+        .mcard21 h4{text-align: center;white-space: nowrap; background-color: hsl(80, 60%, 35%);border-radius: 5px;color: white;}
+
+
+        .mcard3{display: grid;grid-template-columns: repeat(4,1fr);gap: 30px;}
+        .mcard31img{border-radius: 100%;height: 80%; width: 80%; border: 4px solid #FFD700;}
+        .mcard31 h5{text-align: center;justify-content: space-around;}
+
+        .mrow4{display: grid;grid-template-columns: 30% 70%; gap: 10px;}
+        .mcard41{width: 50%;}
+ 
+        .mcard4{width: 90%;}
+        .mcard42{ display: flex;gap: 20px;}
+        .mimgtulsi{ width: 100%;height: 100%;object-fit: cover; }
+        .mcard42img{width: 50px;height: 50px;object-fit: cover;}
+        .tulsibutton{background-color: #6B8E23 ;color: white;border-radius: 5px;margin-left: 100px;height: 30px;border: none;width: 30%;}
+
+        .mrow5{display: flex;}
+        .mcard51{ width: 40%; background: linear-gradient(to left ,#b5de63,#6B8E23);}
+        .mcard52{width: 60%;}
+        .mainlastimg{width: 100%;height: 100%;object-fit: cover;}
+        .mrow5button{height: 30px; border-radius: 5px; color: #6B8E23;margin-left: 100px;border: none;width: 40%;}
+        
+            @media (min-width:320px){ 
+                *{font-size: 12px;}
+                 .mrow p{margin-left: 80px;padding: 0;}  
+                 .mrow2{gap: 1px;} 
+                 .mcard21{width: 100%;}
+                 .mcard21img{height: 70px;}
+                 .mcard3{gap: 10px; grid-template-columns: repeat(1,1fr); margin-left: 50px;}
+                 .mrow4{margin-left: 40px; grid-template-columns: 100%;width: 90%;}
+                 .mcard41{margin: 10px;margin-top: 20px;}
+                 .mcard42{gap: 2px;}
+                 .mimgtulsi{width: 160px; margin-left: 30px; height: 160px;}
+                 .mrow5{display: block;}
+                 .mcard51{width: 100%;height: 150px;padding: 5%;}
+                 .mcard52{width: 100%;}
+                 .mainlastimg{height: 150px;}
+                 .mcard42img{width: 20px;height: 20px;object-fit: cover;}
+                .tulsibutton{height: 20px;margin-left: 50px;}
+                .mainlastimg{height: 200px;}
+                .mrow5button{margin-left: 30px;height: 15px;}
+            }
+            @media (min-width:620px){
+             *{font-size: 16px;}
+             .mrow p{margin-left: 50px;padding: 4px;}
+             .mrow{gap: 2px;}
+             .mcard21img{height: 70px;}
+                 .mcard3{ grid-template-columns: repeat(2,1fr); margin-left: 10px;}
+                 .mcard31{text-align: center;}
+                 .mrow4{grid-template-columns: 100%; gap: 30px;}
+                 .mcard41{margin: 10px;margin-top: 0px;height: 200px; margin-left: 40px;}
+                 .mcard42{gap: 2px;}
+                 .mimgtulsi{width: 160px;height:160px; margin-left: 100px;}
+                 .mrow5{display: block;}
+                 .mcard51{width: 100%;height: 250px;padding: 5%;}
+                 .mcard52{width: 100%;height: 250px;}
+                 .mainlastimg{height: 100%;}
+                 .mcard42img{width: 20px;height: 20px;object-fit: cover;}
+                .tulsibutton{height: 20px;margin-left: 50px;}
+                
+                .mrow5button{margin-left: 30px;height: 15px;}
+            }
+            @media (min-width:1024px){ 
+
+                *{font-size: 26px;}
+                .mrow p{margin-left: 300px;padding: 4px;}
+                .mrow{gap: 8px;}
+                .mcard21img{height: 150px;}
+                 .mcard3{gap: 10px; grid-template-columns: repeat(4,1fr); margin-left: 20px;}
+                 .mcard31{text-align: center;}
+                 .mrow4{display: grid;grid-template-columns: 30% 70%; gap: 10px;}
+                    .mcard41{width: 50%;}
+                            
+                    .mrow5{display: flex;}
+                    .mcard51{ width: 40%;height: 100%; background: linear-gradient(to left ,#b5de63,#6B8E23);}
+                    .mcard52{width: 60%;height: 100%;}
+ 
+                 .mcard41{margin: 10px; height: 100%; margin-top: 40px; margin-left: 60px;}
+                 .mcard42{gap: 2px;}
+
+                 
+       
+                 .mimgtulsi{width: 250px;height:250px;}
+                 .mainlastimg{height: 100%;}
+                 .mcard42img{width: 60px;height: 60px;object-fit: cover;}
+                .tulsibutton{height: 30px;margin-left: 50px;}
+               
+                .mrow5button{margin-left: 30px;height: 30px;}
+            
+            }
+
+
+
+
+        .footer{background-color: #6B8E23 ;color: white; font-size: medium;}
+        .frow{display: flex;gap: 30px;line-height: 1.3;}
+       
+        .fcol1{margin-top: 25px;width: 30%; }
+        ul{list-style-type: none;}
+        .fcol11{margin: 15px; margin-top: 5px;}
+        .fcol{margin-top: 25px;width: 50%;}
+        .fcol2{margin-left: 35px;}
+        .fcol3{margin-top: 70px;line-height: 1.5;}
+    
+        .flogo{width: 90%;height: 100%;object-fit: cover;}
+        .fimg{border-radius: 100%;width: 20px;height: 20px;object-fit: cover;}
+    
+    
+        @media (min-width:320px){ 
+            *{font-size: 6px;}
+                .frow{width: 100%; gap: 0;line-height: 1.4;}
+                .fcol1{margin-top: 5px;}
+                .fcol{margin-top: 5px;}
+                .fcol2{margin-left: 5px;}
+                .fcol3{margin-top: 5px;line-height: 1;}
+                .flogo{width: 100%;height: 80px;}
+                .fimg{width: 10px;height: 10px;}
+
+         
+      }
+      @media (min-width:620px){
+       
+        *{font-size: 10px;line-height: 1.4;}
+         
+      }
+      @media (min-width:1024px){ 
+        *{font-size: 20px;}
+        .flogo{height: 200px;}
+        
+      }
+    
+   
+   
+   
+   
+   
+   
+   
+   </style>
+</head>
+<body>
+
+    <div class="ncontainer">
+        <nav>
+              <ul>
+                <div class="nav">
+                    <div class="nav1`"><img  class="navlogo" src="./assests/images/MN__2_-removebg-preview.png" alt=""></div>
+                    <div class="nav1"> <li><a href="#">Shop By Category <select name="shop" id="shop" ></select></a></li>
+                            <div class="dropdown">
+                                <div class="dropdownlist">
+                                    <ul>
+                                        <li><a href="tea.html">Tea & Infusion</a></li><hr>
+                                        <li><a href="health.html">Health & Wellness</a></li><hr>
+                                        <li><a href="staple.html">Staple & Packed food</a></li><hr>
+                                        <li><a href="pulses.html">Pulses & Dhals</a></li><hr>
+                                        <li><a href="personal.html">Personal Care</a></li><hr>
+                                        <li><a href="detox.html">Detox</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                   </div>
+                   
+                   
+                   <div class="nav1">  <li><a href="#">Track Order</a></li></div>
+                   <div class="nav1"> <li><a href="./about.html">About Us</a></li></div>
+                   <div class="nav1"><li><a href="./contactus.html">Contact Us</a></li></div>
+                   <div class="nav1"><li><a href="#">Support</a></li></div>
+                   <div class="nav1"> <li><a href="#">Cart</a></li></div>
+                
+                </div></ul>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <div class="mcontainer">
+        <div class="mrow"><p>Live Q&A Sessions</p><p> Organic Lifestyle Tips</p></div>
+        <div class="mrow1">
+           <div class="mrow11"><img  class="mrow11img" src="./assests/images/set-pecan-pistachios-almond-peanut-cashew-pine-nuts-lined-up-assorted-nuts-dried-fruits-mini-different-bowls_600x600.png" alt=""></div>
+          
+           <div class="mrow12"><img  class="mrow12img" src="./assests/images/FLAX-FACTS_-6-BENEFITS-YOU-NEED-TO-KNOW-ABOUT-FLAXSEED-1.png" alt=""></div>
+
+
+        </div>
+        <hr><br>  <h2 style="text-align: center;"><u>BEST SELLING PRODUCTS</u></h2><br>
+        <div class="mrow2">
+            <div class="mcard21"><img src="./assests/images/moringa-leaf-powder-100g-freshly-ground-using-organically-grown-and-naturally-shade-dried-moringa-leaves-no-additives-satopradhan-1-31166152835298.jpg" class="mcard21img" alt=""><h4>Moringa Powder</h4></div>
+            <div class="mcard21"><img src="./assests/images/10.png" class="mcard21img" alt=""><h4>Health Capsules</h4></div>
+            <div class="mcard21"><img src="./assests/images/9.png" class="mcard21img" alt=""><h4>Aswagandha</h4></div>
+            <div class="mcard21"><img src="./assests/images/Tea 1.png" class="mcard21img" alt=""><h4>Organic Tea</h4></div>
+            <div class="mcard21"><img src="./assests/images/Staple 4.png" class="mcard21img" alt=""><h4>Organic Ghee</h4></div>
+            <div class="mcard21"><img src="./assests/images/Staple 5.png" class="mcard21img" alt=""><h4>Coconut Oil</h4></div>
+            <div class="mcard21"><img src="./assests/images/Tea 5.png" class="mcard21img" alt=""><h4>Hibiscus Tea</h4></div>
+            <div class="mcard21"><img src="./assests/images/Dhal 2.png" class="mcard21img" alt=""><h4>Dhals</h4></div>
+            <div class="mcard21"><img src="./assests/images/1_by_1_A.webp" class="mcard21img" alt=""><h4>Detox</h4></div>
+            <div class="mcard21"><img src="./assests/images/Beauty 8.png" class="mcard21img" alt=""><h4>Personal Care</h4></div>
+        </div><br><hr>
+        <div class="mrow3"><br>
+            <h2 style="text-align: center;"><u>OUR PRODUCTS</u></h2>
+            <br><br><div class="mcard3">
+                <div class="mcard31"><a href="./tea.html"><img class="mcard31img" src="./assests/images/organic-india-classic-tulsi-green-tea-bags-1-74-g-25-pcs-product-images-o490058565-p490058565-6-202307031247.png" alt=""><h5> Tea & Infusions</h5></a></div>
+                <div class="mcard31"><a href="./health.html"><img class="mcard31img" src="./assests/images/Staple 3.png" alt="image"><h5>Health & Wellness</h5></a></div>
+                <div class="mcard31"><a href="./staple.html"><img class="mcard31img" src="./assests/images/1_121_11zon.webp" alt=""><h5>Staple & Packed Foods</h5></a></div>
+                <div class="mcard31"><a href="./health.html"><img class="mcard31img" src="./assests/images/blacksoysos.webp" alt=""><h5>Health Food</h5></a></div>
+                <div class="mcard31"><a href="./pulses.html"><img class="mcard31img" src="./assests/images/Organic_Pulses_online_1200x1200.webp" alt=""><h5>Pulses & Dhals</h5></a></div>
+                <div class="mcard31"><a href="./personal.html"><img  class="mcard31img" src="./assests/images/Skin_Care_Blog_File.webp" alt=""><h5>Personal Care</h5></a></div>
+                <div class="mcard31"><a href="./detox.html"><img  class="mcard31img" src="./assests/images/CleanNEW7DAY.webp" alt=""><h5>Detox</h5></a></div>
+                <div class="mcard31"><a href="./personal.html"><img class="mcard31img" src="./assests/images/avaan-mens-perfume-50-ml-verified-sustainable-perfume-on-brown-living-210195.webp" alt=""><h5>Perfume</h5></a></div>
+            </div><br>
+        </div><hr><br>
+        <div class="mrow4">
+            
+            <div class="mcard41"><img   src="./assests/images/image 34.png" class="mimgtulsi" alt=""></div>
+
+            <div class="mcard4">
+                <h2>GET THE 'TULSI' WELLNESS EDGE</h2><br>
+                <div class="mcard42">
+                    <div class="mcard421"><img class="mcard42img" src="./assests/images/image 35.png" alt=""></div>
+                    <div class="mcard421"><h3>GUARD AGAINST COUGH, COLD & POLLUTION</h3><p>Tulsi is long known to have anti-inflammatory, anti-bacterial, and anti-viral
+                        properties that help fight infections, hasten the healing of wounds and
+                        increase immunity against cough and cold.</p></div>
+                    </div>
+                <div class="mcard42">
+                    <div class="mcard421"><img class="mcard42img" src="./assests/images/image 36.png" alt=""></div>
+                    <div class="mcard421"><h3>FIGHT STRESS</h3><p>Tulsi is a powerful adaptogen that helps your body ward off the ill effects of
+                        physical and mental stress. It helps lower cortisol levels, relaxes your nervous
+                        system, and boosts cognitive function.</p></div></div>
+                <div class="mcard42">
+                    <div class="mcard421"><img class="mcard42img" src="./assests/images/image 37.png" alt=""></div>
+                    <div class="mcard421"><h3>SUPPORT METABOLISM</h3><p>Tulsi is packed with antioxidants that enhance liver health, reduce acid reflux,
+                        and boost digestive system function.</p></div></div><br>
+                <button class="tulsibutton" >Shop Now</button></div><br><br>
+                
+        </div><br><hr>
+        
+        <div class="mrow5">
+            <div class="mcard51" ><h3 style="margin: 10px;">HEALTHY CONSCIOUS LIVING</h3><br>
+                <p style="margin: 10px;">Healthy Conscious Living includes conscious business
+                practices to ensure our impact on our world and
+                communities is a positive one. At the foundation of
+                ORGANIC INDIA's products, company, and sourcing is
+                regenerative agriculture that not only sustains but
+                replenishes the earth; fair trade practices that support and
+                honour farmer partners with equitable wages, health care,
+                and ongoing organic agricultural training; and a LEED
+                Platinum certified production facility that is a marvel of top-
+                tier sustainable design, construction, and operations.</p><br>
+                <button class="mrow5button" >Shop Now</button><br><br></div>
+            <div class="mcard52"><img src="./assests/images/pixelcut-export_fb8a1cef-ce02-40b5-ae4d-1cb42965945b.webp" class="mainlastimg" alt=""></div>
+        <br></div><br><hr>
+        
+    </div>
+
+    <div class="footer">
+        <div class="fcontainer">
+            <div class="frow">
+                <div class="fcol11">
+                    <img src="./assests/images/MN-removebg-preview (1).png" class="flogo" alt="">
+                </div>
+                <div class="fcol1">
+                    <h4><u>INFORMATION</u></h4>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Contact Us</li>
+                        <li>Terms & Conditions</li>
+                        <li>Terms of Service</li>
+                        <li>Vision &  Mission</li>
+                        <li>FAQs</li>
+                    </ul>
+                </div>
+                <div class="fcol">
+                    <div class="fcol2">
+                        <h4><u>POLICY</u></h4>
+                        <ul>
+                            <li>Privacy Policy</li>
+                            <li>Vision &  Mission</li>
+                            <li>Our Herb</li>
+                            <li>Track your Order</li>
+                            
+                        </ul>
+                     </div>
+                     <div class="fcol3">
+                        <p style="margin-left: 8px;">Follow Us @ <img src="./assests/images/Youtube.png" class="fimg" alt="">
+                            <img src="./assests/images/Whatsapp.png" class="fimg" alt="">
+                            <img src="./assests/images/Instagram.png" class="fimg" alt="">
+                            <img src="./assests/images/Facebook.png" class="fimg" alt="">
+                            <img src="./assests/images/Twitter.png" class="fimg" alt="">
+                        </p>
+                        <p style="color: #FFD700;">Copyright 2025 MN Organic India Pvt.Ltd.</p>
+                     </div>
+                </div>
+                <div class="fcol1">
+                    <h4 style="text-align: center;"><u>CONTACT US:</u></h4>
+                        <ul>
+                            <li>info@mnorganicproducts.com</li>
+                            <br><li>+91 9123456789</li>
+                            <br><li><p>MN ORGANIC INDIA Pvt. Ltd.<br>Unit No.123,7th Floor,Tower-B,<br>XXX Towers ABC Nagar<br>Chennai-xxxxxx</p></li>
+                            <li>Track your Order</li>
+                            
+                        </ul>
+                </div>
+                <div class="fcol1"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

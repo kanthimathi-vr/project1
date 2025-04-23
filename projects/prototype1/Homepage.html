@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MN ORGANIC PRODUCTS</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{background-color: black;font-family: Arial, Helvetica, sans-serif;}
+        .row{display: grid;grid-template-columns: repeat(2,1fr);gap: 10px; height: 100vh; background-color:#6B8E23 ;}
+        .content{margin: 10px;margin-top: 150px;}
+        .input1{background-color:#FFD700 ; border: none;width: 50%; border-radius: 10px;height: 30px;}
+        .input2{background-color:#FFD700 ; border: none;width: 50%; border-radius: 10px;height: 30px;}
+        .homebutton{background-color:  #FFD700;border: none; border-radius: 10px;height: 30px;width: 40%;}
+        a{text-decoration: none;color: black;}
+      
+        @media (min-width:320px){ 
+         .container{width: 100%; font-size: smaller;}
+         .row{gap: 0;}
+         .logo{margin-top: 130px;margin-left: 10px;}
+         .logo1{width: 150px;height: 150px;}
+         .content{margin: 0;margin-top: 100px;}
+         .content h1{font-size: 16px;}
+         .input1{height: 40px;border-radius: 4px; width: 80%;}
+         .input2{height: 60px;border-radius: 4px; width: 80%;}
+         .homebutton{height: 40px; margin-left: 10px;}
+      }
+      @media (min-width:620px){
+        .container{font-size: larger;}
+        .row{gap: 10px;}
+        .logo{margin-top: 100px;margin-left: 150px;}
+        .logo1{width: 250px;height: 250px;}
+        .content{}
+         .content h1{font-size: 24px;}
+        .input1{height: 35px;border-radius: 10px;}
+        .input2{height: 70px;border-radius: 10px; width: 70%;}
+        .homebutton{height: 35px;margin-left: 30px;}
+         
+      }
+      @media (min-width:1024px){ 
+        .container{width: 60%; font-size: 36px; margin-left: 300px;margin-right: 300px;}
+        .input1{height: 60px;border-radius: 8px; width: 80%;}
+         .input2{height: 100px;border-radius: 8px; width: 80%;}
+         .homebutton{height: 40px; margin-left: 80px;width: 30%;}
+         .logo1{width: 450px;height: 450px;}
+         
+      }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="logo">
+                <img class="logo1" src="./assests/images/MN-removebg-preview (1).png" alt="">
+            </div>
+            <div class="content">
+                <h1>WE CARE FOR YOU!!</h1><br><br>
+                <input class="input1" type="text"required placeholder="   Name"><br>
+               <br> <input class="input1" type="number"required placeholder="   Mobile"><br>
+               <br>
+               <input class="input2" type="text" placeholder="   Message">
+              <br><br>  <button  class="homebutton"><a href="indexpage.html">Submit</a></button>
+            
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
