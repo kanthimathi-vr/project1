@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Port+Lligat+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+        .hlogo{ font-family: "Port Lligat Slab", serif;font-size: 30px;
+         font-weight: 500; margin-top: 20px;}
+        .hsymbol{border-radius: 100%; color: #FDC5C5;
+            text-align: center; background-color: rgb(30, 207, 195);
+            font-size: 16px;padding: 20%;width: 90px;}
+        
+        .blue{background-color: rgb(66, 66, 250);color: white;}
+        
+        .headcontainer{  font-family: "Poppins", sans-serif;}
+        .hrow{background-color: #85def5;font-size: 28px;}
+        .hcol1{display: flex;gap: 30px; margin-left: 10%;padding: 3%;}
+       
+        .search{border-radius: 32px;padding: 18px;
+            border: none;width: 550px;font-size: 24px;}
+        .navbar{display: flex;gap: 50px;margin-left: 250px; padding: 20px; white-space: nowrap;}
+        a{text-decoration: none; color: black;
+             background-color: white; padding: 12px;border-radius: 18px;
+            transition: transform 2s ease; }
+        ul{list-style-type: none;}
+ 
+        a:hover{ border: 2px solid black;transform: scaleX(2); }
+    
+        @media (min-width:320px){
+            .hrow{font-size: 24px;}
+            .hcol1{flex-wrap: wrap; gap: 30px;margin-left: 20px;}
+            .search{padding: 5px;width: 250px;font-size: 20px;border: none;}
+
+            .navbar{flex-direction: column;gap: 26px;
+                margin-left: 20px;padding: 10px;}
+            a{padding: 5px;border-radius: 10px;}
+
+
+           
+        }
+        @media (min-width:620px){
+            .hrow{font-size: 20px;}
+            .hcol1{flex-wrap: nowrap; gap: 8px;margin-left: 2px;}
+            .search{padding: 10px;width: 250px;margin-top: 10px;
+                font-size: 16px;border: none;}
+            .hcard2{margin-top: 14px;white-space: nowrap;}
+            .navbar{flex-direction: row;gap: 10px;
+                margin-left: 50px;padding: 12px;}
+            a{padding: 8px;border-radius: 18px;}
+            a:hover{ border: 3px solid black;transform: scaleX(2); }
+
+           
+        }
+        @media (min-width:1024px){
+            .hrow{background-color:  #85def5;width: 100%; font-size: 26px;}
+            .hcol1{flex-wrap: nowrap; gap: 15px;margin-left: 8px;}
+            .search{padding: 10px;width: 350px;font-size: 20px;border: none;}
+
+            .navbar{flex-direction: row;gap: 10px;
+                margin-left: 80px;padding: 15px;}
+            a{padding: 10px;border-radius: 18px;}
+            a:hover{ border: 4px solid black;transform: scaleX(100); }
+        }
+    
+        @media (min-width:1440px){
+            .hrow{background-color:  #85def5;width: 100%; font-size: 26px;}
+            .hcol1{flex-wrap: nowrap; gap: 40px;margin-left: 16px;}
+            .search{padding: 10px;width: 400px;font-size: 22px;border: none;}
+
+            .navbar{flex-direction: row;gap: 30px;
+                margin-left: 150px;padding: 15px;}
+            a{padding: 12px;border-radius: 18px;}
+            a:hover{ border: 4px solid black;transform: scaleX(100); 
+        }
+        }
+
+
+
+
+        .body{font-family: "Poppins", sans-serif ;}
+        .bcol1{display: flex;background-color: #fdd8d8;}
+
+        .bcard1{width:45%;}
+            .babysleepimg{width: 100%;height: 100%;object-fit: cover;}
+        .bcard2{width: 55%;margin: 2%;text-align: center;padding: 5%;}
+        .newfont{font-family: "MedievalSharp", cursive ;font-size: 40px;letter-spacing: 2px;padding: 5%;}
+        .newfont1{font-family: "MedievalSharp", cursive ;font-size: 32px;padding: 1%;margin-top: 80px;margin-left: 20px;}
+
+        .bcol2{height: 150px;padding: 2%;margin: auto;text-align: center;font-size: 24px;}
+        .blogpara{font-size: 32px;color: gray;text-align: left;padding: 8%;margin-left: 20px;margin-top: 50px;}
+        .blogpara1{font-size: 32px;color: gray;text-align: left;padding: 8%;margin-left: 20px;margin-top: 50px;}
+        .blogpara2{font-size: 22px;color: black; width: 80%; margin-left: 30px;margin-top: 30px;}
+        .bcol31{display: grid;grid-template-columns: repeat(2,1fr);gap: 10px;}
+        .bcard3{display: grid;grid-template-columns: repeat(2,1fr); background-color: #fdd8d8;}
+        .bcardimg{width: 100%;height: 100%;object-fit: cover;}
+
+        .bcard5{transition: all 2s ease;}
+        .bcard5:hover{transform: translateY(10px);}
+
+        
+        .bcard4{text-align: center;font-size: 22px;padding: 2%;}
+
+        .bcol4{height: 200px;background-color: #F0F8FC;}
+        .bcard6{padding: 10%;text-align: center;font-size: 32px;margin-left: 20px;font-weight: 400;}
+        .blogbutton{height: 50px;width: 50%;font-size: 28px; transition: transform 2s ease; margin-left: 150px;background-color: rgb(41, 134, 188);border-radius: 18px;border: none;}
+        .blogbutton:hover{transform: scale(1.2);border: 3px solid;}
+
+
+
+
+        @media (min-width:320px){
+             .bcol1{display: flex;background-color: #fdd8d8;flex-direction: column;}
+        .bcard1{width:100%;margin-left: 20px;}
+            .babysleepimg{width: 90%;height: 100%;object-fit: cover;}
+        .bcard2{width: 98%;margin: 1%;text-align: center;padding: 2%;}
+        .newfont{font-family: "MedievalSharp", cursive ;font-size: 34px;letter-spacing: 2px;padding: 3%;}
+        .newfont1{font-family: "MedievalSharp", cursive ;font-size: 34px;padding: 2%;margin-top: 20px;margin-left: 10px;}
+
+        .bcol2{height: 200px;padding: 1%;margin: auto;text-align: center;font-size: 22px;}
+        .blogpara{font-size: 28px;color: rgb(67, 67, 67);text-align: left;padding: 5%;margin-left: 10px;margin-top: 20px;}
+        .blogpara1{font-size: 30px;color: rgb(52, 50, 50);text-align: left;padding: 5%;margin-left: 10px;margin-top: 20px;}
+        .blogpara2{font-size: 26px;color: black; width: 90%; margin-left: 20px;margin-top: 10px;}
+        .bcol31{display: grid;grid-template-columns: repeat(1,1fr);gap: 2px;}
+        .bcard3{display: grid;grid-template-columns: repeat(1,1fr); background-color: #fdd8d8;}
+        .bcardimg{margin-left: 2px; width: 98%;height: 90%;object-fit: cover;margin-left: 6px;}
+
+        .bcard5{transition: all 2s ease;padding: 4%;}
+        .bcard5:hover{transform: translateY(2px);}
+
+        p{font-size: 22px;width: 90%;}
+        .bcard4{text-align: center;font-size: 20px;padding: 1%;width: 80%;margin-left: 10px;}
+        .bcard4 p{font-size: 28px;margin-left: 30px;}
+        .bcol4{height: 300px;background-color: #F0F8FC;}
+        .bcard6{padding: 10%;text-align: center;font-size: 28px;margin-left: 10px;font-weight: 200;width: 85%;}
+        .lastpara{font-size: 28px;}
+        .blogbutton{height: 50px;width: 50%;font-size: 22px; transition: transform 2s ease; margin-left: 10px;background-color: rgb(41, 134, 188);border-radius: 18px;border: none;}
+        .blogbutton:hover{transform: scale(1.1);border: 2px solid;}
+
+        }
+        @media(min-width:620px){
+            .bcol1{display: flex;background-color: #fdd8d8;flex-direction: row;width: 100%;}
+
+        .bcard1{width:45%;}
+            .babysleepimg{width: 100%;height: 100%;object-fit: cover;}
+        .bcard2{width: 55%;margin: 2%;text-align: center;padding: 5%;}
+        .newfont{font-family: "MedievalSharp", cursive ;font-size: 40px;letter-spacing: 2px;padding: 5%;}
+        .newfont1{font-family: "MedievalSharp", cursive ;font-size: 32px;padding: 1%;margin-top: 80px;margin-left: 20px;}
+
+        .bcol2{height: 150px;padding: 2%;margin: auto;text-align: center;font-size: 24px;}
+        .blogpara{font-size: 32px;color: gray;text-align: left;padding: 8%;margin-left: 20px;margin-top: 50px;}
+        .blogpara1{font-size: 28px; color: black;text-align: center;padding: 0;margin-left: 20px;margin-top: 20px;width: 80%;}
+        .blogpara2{font-size: 22px;color: black; width: 80%; margin-left: 30px;margin-top: 30px;}
+        .bcol31{display: grid;grid-template-columns: repeat(1,1fr);gap: 10px;}
+        .bcard3{display: grid;grid-template-columns: repeat(2,1fr); background-color: #fdd8d8;}
+        .bcardimg{width: 100%;height: 100%;object-fit: cover;}
+
+        .bcard5{transition: all 2s ease;}
+        .bcard5:hover{transform: translateY(10px);}
+
+        
+        .bcard4{text-align: center;font-size: 20px;padding: 2%;white-space: wrap;}
+
+        .bcol4{height: 200px;background-color: #F0F8FC;height: 300px;}
+        .bcard6{padding: 10%; height: 300px; text-align: center;font-size: 32px;margin-left: 20px;font-weight: 400;}
+        .blogbutton{height: 40px;width: 50%;font-size: 28px; transition: transform 2s ease; margin-left: 60px;background-color: rgb(41, 134, 188);border-radius: 18px;border: none;}
+        .blogbutton:hover{transform: scale(1.2);border: 3px solid;}
+
+
+        }
+        @media (min-width:1024px){ 
+            .bcol1{display: flex;background-color: #fdd8d8;flex-direction: row;width: 100%;margin-left: 0px;}
+
+        .bcard1{width:45%;}
+            .babysleepimg{width: 100%;height: 100%;object-fit: cover;}
+        .bcard2{width: 50%;margin: 0%;text-align: center;padding: 5%;}
+        .newfont{font-family: "MedievalSharp", cursive ;font-size: 40px;letter-spacing: 2px;padding: 5%;}
+        .newfont1{font-family: "MedievalSharp", cursive ;font-size: 32px;padding: 1%;margin-top: 80px;margin-left: 20px;}
+
+        .bcol2{height: 200px;padding: 2%;margin: auto;text-align: center;font-size: 24px;}
+        .blogpara{font-size: 32px;color: gray;text-align: left;padding: 8%;margin-left: 20px;margin-top: 50px;}
+        .blogpara1{font-size: 28px; color: black;text-align: center;padding: 0;margin-left: 20px;margin-top: 20px;width: 80%;}
+        .blogpara2{font-size: 22px;color: black; width: 80%; margin-left: 30px;margin-top: 30px;}
+        .bcol31{display: grid;grid-template-columns: repeat(2,1fr);gap: 0px;width: 95%;margin-left: 0px;}
+        .bcard3{display: grid;grid-template-columns: repeat(2,1fr);width: 95%;margin-left: 20px; background-color: #fdd8d8;}
+        .bcardimg{width: 100%;height: 100%;object-fit: cover;}
+
+        .bcard5{transition: all 2s ease;width: 90%;}
+        .bcard5:hover{transform: translateY(10px);}
+
+        
+        .bcard4{text-align: center;font-size: 20px;padding: 2%;white-space: wrap;}
+
+        .bcol4{height: 200px;background-color: #F0F8FC;}
+        .bcard6{padding: 1%;text-align: center;font-size: 32px;margin-left: 20px;font-weight: 400;height: 300px;}
+        .lastpara{font-size: 42px;letter-spacing: 4;white-space: nowrap;}
+        .blogbutton{height: 70px;width: 40%;font-size: 28px; transition: transform 2s ease; margin-left: 150px;background-color: rgb(41, 134, 188);border-radius: 18px;border: none;}
+        .blogbutton:hover{transform: scale(1.2);border: 3px solid;}
+
+        }
+
+      
+        .footcontainer{font-family: "Poppins", sans-serif;font-size: 28px;}
+        .frow{background-color: #85def5;padding: 8%;margin: auto;}
+
+        .fcol1{text-align: center; font-size: 30px;}
+        .fpara{white-space: nowrap;}
+            .fcard2{display: flex;gap: 20px;margin-left: 400px;}
+                .fmail{border-radius: 16px;width: 250px;height: 40px;border: none;}
+                .fbutton{background-color: blue;color: white;padding: 20%;border-radius: 10px;}
+        .fcol2{display: grid; grid-template-columns: repeat(3,1fr); gap: 20px;}
+        .fcard3{padding: 3%;}
+
+
+
+    
+        @media (min-width:320px){
+            .footcontainer{font-size: 16px;}
+            .fcol1{font-size: 18px;}
+            .fpara{white-space: wrap;}
+            .fcard2{flex-direction: column;margin-left: 10px;}
+            .fbutton{padding: 8px;}
+            .fcol2{grid-template-columns: repeat(1,1fr);}
+            .fcard3{width: 80%;}
+         
+
+        }
+        @media (min-width:620px){
+            .footcontainer{font-size: 22px;}
+            .fcol1{font-size: 24px;}
+            .fpara{white-space:nowrap;}
+            .fcard2{ display: flex;gap: 20px;flex-direction: row; margin-left: 50px;}
+            .fbutton{padding: 14px;}
+            .fcol2{grid-template-columns: repeat(2,1fr);}
+         
+
+        }
+        @media (min-width:1024px){
+            .footcontainer{font-size: 26px;}
+            .fcol1{font-size: 28px;}
+            .fpara{white-space: wrap;}
+            .fcard2 {display: flex;gap: 20px; margin-left : 140px;}
+            .fbutton{padding: 16px;}
+            .fcol2{grid-template-columns: repeat(3,1fr);}
+         
+
+        }  
+        @media (min-width:1440px){
+            .footcontainer{font-size: 26px;}
+            .fcol1{font-size: 28px;}
+            .fpara{white-space: wrap;}
+            .fcard2 {display: flex;gap: 20px; margin-left : 350px;}
+            .fmail{border-radius: 16px;width: 350px;height: 50px;border: none;font-size: 28px;}
+            .fbutton{background-color: blue;color: white;padding: 10%;border-radius: 10px;}
+           
+            .fbutton{padding: 16px;font-size: 24px;}
+            .fcol2{grid-template-columns: repeat(3,1fr);}
+         
+
+        } 
+
+    </style>
+</head>
+<body>
+
+    <div class="headcontainer">
+        <div class="hrow">
+            <header>
+                <div class="hcol1">
+                    <div class="hcard1"><p class="hsymbol">Snuggle<br>  Nest♡</p></div>
+                    <div class="hcard1"><p class="hlogo">SnuggleNest</p></div>
+                    <div class="hcard1"><input class="search" type="text" placeholder="Search for category, Brand or Product   ⌕"></div>
+                    <div class="hcard2"><a href="#">Login👤  </a></div>
+                    <div class="hcard2"><a href="#">Sign Up👤</a></div>
+                </div>
+            </header>
+            <nav>
+                <div class="hcol2">
+                    <ul class="navbar">
+                        <li><a href="homepage.html">Home🏠︎ </a></li>
+                        <li><a class="blue" href="blog.html">Blog✍</a></li>
+                        <li><a href="shop.html">Shop🍼</a></li>
+                        <li><a href="cart1.html">Cart🛒</a></li>
+                        <li><a href="aboutus.html">About Us⚠</a></li>
+                        <li><a href="contactus.html">Contact Us✆</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="blogcontainer">
+        <div class="brow">
+            <div class="bcol1">
+                <div class="bcard1"><img  class="babysleepimg" src="./images/baby sleep.png" alt=""></div>
+                <div class="bcard2"><h4 class="newfont">Where comfort meets care,  dreams begin peacefully.</h4><br>
+                    <p class="blogpara">Because your baby's rest deserves the softest embrace.</p></div>
+            </div>
+            <div class="bcol2"><p class="blogpara1">Get the perfect sleep sack for your baby with these tips.</p><p>APRIL 12,2025</p></div>
+            <div class="bcol3">
+                <div class="bcol31">
+
+
+                    <div class="bcard5">
+                        <div class="bcard3">
+                            <div class="bcardimg"><img class="bcardimg" src="./images/baby oil product.png" alt=""></div>
+                            <div class="bcardimg"><h4 class="newfont1">Nourish their skin, soothie their soul.</h4><br>
+                                <p class="blogpara2">Because every gentle touch matters.</p></div>
+
+                        </div><br>
+                        <div class="bcard4">
+                            <p>Discover the best baby massage oils for healthy, happy skin.</p>
+                            <p>MARCH 25, 2025</p></div>
+                    </div>
+
+                    <div class="bcard5">
+                        <div class="bcard3">
+                            <div class="bcardimg"><img class="bcardimg" src="./images/baby eating.png" alt="baby eating"></div>
+                            <div class="bcardimg"><h4 class="newfont1">Tiny bites,big smiles.</h4><br>
+                                <p class="blogpara2">Fuel their growth with love and nutrition.</p></div>
+                            
+                        </div><br>
+                        <div class="bcard4">
+                            <p>Explore wholesome baby food tips to keep every spoonful joyful.</p>
+                            <p>MARCH 20, 2025</p></div>
+                    </div>
+
+                    <div class="bcard5">
+                        <div class="bcard3">
+                            <div class="bcardimg"><img class="bcardimg" src="./images/baby sleeping comfort in cushion.png" alt="baby sleeping"></div>
+                            <div class="bcardimg"><h4 class="newfont1">Wrapped in softness, dreaming in serenity.</h4><br>
+                                <p class="blogpara2">Because  your baby deserves the gentlest rest.</p></div>
+                        </div><br>
+                        <div class="bcard4"><p>Discover cozy bedding picks that promise a night of peaceful dreams.</p><p>MARCH 16, 2025</p></div>
+                    </div>
+
+
+                    <div class="bcard5">
+                        <div class="bcard3">
+                            <div class="bcardimg"><img class="bcardimg" src="./images/baby bathing.png " alt="baby bathing"></div>
+                            <div class="bcardimg"><h4 class="newfont1">Splashes of joy. bubbles of love</h4><br>
+                                <p class="blogpara2">Bath time made fun, safe and soothing.</p></div>
+                        </div><br>
+                        <div class="bcard4"><p>Explore baby bath essentials that fun every splash into a smile.</p><p>MARCH 05, 2025</p></div>
+                    </div>
+                </div>
+            </div>
+        <br><br>
+            <div class="bcol4">
+                <div class="bcard6">
+                    <p class="lastpara">Subscribe to receive updates, access to exclusive deals and more.</p>
+                  <br>  <button class="blogbutton">Subscribe</button>
+                </div>
+            </div>
+        
+        
+        </div>
+    </div>
+
+    <div class="footcontainer">
+        <div class="frow">
+            <div class="fcol1">
+                <div class="fcard1"><p class="fpara">Want to stay updated with the best deal!</p></div>
+                <div class="fcard2">
+                    <div class="fcard21"><input class="fmail" type="text" placeholder="     Enter your email  ✉"></div>
+                    <div class="fcard22"><button class="fbutton">Subscribe</button></div>
+                </div>
+            </div>
+
+            <br>
+            <div class="fcol2">
+                <div class="fcard3"><h5><u>About Us</u></h5><br>
+                    <p>At  <b>SnuggleNest</b>, we believe that every baby deserves
+                        the best start in life. We are a dedicated team of
+                        parents, designers, and baby care experts,
+                        committed to creating high-quality, safe, and
+                        comfortable products for your little ones.</p></div>
+
+                <div class="fcard3"><h5><u>Contact Us</u></h5><br>
+                    <p  > ✉ Email: supp@snugglenest.com</p>
+                    <p> 🕻 Phone: +91 9876543210</p>
+                    <p>   Live Chat Support</p></div>
+
+                <div class="fcard3"><h5><u>Connect with us</u></h5><br>
+                    <img src="./images/Whatsapp.png" class="fimg" alt="">
+                    <img src="./images/Instagram.png" class="fimg" alt="">
+                    <img src="./images/Facebook.png" class="fimg" alt="">
+                    <img src="./images/Twitter.png" class="fimg" alt="">
+                </div>
+            </div>
+            <div class="fcol3"><p style="text-align: center;">Copyright @ 2025 SnuggleNest.com.  All Rights Reserved.*</p></div>
+        </div>
+    </div>
+</body>
+</html>
