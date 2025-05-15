@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry</title>
+     <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=MedievalSharp&display=swap" rel="stylesheet">
+
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;font-family: "Andika", sans-serif;}
+        .enqpara{text-align: center;font-size: 32px;font-weight: 700;}
+        .enqcol{display: grid;grid-template-columns: 30% 70%;margin-left: 1050px;
+          width: 60%;margin:auto; padding: 0%;line-height: 4;font-size: 28px;}
+        .enqinput{width: 50%;height: 45px;margin-top: 45px;}
+        .message{width: 50%;margin-top: 45px;height: 100px;}
+         .submit{margin-left: 150px;height: 60px;background-color: #EE6611; 
+         border: none;color: white;font-size: 28px;
+         margin-top: 40px;width: 100%;} 
+
+           @media (min-width:320px){
+             .enqpara{text-align: center;font-size: 26px;font-weight: 700;}
+        .enqcol{display: grid;grid-template-columns: 44% 60%;margin-left: 10px;
+          width: 98%;margin:auto; padding: 0%;line-height: 4;font-size: 20px;}
+        .enqinput{width: 50%;height: 45px;margin-top: 25px;}
+        .message{width: 50%;margin-top: 25px;height: 100px;}
+         .submit{margin-left: 50px;height: 60px;background-color: #EE6611; 
+         border: none;color: white;font-size: 28px;
+         margin-top: 40px;width: 100%;}
+         label{white-space: nowrap;}
+
+            }
+            @media(min-width:620px){
+               .enqpara{text-align: center;font-size: 26px;font-weight: 700;}
+        .enqcol{display: grid;grid-template-columns: 44% 60%;margin-left: 200px;
+          width: 70%;margin:auto; padding: 0%;line-height: 4;font-size: 20px;}
+        .enqinput{width: 50%;height: 45px;margin-top: 25px;}
+        .message{width: 50%;margin-top: 25px;height: 100px;}
+         .submit{margin-left: 50px;height: 60px;background-color: #EE6611; 
+         border: none;color: white;font-size: 28px;
+         margin-top: 40px;width: 100%;}
+
+            }
+          @media (min-width:1024px){
+              .enqpara{text-align: center;font-size: 26px;font-weight: 700;}
+        .enqcol{display: grid;grid-template-columns: 44% 60%;margin-left: 300px;
+          width: 65%;margin:auto; padding: 0%;line-height: 4;font-size: 20px;}
+        .enqinput{width: 50%;height: 45px;margin-top: 25px;}
+        .message{width: 50%;margin-top: 25px;height: 100px;}
+         .submit{margin-left: 50px;height: 60px;background-color: #EE6611; 
+         border: none;color: white;font-size: 28px;
+         margin-top: 40px;width: 100%;}
+          }
+
+          @media (min-width:1024px){
+              .enqpara{text-align: center;font-size: 26px;font-weight: 700;}
+        .enqcol{display: grid;grid-template-columns: 44% 60%;margin-left: 200px;
+          width: 50%;margin:auto; padding: 0%;line-height: 4;font-size: 20px;}
+        .enqinput{width: 50%;height: 45px;margin-top: 25px;}
+        .message{width: 50%;margin-top: 25px;height: 100px;}
+         .submit{margin-left: 50px;height: 60px;background-color: #EE6611; 
+         border: none;color: white;font-size: 28px;
+         margin-top: 40px;width: 100%;}
+          }
+
+    </style>
+</head>
+<body>
+
+    <div class="enqcontainer">
+        <div class="enqrow">
+            <p class="enqpara">ENQUIRY</p>
+            <div class="enqcol">
+                <label for="text" >Name</label>
+                <input type="text" class="enqinput">
+                  <label for="text" >Phone Number</label>
+                <input type="text" class="enqinput">
+                  <label for="text" >Email ID</label>
+                <input type="text" class="enqinput">
+                  <label for="text" >Message</label>
+                <input type="text" class="message">
+                <button class="submit">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

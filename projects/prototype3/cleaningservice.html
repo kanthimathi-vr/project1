@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cleaning Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=MedievalSharp&display=swap" rel="stylesheet">
+
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;font-family: "Andika", sans-serif;}
+        .navcontainer{background-color: #EE6611;font-family: "Andika", sans-serif;}
+
+        .nrow{display: flex;gap: 100px;margin-left: 50px;}
+
+        .logoimg1{width: 150px;height: 150px;object-fit: cover;}
+        .ncol1{position: relative;}
+        .ncard2{position: absolute;bottom: 10px;left: 8px;font-size: 24px;}
+       .logopara{font-size: 24px;}
+        a{text-decoration: none;color: white;font-size: 30px;white-space: nowrap;}
+        .ncol2, .ncol3,.ncol4,.ncol5,.ncol6{margin-top: 50px;}
+
+
+
+        @media (min-width:320px){
+            .nrow{display: flex;gap: 10px; flex-direction: column; margin-left: 50px;}
+
+.logoimg1{width: 150px;height: 150px;object-fit: cover;}
+.ncol1{position: relative;}
+.ncard2{position: absolute;bottom: 10px;left: 8px;font-size: 24px;}
+.logopara{font-size: 26px;}
+a{text-decoration: none;color: white;font-size: 30px;}
+.ncol2, .ncol3,.ncol4,.ncol5,.ncol6{margin-top: 50px;}
+
+
+}
+@media(min-width:620px){
+    .nrow{display: flex;gap: 30px;margin-left: 10px; flex-wrap: wrap; flex-direction: row;}
+
+.logoimg1{width: 150px;height: 150px;object-fit: cover;}
+.ncol1{position: relative;}
+.ncard2{position: absolute;bottom: 10px;left: 8px;font-size: 24px;}
+.logopara{font-size: 24px;}
+a{text-decoration: none;color: white;font-size: 22px;}
+.ncol2, .ncol3,.ncol4,.ncol5,.ncol6{margin-top: 50px;}
+
+}
+@media (min-width:1024px){
+     .nrow{display: flex;gap: 50px;margin-left: 30px;flex-direction: row;flex-wrap: nowrap;}
+
+.logoimg1{width: 150px;height: 150px;object-fit: cover;}
+.ncol1{position: relative;}
+.ncard2{position: absolute;bottom: 10px;left: 8px;font-size: 24px;}
+.logopara{font-size: 24px;}
+a{text-decoration: none;color: white;font-size: 26px;}
+.ncol2, .ncol3,.ncol4,.ncol5,.ncol6{margin-top: 30px;}
+}
+
+@media (min-width:1440px){
+     .nrow{display: flex;gap: 100px;margin-left: 50px;flex-direction: row;flex-wrap: nowrap;}
+
+.logoimg1{width: 150px;height: 150px;object-fit: cover;}
+.ncol1{position: relative;}
+.ncard2{position: absolute;bottom: 10px;left: 8px;font-size: 24px;}
+.logopara{font-size: 24px;}
+a{text-decoration: none;color: white;font-size: 30px;}
+.ncol2, .ncol3,.ncol4,.ncol5,.ncol6{margin-top: 50px;}
+
+}
+
+
+    .serow{border: 2px solid;padding: 5%;margin-left: 40px;
+        display: grid;grid-template-columns: 25% 75%;
+        gap: 40px;margin: 10%; }
+    .imgfurni{width: 100%;height: 250px;object-fit: cover;margin-top: 30px;}
+    .serpara1{font-size: 24px;font-weight: bold; text-align: center;}
+
+    .scard1{display: flex;gap: 15px;}
+    .scard11{width: 70%;margin-top: 10px;}
+        .serpara2{font-size: 24px;font-weight: 800;}
+    .scard12{width: 30%;margin-top: 20px;}
+        .serpara3{font-size: 24px;font-weight: 800;white-space: nowrap; color: #065858;}
+        .red{font-size: 24px;font-weight: 800;color: #EE6611;}
+    .scard13{display: flex;}
+        .serbut1{background-color: #065858;height: 50px;font-size: 24px;
+        white-space: nowrap;color: white;margin-top: 20px;padding: 2%;
+        width: 80%;}
+    .serpara4{font-size: 24px;width: 90%;}
+    .serpara5{font-size: 20px;font-weight: 600;}
+    .scard3{display: flex;gap: 5px;width: 40%;}
+    .scard31{width: 70%;}
+    .scard32{width: 30%;}
+    ul{list-style-type: none;margin-top: 10px;}
+    li{margin-left: 20px;}
+    .ucimg{width: 80px;height: 80px;margin-top: 20px;
+        border-radius: 100%;object-fit: cover;}
+
+    
+        @media (min-width:320px){
+             .serow{border: 2px solid;padding: 5%;margin-left: 40px;
+        display: grid;grid-template-columns: 100%;
+        gap: 40px;margin: 10%; }
+    .imgfurni{width: 100%;height: 250px;object-fit: cover;margin-top: 30px;}
+    .serpara1{font-size: 24px;font-weight: bold; text-align: center;}
+
+    .scard1{display: flex;gap: 15px;flex-direction: column;}
+    .scard11{width: 100%;margin-top: 10px;}
+        .serpara2{font-size: 24px;font-weight: 800;}
+    .scard12{width: 100%;margin-top: 20px;}
+        .serpara3{font-size: 24px;font-weight: 800;white-space: wrap; color: #065858;}
+        .red{font-size: 24px;font-weight: 800; margin-left: 80px; color: #EE6611;}
+    .scard13{display: flex;flex-direction: column;}
+        .serbut1{background-color: #065858;height: 50px;font-size: 22px;
+        white-space: nowrap;color: white;margin-top: 20px;padding: 2%;
+        width: 80%;margin-left: 20px;}
+        a{font-size: 20px;}
+    .serpara4{font-size: 24px;width: 90%;}
+    .serpara5{font-size: 20px;font-weight: 600;}
+    .scard3{display: flex;gap: 5px;width: 100%;flex-direction: column;}
+    .scard31{width: 100%;}
+    .scard32{width: 100%;margin-left: 50px;}
+    ul{list-style-type: none;margin-top: 10px;}
+    li{margin-left: 20px;}
+    .ucimg{width: 80px;height: 80px;margin-top: 20px;
+        border-radius: 100%;object-fit: cover;}
+
+
+}
+@media(min-width:620px){
+     .serow{border: 2px solid;padding: 5%;margin-left: 40px;
+        display: grid;grid-template-columns: 100%;
+        gap: 40px;margin: 10%; }
+    .imgfurni{width: 100%;height: 250px;object-fit: cover;margin-top: 30px;}
+    .serpara1{font-size: 24px;font-weight: bold; text-align: center;}
+
+    .scard1{display: flex;gap: 15px;flex-direction: row;}
+    .scard11{width: 70%;margin-top: 10px;}
+        .serpara2{font-size: 24px;font-weight: 800;}
+    .scard12{width: 30%;margin-top: 20px;}
+        .serpara3{font-size: 24px;font-weight: 800;white-space: nowrap; color: #065858;}
+        .red{font-size: 24px;font-weight: 800; margin-left: 2px; color: #EE6611;}
+    .scard13{display: flex;flex-direction: row;}
+        .serbut1{background-color: #065858;height: 50px;font-size: 22px;
+        white-space: nowrap;color: white;margin-top: 20px;padding: 2%;
+        width: 80%;}
+        a{font-size: 20px;}
+    .serpara4{font-size: 24px;width: 90%;}
+    .serpara5{font-size: 20px;font-weight: 600;}
+    .scard3{display: flex;gap: 5px;width: 70%;flex-direction: row;}
+    .scard31{width: 70%;}
+    .scard32{width: 30%;}
+    ul{list-style-type: none;margin-top: 10px;}
+    li{margin-left: 20px;}
+    .ucimg{width: 80px;height: 80px;margin-top: 20px;
+        border-radius: 100%;object-fit: cover;}
+
+
+}
+@media (min-width:1024px){
+     .serow{border: 2px solid;padding: 5%;margin-left: 30px;
+        display: grid;grid-template-columns: 25% 75%;
+        gap: 20px;margin: 8%; }
+    .imgfurni{width: 100%;height: 250px;object-fit: cover;margin-top: 30px;}
+    .serpara1{font-size: 24px;font-weight: bold; text-align: center;}
+
+    .scard1{display: flex;gap: 15px;}
+    .scard11{width: 70%;margin-top: 10px;}
+        .serpara2{font-size: 20px;font-weight: 800;white-space: nowrap;}
+    .scard12{width: 30%;margin-top: 20px;}
+        .serpara3{font-size: 20px;font-weight: 800;white-space: nowrap; color: #065858;}
+        .red{font-size: 24px;font-weight: 800;color: #EE6611;}
+    .scard13{display: flex;}
+        .serbut1{background-color: #065858;height: 40px;font-size: 18px;
+        white-space: nowrap;color: white;margin-top: 20px;padding: 2%;
+        width: 70%;}
+        a{font-size: 19px;}
+    .serpara4{font-size: 24px;width: 90%;}
+    .serpara5{font-size: 20px;font-weight: 600;}
+    .scard3{display: flex;gap: 5px;width: 50%;}
+    .scard31{width: 70%;}
+    .scard32{width: 30%;}
+    ul{list-style-type: none;margin-top: 10px;}
+    li{margin-left: 20px;white-space: nowrap;}
+    .ucimg{width: 80px;height: 80px;margin-top: 20px;
+        border-radius: 100%;object-fit: cover;}
+
+}
+@media (min-width:1440px){
+     .serow{border: 2px solid;padding: 5%;margin-left: 40px;
+        display: grid;grid-template-columns: 25% 75%;
+        gap: 40px;margin: 10%; }
+    .imgfurni{width: 100%;height: 250px;object-fit: cover;margin-top: 30px;}
+    .serpara1{font-size: 24px;font-weight: bold; text-align: center;}
+
+    .scard1{display: flex;gap: 15px;}
+    .scard11{width: 70%;margin-top: 10px;}
+        .serpara2{font-size: 24px;font-weight: 800;}
+    .scard12{width: 30%;margin-top: 20px;}
+        .serpara3{font-size: 24px;font-weight: 800;white-space: nowrap; color: #065858;}
+        .red{font-size: 24px;font-weight: 800;color: #EE6611;}
+    .scard13{display: flex;}
+        .serbut1{background-color: #065858;height: 50px;font-size: 24px;
+        white-space: nowrap;color: white;margin-top: 20px;padding: 2%;
+        width: 80%;}
+    .serpara4{font-size: 24px;width: 90%;}
+    .serpara5{font-size: 20px;font-weight: 600;}
+    .scard3{display: flex;gap: 5px;width: 40%;}
+    .scard31{width: 70%;}
+    .scard32{width: 30%;}
+    ul{list-style-type: none;margin-top: 10px;}
+    li{margin-left: 20px;}
+    .ucimg{width: 80px;height: 80px;margin-top: 20px;
+        border-radius: 100%;object-fit: cover;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  .footcontainer{background-color: #EE6611;color: white;}
+        .frow{display: flex;gap: 30px;}
+        .logoimg{object-fit: cover;height: 60px;width: 60px;margin-bottom: 0;}
+         .fimg{width: 15px;height: 15px;object-fit: cover;border-radius: 100%;} 
+         .fpara{margin-left: 5px;   font-family: "Delius Unicase", cursive;}
+         .fcard3{margin-left: 6px;}
+         a{text-decoration: none;color: white;}
+         p{font-size: 22px;}
+
+        @media(min-width:320px){
+            .frow{display: flex;flex-direction: column;font-size: 20px;}
+            .fpara{margin-left: 35px; font-family: "Delius Unicase", cursive;}
+            .logoimg{object-fit: cover;height: 150px;width: 150px;margin-bottom: 0;}
+         .fimg{width: 25px;height: 25px; margin-left: 25px;margin-top: 10px; object-fit: cover;border-radius: 100%;} 
+            .fcard3{margin-left: 6px;}
+            h3{font-size: 22px;white-space: wrap;margin-left: 5px;}
+            p{margin-left: 18px;margin-top: 5px; font-size: 20px;white-space: wrap;}
+
+        }
+        
+        @media(min-width:620px){
+             .frow{display: flex;gap: 40px;flex-direction: row;font-size: 20px;flex-wrap: wrap;}
+             h3{font-size: 24px;}
+         .fpara{margin-left: 5px;   font-family: "Delius Unicase", cursive;}
+         .fcard3{margin-left: 6px;}
+         a{text-decoration: none;color: white;}
+         p{font-size: 22px;}
+        }
+
+        @media(min-width:1020px){
+            .frow{display: flex;gap: 20px;margin-left: 10px;  flex-direction: row;flex-wrap: nowrap;}
+            h3{font-size: 26px;}
+            .logoimg{object-fit: cover;height: 150px;width: 150px;margin-bottom: 0;}
+         .fimg{width: 35px;height: 35px; margin-top: 10px; object-fit: cover;border-radius: 100%;}
+         .fpara{margin-left: 5px;   font-family: "Delius Unicase", cursive;}
+         .fcard3{margin-left: 6px;}
+         a{text-decoration: none;color: white;}
+         p{font-size: 22px;}
+        }
+
+        @media(min-width:1400px){
+            .frow{display: flex;gap: 80px; margin-left: 20px; flex-direction: row;font-size: 32px;flex-wrap: nowrap;}
+        h3{font-size: 32px;}
+        .logoimg{object-fit: cover;height: 180px;width: 180px;margin-bottom: 0;}
+        .fimg{width: 50px;height: 50px;object-fit: cover;border-radius: 100%;margin-top: 15px;}
+         .fpara{margin-left: 5px;   font-family: "Delius Unicase", cursive;}
+         .fcard3{margin-left: 6px;}
+         a{text-decoration: none;color: white;}
+         p{font-size: 28px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="navcontainer">
+        <div class="nrow">
+            <div class="ncol1">
+                <div class="ncard1"><img src="./images/Logo image.png" class="logoimg1" alt=""></div>
+                <div class="ncard2"><p><em><a class="logopara" href="homepage.html">Home clean</a></em></p></div>
+            </div>
+            <div class="ncol2"><a href="homepage.html">HOME</a></div>
+            <div class="ncol3"><a href="about.html">ABOUT US</a></div>
+            <div class="ncol4"><a href="services.html">SERVICES</a></div>
+            <div class="ncol5"><a href="enquiry.html">ENQUIRY</a></div>
+            <div class="ncol6"><a href="login.html">LOG IN</a></div>
+
+        </div>
+    </div>
+    
+
+
+    <div class="servicecontainer">
+        <div class="serow">
+            <div class="scol1">
+                <img src="./images/Home cleaning image.png" class="imgfurni" alt="cleaning">
+                <p class="serpara1">Cleaning</p>
+            </div>
+            <div class="scol2">
+                <div class="scard1">
+                    <div class="scard11">
+                        <p class="serpara2">We Provide Full Home Cleaning Service</p>
+                       <div class="scard13"> <p class="serpara3">Service star at</p> <p class="red">₹100</p><p class="serpara3">per square feet</p></div>
+                    </div>
+                    <div class="scard12"><button class="serbut1"><a href="booknow.html">BOOK NOW</a></button></div>
+                </div>
+                <div class="scard2">
+                    <p class="serpara4">They are essentially "right to your door" services, managed by a company or agency,that help customers with tasks they may not be able or willing to do themselves.</p>
+                </div>
+
+                <div class="scard3">
+                    <div class="scard31">
+                        <p class="serpara5">UC Promise</p>
+                        <ul class="serpara6">
+                            <li># Verified Professionals</li>
+                            <li># Safe Chemicals</li>
+                            <li># Superior Stain Removal</li>
+                        </ul>
+                    </div>
+                    <div class="scard32"><img src="./images/UC Promise image.png" class="ucimg" alt="UCIMG"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    
+    <div class="footcontainer">
+        <div class="frow">
+            <div class="fcol1">
+                <img class="logoimg" src="./images/Logo image.png" alt="">
+                <p class="fpara"><a href="homepage.html">Home clean</a></p>
+                 <div class="fcard3">
+                    <div class="fcard31">
+                        <img src="./images/facebook image.png" class="fimg" alt="">
+                        <img src="./images/instagram icon.png" class="fimg" alt="">
+                        <img src="./images/Youtube icon.png" class="fimg" alt="">
+                     </div>
+                </div>
+            </div>
+
+            <div class="fcol2">
+                <div class="fcard4"><h3>QUICKLINKS</h3></div>
+                <div class="fcard5">
+                    <p><a href="homepage.html">Home</a></p>
+                    <p><a href="about.html">About us</a></p>
+                    <p><a href="services.html">Services</a></p>
+                </div>
+           
+            </div>
+
+
+            <div class="fcol3">
+                <div class="fcard6"><h3>ALL CATEGORIES</h3></div>
+                <div class="fcard7">
+                    <p><a href="cleaning.html">Cleaning</a></p>
+                    <p><a href="renovation.html">Home Renovation</a></p>
+                    <p><a href="plumbing.html">Plumbing</a></p>
+                    <p><a href="electrical.html">Electrical</a></p>
+                    <p><a href="painting.html">Painting</a></p>
+                    <p><a href="moving.html">Moving</a></p>
+                </div>
+           
+            </div>
+
+            <div class="fcol4">
+                <div class="fcard8"><h3>CONTACT US</h3></div>
+                <div class="fcard9">
+                    <p>✆+91 345 24 567 76</p>
+                    <p>✉homecleanservice@gmail.com</p>
+                    <p>🌐www.homeclean.com</p>
+                    <p>📍1/21,New Bus Opposite</p>
+                    <p>  Tirunelveli-627756</p>
+                 
+                </div>
+           
+            </div>
+        </div>
+    </div>
+</body>
+</html>
