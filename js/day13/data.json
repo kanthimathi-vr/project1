@@ -1,0 +1,25 @@
+ [ {
+    "id" : 1,
+    "name" : "barbie",
+    "age" : 30,
+    "city" : "nellai"
+},
+{
+     "id" : 2,
+    "name" : "sophi",
+    "age" : 21,
+    "city" : "chennai"
+},
+{
+     "id" : 3,
+    "name" : "chinnu",
+    "age" : 25,
+    "city" : "madurai"
+},
+{
+     "id" : 4,
+    "name" : "daisy",
+    "age" : 27,
+    "city" : "trichy"
+}
+ ]

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day11 Tasks</title>
+<style>
+    .dark{
+        background:radial-gradient(circle,rgb(223, 13, 48),plum);
+        color:black;border-radius: 20px;
+    }
+    .darkmode{
+        background-color: gray;
+        color: white;
+    }
+    .checkoutbtn{
+        background-color:rgb(18, 18, 177);
+        color: whitesmoke;
+        padding:5px
+    }
+   
+</style>
+</head>
+<body>
+    <h1>Day11 JS Tasks</h1><br>
+
+    <!-- js133 -->
+<button id="themeToggle" class="dark">Change to Dark Mode</button><br><br>
+
+<!-- js134 -->
+ <h2>Shopping Cart</h2>
+<h1>Products</h1>
+<div id="product-list">
+    <!-- Products will be dynamically inserted here -->
+  </div>
+<div class="cart">
+    <table id="cart-table">
+      <thead>
+        <tr style="border: 1px solid black;" >
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- Cart items will be dynamically inserted here -->
+      </tbody>
+    </table>
+    <p><strong>Total: ₹<span id="cart-total">0</span></strong></p>
+  </div>
+
+
+<br><br>
+<!-- js135 -->
+<form id="myform">
+    <label id="fullname">Name:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+    <label id="emai">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+    <button type="submit">Submit</button>
+</form><br><br>
+<!-- js138 -->
+<p>Clicked: <span id="clickcount">0</span> Times </p>
+<button id="click">Click Me!!!</button><br><br>
+
+<!-- js142 -->
+<h2>Survey Form</h2>
+<form id="survey">
+    <label for="name">Name:</label><br>
+    <input type="text" id="full" name="name"><br><br>
+    <label for="age">Age:</label><br>
+    <input type="number" id="aging" name="age"><br><br>
+    <button type="submit">Submit</button>
+</form><br><br>
+<!-- Mini Project1 -->
+<h2>StopWatch</h2>
+<p>Time: <span id="time">00:00:00</span> </p>
+<button type="submit" id="startstop">Start/Stop</button>
+<button type="submit" id="reset">Reset</button><br><br>
+
+<!-- Mini Project2 -->
+<h1>Notes</h1>
+<textarea id="note-input" placeholder="Enter your note"></textarea>
+<button id="save-button">Save Note</button>
+<ul id="notes-list"></ul>
+
+
+    <script src="scriptday11.js"></script>
+
+</body>
+</html>

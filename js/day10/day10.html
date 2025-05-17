@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>day10 tasks</title>
+  <style>
+    body {
+   
+      text-align: center;
+      margin-top: 100px;
+      background: lightpink;
+   
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #333;
+    }
+
+    button {
+      padding: 14px ;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      background-color: #6a11cb;
+      color: #fff;
+      cursor: pointer;
+    
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+      background-color: #2575fc;
+    }
+
+ /* js130 */
+  /* Loader styling */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 1s ease;
+    }
+
+    /* Loader spinner */
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #fff;
+      border-top: 6px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Content styling */
+    #content {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+      color: #333;
+    }
+
+    #content h1 {
+      font-size: 3em;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    #content p {
+      font-size: 1.2em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click Button to change text</h1>
+  <button id="changeTextBtn">Click Me!</button>
+  <br>
+  <!-- js120 -->
+   <h1>Mouse Enter Event</h1>
+  <div class="alert-area" id="hoverBox">
+    Hover Over This Area
+  </div>
+
+
+  <!-- js121 -->
+   
+  <h1>Detect Enter Key</h1>
+
+  <input type="text" id="nameInput" placeholder="Type something and press Enter" />
+  <p>detects user presses enter key</p>
+
+  <!-- js122 -->
+    <div class="container">
+    <h1>Change Background Color</h1>
+    
+    <button id="changeColorBtn">Click Me</button>
+  </div>
+<!-- js123 -->
+ <div class="box">
+    <h2>Toggle Password Visibility</h2>
+    <input type="password" id="passwordField" placeholder="Enter your password" />
+    <br>
+    <button class="toggle-btn" id="togglePassword">Show Password</button>
+  </div>
+<!-- js124 -->
+  <div class="message">Move your mouse around the page to see the coordinates!</div>
+  <div class="coordinates" id="coords">X: 0, Y: 0</div>
+
+<!-- js125 -->
+  <div class="form-container">
+    <h2>Form Submission Example</h2>
+    <form id="myForm">
+      <input type="text" id="name" placeholder="Enter your name" required />
+      <br />
+      <input type="email" id="email" placeholder="Enter your email" required />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+<!-- js126 -->
+  <div class="counter-container">
+    <h2>Click the Button!</h2>
+    <button id="clickBtn">Click Me!</button>
+    <div class="count" id="clickCount">0</div>
+  </div>
+
+  <!-- js127 -->
+  <div class="container">
+    <h1>Click the Button to Make It Disappear</h1>
+    <button id="disappearBtn">Click to Disappear</button>
+  </div>
+
+  <!-- js128 -->
+ <div class="container1">
+    <h1>Click the Button to Toggle Visibility</h1>
+    <button id="toggleBtn1">Show/Hide Content</button>
+    
+    <div id="toggleContent1">
+      <h2>Here's the hidden content!</h2>
+      <p>This content is toggled visible or hidden based on button click.</p>
+    </div>
+  </div>
+  <!-- js129 -->
+    <div class="container2">
+    <h1>Toggle Content</h1>
+    <p>Click the button </p>
+    <button id="toggleBtn2">Show content</button>
+    
+    <div id="toggleContent2">
+      <h2>content to show</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus doloribus dolor voluptatum officia, recusandae praesentium aperiam nostrum incidunt placeat eos.</p>
+        </div>
+  </div>
+
+
+   <div class="container2">
+    <h1>Click to Play bell</h1>
+    <button onclick="playSound()">Play Sound</button>
+    <audio id="bellSound" src="./images/mixkit-happy-bells-notification-937.wav"></audio>
+  </div>
+
+<!-- js130 -->
+
+ <!-- Loader -->
+  <div id="loader1">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="content1">
+    <h1>Welcome!</h1>
+  </div>
+
+<!-- js131 -->
+   <h1>Click the Button to Change the Image</h1>
+  <img id="myImage" src="./images/baby bathing.png" alt="Image">
+  <button onclick="changeImage()">Change Image</button>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script>
+    //js119
+    const btn = document.getElementById("changeTextBtn");
+
+    btn.addEventListener("click", () => {
+      if (btn.textContent === "Click Me!") {
+        btn.textContent = "Thanks for Clicking the button!";
+      } else {
+        btn.textContent = "Click Me!";
+      }
+    });
+
+    //js120
+     const hoverBox = document.getElementById("hoverBox");
+
+    hoverBox.addEventListener("mouseenter", () => {
+      alert("Mouse entered the area!");
+    });
+
+    //js121
+       const inputBox = document.getElementById("nameInput");
+
+    inputBox.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        alert("You pressed Enter! Input: " + inputBox.value);
+      }
+    });
+    //js122
+
+     const btn1 = document.getElementById('changeColorBtn');
+
+    btn1.addEventListener('click', () => {
+      document.body.style.backgroundColor = '#add8e6'; // Light blue
+    });
+    //js123
+
+     const passwordField = document.getElementById("passwordField");
+    const toggleButton = document.getElementById("togglePassword");
+
+    toggleButton.addEventListener("click", () => {
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleButton.textContent = "Hide Password";
+      } else {
+        passwordField.type = "password";
+        toggleButton.textContent = "Show Password";
+      }
+    });
+
+    //js124
+     const coordsElement = document.getElementById('coords');
+
+    document.addEventListener('mousemove', (event) => {
+      const x = event.clientX;  // X coordinate
+      const y = event.clientY;  // Y coordinate
+
+      coordsElement.textContent = `X: ${x}, Y: ${y}`;
+    });
+    //js125
+     // Get the form element
+    const form = document.getElementById('myForm');
+
+    // Add a submit event listener to the form
+    form.addEventListener('submit', function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+
+      // Log the form values to the console (or handle them as needed)
+      console.log(`Name: ${name}`);
+      console.log(`Email: ${email}`);
+    });
+
+    //js126
+     // Get the button and count display element
+    const clickBtn = document.getElementById('clickBtn');
+    const clickCount = document.getElementById('clickCount');
+
+    // Initialize click counter
+    let count = 0;
+
+    // Add click event listener to the button
+    clickBtn.addEventListener('click', () => {
+      count++;  // Increase the count
+      clickCount.textContent = count;  // Update the count on the page
+    });
+
+    //js127
+     const disappearBtn = document.getElementById('disappearBtn');
+
+    // Add click event listener to the button
+    disappearBtn.addEventListener('click', () => {
+      disappearBtn.style.opacity = '0'; // Fade out effect before disappearing
+    });
+
+    //js128
+     // Get the button and the content element
+    const toggleBtn1 = document.getElementById('toggleBtn1');
+    const content1 = document.getElementById('toggleContent1');
+
+    // Add click event listener to the button
+    toggleBtn1.addEventListener('click', () => {
+      // Toggle the visibility of the content
+      content1.style.display = content1.style.display === 'none' ? 'block' : 'none';
+    });
+
+
+    //js129
+        // Get the button and the content element
+    const toggleBtn2 = document.getElementById('toggleBtn2');
+    const content2 = document.getElementById('toggleContent2');
+
+    // Add click event listener to the button
+    toggleBtn2.addEventListener('click', () => {
+      // Toggle the visibility of the content
+      content2.style.display = content2.style.display === 'none' ? 'block' : 'none';
+      toggleBtn2.innerHTML = content2.style.display === 'none' ? 'Show ' : 'Hide';
+    });
+
+     function playSound() {
+      const sound = document.getElementById("bellSound");
+      sound.play();
+    }
+
+    //js130
+     window.addEventListener("load", function () {
+      const loader1 = document.getElementById("loader1");
+      const content1 = document.getElementById("content1");
+
+      // Fade out loader
+      loader1.style.opacity = 0;
+
+      setTimeout(() => {
+        loader1.style.display = "none";
+        content1.style.display = "block";
+        document.body.style.overflow = "auto"; // Re-enable scrolling if needed
+      }, 1000); // matches CSS transition time
+    });
+
+
+
+    //js131
+
+     let current = 1;
+
+    function changeImage() {
+      const image = document.getElementById("myImage");
+
+      if (current === 1) {
+        image.src="C:\Users\mathi\OneDrive\Desktop\front\js\day10\images\baby bathing.png";
+        current = 2;
+      } else {
+        image.src = "C:\Users\mathi\OneDrive\Desktop\front\js\day10\images\baby.png";
+        current = 1;
+      }
+    }
+
+
+    
+  </script>
+
+
+</body>
+</html>
