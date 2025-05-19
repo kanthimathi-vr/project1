@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typing Speed Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    #testText {
+      font-size: 1.5em;
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      white-space: pre-wrap;
+    }
+    #typingInput {
+      width: 80%;
+      padding: 10px;
+      font-size: 1.2em;
+    }
+    #result {
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Typing Speed Test</h1>
+
+  <button onclick="startTest()">Start Test</button>
+  
+  <div id="testText"></div>
+  
+  <input type="text" id="typingInput" placeholder="Start typing the text above" style="display:none;" oninput="checkTyping()">
+  
+  <div id="result"></div>
+
+  <script>
+    let startTime;
+    let endTime;
+    let testText = '';
+    let typedText = '';
+
+    // Function to start the typing test
+    async function startTest() {
+      // Fetch a random text for the user to type
+      const response = await fetch('https://random-word-api.herokuapp.com/word?number=5');
+      const words = await response.json();
+      testText = words.join(' ');
+
+      // Display the text for the user to type
+      document.getElementById('testText').textContent = testText;
+
+      // Show the typing input field
+      const typingInput = document.getElementById('typingInput');
+      typingInput.style.display = 'block';
+      typingInput.value = '';
+
+      // Reset the result and start time
+      document.getElementById('result').textContent = '';
+      startTime = new Date().getTime();
+    }
+
+    // Function to check if the user has typed the text correctly
+    function checkTyping() {
+      const typingInput = document.getElementById('typingInput');
+      typedText = typingInput.value;
+
+      if (typedText === testText) {
+        endTime = new Date().getTime();
+        const timeTaken = (endTime - startTime) / 1000; // in seconds
+        const wordsPerMinute = Math.round((testText.split(' ').length / timeTaken) * 60);
+
+        document.getElementById('result').innerHTML = `Congratulations! You completed the test in ${timeTaken.toFixed(2)} seconds.<br>Typing Speed: ${wordsPerMinute} WPM (Words per minute)`;
+
+        // Hide the input field and show the result
+        document.getElementById('typingInput').style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>

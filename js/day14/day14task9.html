@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Currency Exchange Rates</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    select, button {
+      padding: 10px;
+      font-size: 1em;
+      margin-right: 10px;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Currency Exchange Rates</h1>
+  
+  <label for="base">Base Currency:</label>
+  <select id="base">
+    <option value="USD" selected>USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="JPY">JPY</option>
+    <option value="INR">INR</option>
+  </select>
+  <button onclick="getRates()">Get Rates</button>
+
+  <table id="ratesTable" style="display:none;">
+    <thead>
+      <tr>
+        <th>Currency</th>
+        <th>Rate</th>
+      </tr>
+    </thead>
+    <tbody id="ratesBody"></tbody>
+  </table>
+
+  <script>
+    async function getRates() {
+      const base = document.getElementById('base').value;
+      const url = `https://api.exchangerate.host/latest?base=${base}`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        const ratesBody = document.getElementById('ratesBody');
+        ratesBody.innerHTML = '';
+
+        // Display only top 10 currencies for simplicity
+        const currencies = Object.entries(data.rates).slice(0, 10);
+
+        for (const [currency, rate] of currencies) {
+          const row = `<tr><td>${currency}</td><td>${rate.toFixed(4)}</td></tr>`;
+          ratesBody.insertAdjacentHTML('beforeend', row);
+        }
+
+        document.getElementById('ratesTable').style.display = 'table';
+      } catch (error) {
+        alert('Failed to fetch exchange rates.');
+        console.error('Error:', error);
+      }
+    }
+  </script>
+
+</body>
+</html>

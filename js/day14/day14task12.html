@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Users</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    input {
+      padding: 10px;
+      font-size: 1em;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .no-results {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Search Users</h1>
+  <input type="text" id="searchInput" placeholder="Search by name..." oninput="searchUsers()" />
+
+  <ul id="userList"></ul>
+
+  <script>
+    let users = [];
+
+    // Fetch all users once when page loads
+    async function fetchUsers() {
+      try {
+        const res = await fetch('https://jsonplaceholder.typicode.com/users');
+        users = await res.json();
+        displayUsers(users);
+      } catch (error) {
+        document.getElementById('userList').innerHTML = '<li class="no-results">Failed to load users.</li>';
+        console.error('Error fetching users:', error);
+      }
+    }
+
+    function searchUsers() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const filteredUsers = users.filter(user => user.name.toLowerCase().includes(query));
+      displayUsers(filteredUsers);
+    }
+
+    function displayUsers(usersToShow) {
+      const list = document.getElementById('userList');
+      list.innerHTML = '';
+
+      if (usersToShow.length === 0) {
+        list.innerHTML = '<li class="no-results">No users found.</li>';
+        return;
+      }
+
+      usersToShow.forEach(user => {
+        const li = document.createElement('li');
+        li.textContent = `${user.name} (${user.email})`;
+        list.appendChild(li);
+      });
+    }
+
+    // Load users on page load
+    fetchUsers();
+  </script>
+
+</body>
+</html>

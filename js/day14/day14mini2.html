@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real-time Air Quality Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 1em;
+      margin-top: 10px;
+    }
+    #result {
+      margin-top: 20px;
+    }
+    .air-quality {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Real-time Air Quality Checker</h1>
+  <label for="city">Enter City Name:</label>
+  <input type="text" id="city" placeholder="e.g., New York" />
+  <button onclick="checkAirQuality()">Check Air Quality</button>
+
+  <div id="result"></div>
+
+  <script>
+    const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
+
+    async function checkAirQuality() {
+      const city = document.getElementById('city').value;
+      const resultDiv = document.getElementById('result');
+      
+      if (!city) {
+        resultDiv.innerHTML = 'Please enter a city name.';
+        return;
+      }
+
+      try {
+        // Fetch the latitude and longitude of the city
+        const geoResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
+        const geoData = await geoResponse.json();
+
+        if (geoData.cod !== 200) {
+          resultDiv.innerHTML = 'City not found, please try again.';
+          return;
+        }
+
+        const lat = geoData.coord.lat;
+        const lon = geoData.coord.lon;
+
+        // Fetch air quality data based on latitude and longitude
+        const airResponse = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`);
+        const airData = await airResponse.json();
+
+        displayAirQuality(airData);
+
+      } catch (error) {
+        console.error('Error:', error);
+        resultDiv.innerHTML = 'Error fetching air quality data.';
+      }
+    }
+
+    function displayAirQuality(data) {
+      const resultDiv = document.getElementById('result');
+      const aqi = data.list[0].main.aqi;
+      let aqiDescription = '';
+
+      // Define the air quality index levels
+      switch (aqi) {
+        case 1:
+          aqiDescription = 'Good';
+          break;
+        case 2:
+          aqiDescription = 'Fair';
+          break;
+        case 3:
+          aqiDescription = 'Moderate';
+          break;
+        case 4:
+          aqiDescription = 'Poor';
+          break;
+        case 5:
+          aqiDescription = 'Very Poor';
+          break;
+        default:
+          aqiDescription = 'Unknown';
+      }
+
+      resultDiv.innerHTML = `
+        <div class="air-quality">
+          <p><strong>Air Quality Index (AQI):</strong> ${aqi}</p>
+          <p><strong>Status:</strong> ${aqiDescription}</p>
+          <p>The air quality is categorized as <strong>${aqiDescription}</strong>. You may want to consider this before going outdoors.</p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Profile Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      font-size: 1em;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    #profile {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      display: inline-block;
+      text-align: left;
+      max-width: 400px;
+    }
+    img {
+      width: 100px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <h1>GitHub User Profile</h1>
+  <input type="text" id="username" placeholder="Enter GitHub username" />
+  <button onclick="getGitHubProfile()">Fetch Profile</button>
+
+  <div id="profile"></div>
+
+  <script>
+    async function getGitHubProfile() {
+      const username = document.getElementById('username').value;
+      const url = `https://api.github.com/users/${username}`;
+
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error('User not found');
+        }
+
+        const user = await response.json();
+        document.getElementById('profile').innerHTML = `
+          <img src="${user.avatar_url}" alt="${user.login}" />
+          <h2>${user.name || user.login}</h2>
+          <p><strong>Username:</strong> ${user.login}</p>
+          <p><strong>Bio:</strong> ${user.bio || 'No bio available'}</p>
+          <p><strong>Public Repos:</strong> ${user.public_repos}</p>
+          <p><strong>Followers:</strong> ${user.followers}</p>
+          <p><a href="${user.html_url}" target="_blank">View Profile on GitHub</a></p>
+        `;
+      } catch (error) {
+        document.getElementById('profile').innerHTML = `<p style="color:red;">${error.message}</p>`;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagination with Fetch API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    .post {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Paginated Posts</h1>
+  <div id="posts"></div>
+  <div class="pagination">
+    <button onclick="changePage(-1)">Previous</button>
+    <span id="pageNumber">Page 1</span>
+    <button onclick="changePage(1)">Next</button>
+  </div>
+
+  <script>
+    const postsPerPage = 3;
+    let currentPage = 1;
+
+    async function fetchPosts(page) {
+      const start = (page - 1) * postsPerPage;
+      const url = `https://jsonplaceholder.typicode.com/posts?_start=${start}&_limit=${postsPerPage}`;
+
+      try {
+        const response = await fetch(url);
+        const posts = await response.json();
+        displayPosts(posts);
+        document.getElementById('pageNumber').textContent = `Page ${page}`;
+      } catch (error) {
+        document.getElementById('posts').innerHTML = '<p>Error fetching posts.</p>';
+        console.error('Fetch error:', error);
+      }
+    }
+
+    function displayPosts(posts) {
+      const container = document.getElementById('posts');
+      container.innerHTML = '';
+      posts.forEach(post => {
+        const div = document.createElement('div');
+        div.className = 'post';
+        div.innerHTML = `<h3>${post.title}</h3><p>${post.body}</p>`;
+        container.appendChild(div);
+      });
+    }
+
+    function changePage(direction) {
+      const totalPages = 10; // JSONPlaceholder has 100 posts, 10 per page
+      const nextPage = currentPage + direction;
+
+      if (nextPage >= 1 && nextPage <= totalPages) {
+        currentPage = nextPage;
+        fetchPosts(currentPage);
+      }
+    }
+
+    // Initial load
+    fetchPosts(currentPage);
+  </script>
+
+</body>
+</html>
