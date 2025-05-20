@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 task13</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+
+    </style>
+</head>
+<body>
+    <h1>real world error logging system using localstorage</h1>
+    
+
+
+
+    <script >
+        //real world error logging system using localstorage
+      
+       try{
+        let sys = localStorage.getItem("errorlogs");
+        console.log(sys);
+        
+
+       }catch{
+        console.error("error logging system");
+        
+       }
+        
+    </script>
+</body>
+</html>

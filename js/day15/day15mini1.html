@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 Mini Project1</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{background-color: lightpink;}
+        h1{margin: auto;text-align: center;}
+
+.contact-form {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+         .contact-form input,
+        .contact-form textarea {
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+          .contact-form button {
+            background-color: #007acc;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+    <h1>User Registration form with validation</h1>
+    
+<form  class="contact-form" onsubmit="return validateForm();">
+    <input type="text" id="name" placeholder="Enter name here"><br>
+      <input type="email" id="email" placeholder="Enter email here"><br>
+      <textarea name="" id="message" rows="5" cols="20" placeholder="Message here"></textarea>
+    <button>Submit</button>
+    </form>
+</div>
+
+
+    <script >
+        try{
+         function validateForm() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !message) {
+            alert("Please fill in all fields.");
+            return false;
+        }
+
+        alert("Message sent successfully!");
+        return true;
+    }
+
+    function validateUsername(name) {
+        if (name.length < 5) {
+            return "username must be at least 5 characters long";
+        } else {
+            return "Valid username.";
+        }
+    }
+    console.log(name);
+
+
+    function validateEmail(email) {
+        return email.includes("@") && email.endswith(".com");
+    }
+}catch{
+    console.error(error);
+    
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 Mini Project2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Api Response logger</h1>
+
+    <div id="root"></div>
+
+
+    <script>
+        //API response logger
+        try{
+        async function getdata() {
+            let response = await fetch('https://jsonplaceholder.typicode.com/users');
+            let data = await response.json();
+          
+
+            console.log(data);
+         
+            
+            profiledisplay(data);
+        }
+        getdata();
+
+        function profiledisplay(value) {
+            let root = document.getElementById('root');
+                  
+            value.map((value) => {
+            const li = document.createElement('li');
+                li.innerText = value.name;
+                root.append(li);
+            }
+            )
+        }}
+        catch (error) {
+        alert('Failed to load data');
+        console.error('Error:', error);
+        let errmsg = localStorage.setItem(error);
+        console.log(errmsg);
+        
+      }
+
+    </script>
+</body>
+
+</html>

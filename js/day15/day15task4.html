@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 task4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>custom error when user input invalid age</h1>
+
+
+
+
+    <script>
+        //custom error
+
+
+        let age = prompt("enter age:");
+        function checkage(age) {
+            if (age < 18) {
+                throw new Error("age must be 18 or above");
+
+            }
+            return "access granted.";
+        }
+        try {
+            console.log(checkage(age));
+
+
+
+        } catch (error) {
+            console.log(error);
+
+        }
+        console.log("hello");
+
+    </script>
+</body>
+
+</html>

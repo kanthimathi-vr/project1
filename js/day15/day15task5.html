@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 task5</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+
+    </style>
+</head>
+<body>
+    <h1>function that throws a type error</h1>
+    
+
+
+
+    <script >
+        //type error
+        function isnum(x){
+            if(x != Number(x)){
+              null.toUppercase();
+                 throw new Error("this is not a number");
+              
+
+            }
+            else{console.log("it's a number")};
+        }
+    
+        try {
+          
+             isnum("a");
+           
+        } catch (error) {
+            console.log(error);
+            
+        }
+        console.log("hello");
+        
+    </script>
+</body>
+</html>

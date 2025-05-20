@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 task6</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+
+    </style>
+</head>
+<body>
+    <h1>nested try catch error</h1>
+    
+
+
+
+    <script >
+        //nested try catch error
+      
+        try {
+            try{
+                throw "error";
+            }catch(error){console.log(error);
+            }
+            
+        } catch (error) {
+           
+             throw "error";
+        }
+        finally{
+            console.log("code executed");
+            
+        }
+        console.log("hello");
+        
+    </script>
+</body>
+</html>

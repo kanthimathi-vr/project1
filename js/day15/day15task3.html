@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 task3</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+
+    </style>
+</head>
+<body>
+    <h1>Division by zero error</h1>
+    
+
+
+
+    <script >
+        //Division by zero error
+      function divide(a,b){
+        if (b === 0){
+            throw new Error("can't divide by zero");
+          
+        }
+        return a/b;
+      }
+        try {
+           console.log(divide(5,0));
+           
+        }
+         catch (error) {
+            console.log(error);
+            
+        }
+        console.log("hello");
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15 task10</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+
+    </style>
+</head>
+<body>
+    <h1>API call failure</h1>
+    
+
+
+
+    <script >
+        //API call failure
+      async function fetchData() {
+        try{
+            let response = await fetch("https://jsonplaceholde.typicode.com/users");
+            if(!response.ok){
+                throw new Error("API error: Unable to fetch data!");
+                
+            }
+            let data = await response.json();
+            console.log(data);
+            
+        }
+        catch(error){
+                console.error(error.message);}
+                        
+      }
+      fetchData();
+       
+       console.log("asynchronous function doesn't wait to  execute");
+       
+    
+        
+    </script>
+</body>
+</html>
