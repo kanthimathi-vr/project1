@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanthimathi | Full Stack Python Developer</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+
+
+        .main-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgb(162, 226, 247);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #007acc;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .logo span {
+            color: #007acc;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #007acc;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #007acc;
+            transition: width 0.3s;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+
+        .home-section {
+            height: 100vh;
+            background: linear-gradient(to right, #e0f7fa, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .home-content {
+            max-width: 800px;
+        }
+
+        .home-content h1 {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .home-content h1 span {
+            color: #007acc;
+        }
+
+        .home-content h2 {
+            font-size: 28px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .home-content p {
+            font-size: 18px;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .home-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-primary {
+            background-color: #007acc;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #005f99;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #007acc;
+            border: 2px solid #007acc;
+        }
+
+        .btn-secondary:hover {
+            background-color: #007acc;
+            color: white;
+        }
+
+
+        #about {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+            text-align: left;
+            width: 60%;
+            margin: auto;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        #about h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: #2c3e50;
+        }
+
+        #about p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        #about strong {
+            color: #007acc;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+
+        }
+
+        .skill-group {
+            background: #f5f5f5;
+            padding: 20px;
+            border-left: 4px solid #007acc;
+            flex: 1 1 300px;
+            border-radius: 8px;
+        }
+
+        .skill-group h3 {
+            margin-top: 0;
+            color: #007acc;
+        }
+
+        .skill-group ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-group li {
+            padding: 5px 0;
+        }
+
+        /* technical skills */
+
+        #skills {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skillimg {
+            width: 50px;
+            height: 50px;
+            align-items: center;
+            margin: auto;
+            margin-left: 25px;
+        }
+
+        .col1 {
+            width: 20%;
+        }
+
+        .col2 {
+            width: 80%;
+        }
+            @media (min-width:320px){.skillimg{margin-left: 2px;}
+
+}
+@media(min-width:620px){
+.skillimg{margin-left: 10px;}
+}
+@media (min-width:1024px){
+    .skillimg{margin-left: 20px;}
+}
+
+        .skill h3 {
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .skill-bar {
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 25px;
+        }
+
+        .skill-level {
+            background-color: #007acc;
+            color: white;
+            text-align: right;
+            padding-right: 10px;
+            height: 100%;
+            line-height: 25px;
+            border-radius: 20px;
+            animation: fillSkill 1.5s ease-in-out;
+        }
+
+        @keyframes fillSkill {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: inherit;
+            }
+        }
+
+
+
+        .projects-section {
+            background: #f4faff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .projects-section h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 122, 204, 0.2);
+        }
+
+        .project-card h3 {
+            color: #007acc;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tech-tags span {
+            background-color: #e3f2fd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #007acc;
+            font-weight: 500;
+        }
+
+        .project-links a {
+            text-decoration: none;
+            color: #fff;
+            background: #007acc;
+            padding: 8px 16px;
+            border-radius: 5px;
+            margin: 5px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .project-links a:hover {
+            background: #005f99;
+        }
+
+
+        .contact-section {
+            background: #f0f9ff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 32px;
+            color: #007acc;
+            margin-bottom: 15px;
+        }
+
+        .contact-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #007acc;
+            box-shadow: 0 0 5px rgba(0, 122, 204, 0.4);
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: #007acc;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #005f99;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #007acc;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: #005f99;
+        }
+
+
+
+
+        .footer {
+            background-color: #007acc;
+            color: white;
+            text-align: center;
+            padding: 40px 20px 20px;
+            font-size: 16px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #cceeff;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #cceeff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="indexcontainer">
+        <div class="indexrow">
+            <header class="main-header">
+                <div class="logo">Kanthimathi<span>.</span></div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+        </div>
+    </div>
+    <div class="maincontainer">
+        <section id="home" class="home-section">
+            <div class="home-content">
+                <!-- <img src="" alt="photo" style="border-radius: 100%; height: 100px;width: 100px; object-fit: cover;"> -->
+                <h1>Hi, I'm <span>Kanthimathi</span></h1>
+                <h2 class="typing">Full Stack Developer</h2>
+                <p>I build user-friendly, efficient, and scalable web applications from front to back. Let’s make the
+                    web better together!</p>
+
+                <div class="home-buttons">
+                    <a href="#projects" class="btn-primary">View Projects</a>
+                    <a href="https://github.com/kanthimathi-vr/project1/blob/main/Kanthimathi.pdf" class="btn-secondary"
+                        target="_blank" download>Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>👩‍💻About Me</h2>
+            <p>
+                Hi, I'm <strong>Kanthimathi</strong> — a budding <strong>Full Stack Python Developer</strong> with a
+                passion for building web applications that are both functional and user-friendly. Though I’m just
+                starting out professionally, I’ve already built several projects that showcase my ability to develop
+                full-stack applications from the ground up.
+            </p>
+            <p>
+                I specialize in Python-based web development, using technologies like <strong>Python, Django,
+                    Flask</strong> on the backend, and <strong>HTML, CSS, JavaScript</strong> on the frontend. I'm also
+                familiar with working with <strong>SQLite, PostgreSQL</strong>, and version control systems like
+                <strong>Git</strong>.
+            </p>
+            <p>
+                I'm constantly learning and improving my skills by building projects, contributing to open-source, and
+                staying up to date with industry trends. My goal is to write clean, maintainable code and create
+                solutions that make a difference.
+            </p>
+            <p>
+                I’m excited to begin my career in tech and eager to join a team where I can contribute, learn from
+                experienced developers, and grow as a full-stack professional.
+            </p>
+        </section>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+
+                <div class="skill-group">
+                    <h3>👩‍💻 Frontend</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3 / Flexbox / Grid</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Bootstrap / Tailwind CSS</li>
+                        <li>Basic React (learning in progress)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <h3>🧠 Backend</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>Flask</li>
+                        <li>RESTful API development</li>
+                        <li>Authentication (JWT, sessions)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <h3>🗃️ Database & ORM</h3>
+                    <ul>
+                        <li>SQLite</li>
+                        <li>PostgreSQL</li>
+                        <li>Django ORM</li>
+                        <li>SQL basics</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <h3>🛠️ Tools & Platforms</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>VS Code</li>
+                        <li>Postman</li>
+                        <li>Heroku / Render (for deployment)</li>
+                        <li>Basic Linux commands</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <h3>📚 Currently Learning</h3>
+                    <ul>
+                        <li>React.js</li>
+                        <li>Docker basics</li>
+                        <li>Unit testing (PyTest, Django test)</li>
+                    </ul>
+                </div>
+            </div>
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <div class="card" style="display: flex;gap: 20px;">
+                    <div class="col1"><img src="./images/python1.jpg" class="skillimg" alt=""></div>
+                    <div class="col2">
+                        <div class="skill">
+                            <h3>Python</h3>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%;">90%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="card" style="display: flex;gap: 20px;">
+                    <div class="col1"><img src="./images/django.jpg" class="skillimg" alt=""></div>
+                    <div class="col2">
+                <div class="skill">
+                    <h3>Django</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+             <div class="card" style="display: flex;gap: 20px;">
+                    <div class="col1"><img src="./images/html.jpg" class="skillimg" alt=""></div>
+                    <div class="col2">
+                <div class="skill">
+                    <h3>HTML/CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;">95%</div>
+                    </div>
+                </div></div></div>
+
+                
+             <div class="card" style="display: flex;gap: 20px;">
+                    <div class="col1"><img src="./images/js1.jpg" class="skillimg" alt=""></div>
+                    <div class="col2">
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%;">75%</div>
+                    </div>
+                </div></div></div>
+
+                  <div class="card" style="display: flex;gap: 20px;">
+                    <div class="col1"><img src="./images/sql.jpg" class="skillimg" alt=""></div>
+                    <div class="col2">
+                <div class="skill">
+                    <h3>PostgreSQL</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 70%;">70%</div>
+                    </div>
+                </div></div></div>
+
+                  <div class="card" style="display: flex;gap: 20px;">
+                    <div class="col1"><img src="./images/git.jpg" class="skillimg" alt=""></div>
+                    <div class="col2">
+                <div class="skill">
+                    <h3>Git & GitHub</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%;">80%</div>
+                    </div>
+                </div></div></div>
+
+            </section>
+
+
+        </section>
+        <section id="projects" class="projects-section">
+            <h2>🚀 My Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>A personal website to showcase my skills, resume, and projects. Built with HTML, CSS, and
+                        JavaScript.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/kanthimathi/portfolio" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+                <!-- Prototype1 -->
+                <div class="project-card">
+                    <h3>Organic Products Website</h3>
+                    <p>E-commerce website that showcases products list,add to cart,user friendly and interactive
+                        platform for easy assistance.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/kanthimathi-vr/project1/tree/main/projects/prototype1"
+                            target="_blank">GitHub</a>
+                        <a href="https://kanthimathi-vr.github.io/project1/projects/prototype1/Homepage.html"
+                            target="_blank">Live Demo</a>
+                    </div>
+                </div>
+                <!-- Prototype2 -->
+                <div class="project-card">
+                    <h3>Baby Products Website</h3>
+                    <p>E-commerce website that showcases products list,add to cart,user friendly and interactive
+                        platform for easy assistance.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/kanthimathi-vr/project1/tree/main/projects/prototype2"
+                            target="_blank">GitHub</a>
+                        <a href="https://kanthimathi-vr.github.io/project1/projects/prototype2/homepagemain.html"
+                            target="_blank">Live Demo</a>
+                    </div>
+                </div>
+                <!-- prorype3 -->
+                <div class="project-card">
+                    <h3>Cleaning Services Website</h3>
+                    <p>E-commerce website that showcases products list,add to cart,user friendly and interactive
+                        platform for easy assistance.</p>
+                    <div class="tech-tags">
+                        <span>HTML</span><span>CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/kanthimathi-vr/project1/tree/main/projects/prototype3"
+                            target="_blank">GitHub</a>
+                        <a href="https://kanthimathi-vr.github.io/project1/projects/prototype3/homepage.html"
+                            target="_blank">Live Demo</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>📬 Get In Touch</h2>
+            <p>If you’d like to collaborate or just say hello, feel free to drop a message below or connect via social
+                platforms.</p>
+
+            <form class="contact-form" onsubmit="return validateForm();">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="contact-links">
+                <a href="mailto:mathi.v.r.1990@gmail.com">📧 Email</a>
+                <a href="https://github.com/kanthimathi-vr/project1" target="_blank">🐙 GitHub</a>
+                <a href="https://linkedin.com/in/kanthimathi" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </section>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Kanthimathi. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/kanthimathi-vr/project1" target="_blank">🐙</a>
+                <a href="mailto:mathi.v.r.1990@gmail.com">📧</a>
+                <a href="https://linkedin.com/in/kanthimathi" target="_blank">🔗</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+<!-- header -->
+
+<script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 100;
+            if (scrollY >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
+
+
+<!-- about -->
+
+<script>
+    const words = ["Full Stack Developer", "JavaScript Enthusiast", "Problem Solver", "Tech Explorer"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    const typingElement = document.querySelector(".typing");
+    let isDeleting = false;
+
+    function typeEffect() {
+        const currentWord = words[wordIndex];
+        const currentChar = currentWord.substring(0, charIndex);
+
+        typingElement.textContent = currentChar;
+
+        if (!isDeleting && charIndex < currentWord.length) {
+            charIndex++;
+            setTimeout(typeEffect, 100);
+        } else if (isDeleting && charIndex > 0) {
+            charIndex--;
+            setTimeout(typeEffect, 50);
+        } else {
+            isDeleting = !isDeleting;
+            wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+            setTimeout(typeEffect, 1000);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", typeEffect);
+</script>
+
+<!-- contact section -->
+<script>
+    function validateForm() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !message) {
+            alert("Please fill in all fields.");
+            return false;
+        }
+
+        alert("Message sent successfully!");
+        return true;
+    }
+
+    function validateUsername(name) {
+        if (name.length < 5) {
+            return "username must be at least 5 characters long";
+        } else {
+            return "Valid username.";
+        }
+    }
+    console.log(name);
+
+
+    function validateEmail(email) {
+        return email.includes("@") && email.endswith(".com");
+    }
+</script>
+
+
+</html>
