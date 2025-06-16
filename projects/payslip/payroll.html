@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+    <title>Payroll Details</title>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "quicksand", sans-serif;
+        }
+
+           a{text-decoration: none;color: white;}
+        .detailrow {
+            display: flex;
+        }
+
+        li{color: white;font-size: 22px;}
+        ul{list-style-type: none;}
+        .detailcol1 {
+            width: 15%;
+            background-color: #455A64;
+            padding: 3px;
+            line-height: 2.0;
+        }
+
+        .active {
+            color: #F8CC14
+        }
+
+        .detailcol2 {
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .detailcard1 {
+            display: flex;
+            gap: 2px;
+            padding: 2%;
+            margin: 10px;margin-left: 10px;
+        }
+
+        .card11 {
+            width: 55%;
+            font-size: 26px;font-weight: 600;
+        }
+
+        .card12 {
+            width: 20%;
+
+        }
+
+        .card13 {
+            width: 20%;
+        }
+
+        .btn1 {
+            width: 60%;
+            background-color: black;
+            color: white;
+            border-radius: 8px;
+            height: 40px;padding: 2px;
+            font-weight: 600;
+            text-align: center;
+            justify-content: center;
+            font-size: 18px;
+            
+          
+        }
+
+        .btn2 {
+            width: 60%;
+            background-color: #F8CC14;
+            border-radius: 8px;
+             height: 40px;padding: 2px;
+            font-weight: 600;
+            border: none;font-size: 18px;
+        }
+
+        .detailcard2 {
+            background-color: #FEEBA8;
+            margin: 25px;
+        }
+
+        .gridcontainer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            width: 90%;margin-left: 20px;
+
+            
+        }
+
+        .item1{margin-top: 10px;}
+        label{font-size: 22px;font-weight: 600;}
+        input{height: 40px;width: 100%; border: 1px solid;border-radius: 5px; background-color: #FEEBA8 ;}
+
+        .gridcontainer2{display: flex;gap: 40px; margin-top: 30px;margin-left: 300px; width: 40%;align-items: center;justify-content: center;}
+
+        .btnsubmit{height: 40px; font-size: 20px; background-color: #F8CC14;border: none;border-radius: 10px;padding: 10px;font-weight: 600;}
+        .btncancel{height: 40px; font-size: 20px; background-color: #455A64;border-radius: 10px;border: none;padding: 10px;color: white;font-weight: 600;}
+
+
+
+          @media (min-width:320px){
+            .detailrow{flex-direction: column;gap: 20px;}
+            .detailcol1{width: 98%;}
+            .detailcol2{width: 98%;}
+            .card11, .card12, .card13{width: 80%;}
+            .btn2, .btn1{font-size: 18px;width: 100%;padding: 3%;}
+            .detailcard1{flex-direction: column;margin-left: 30px;gap: 20px;}
+
+            .gridcontainer{grid-template-columns: repeat(1,1fr);}
+            .gridcontainer2{flex-direction: column;margin-left: 60px;gap: 20px;}
+            .btnsubmit{white-space: nowrap;}
+            
+}
+@media(min-width:720px){
+  
+    .detailcontainer{font-size: 28px;}
+    .detailcard1{flex-direction: row;}
+    .btn1, .btn2{width: 70%;}
+    .gridcontainer{grid-template-columns: repeat(2,1fr);font-size: 24px;}
+    .gridcontainer2{flex-direction: row;margin-left: 150px;}
+}
+@media (min-width:1024px){
+    .detailrow{flex-direction: row;}
+    .detailcol1{width: 25%;}
+    .gridcontainer{grid-template-columns: repeat(3,1fr);}
+}
+    </style>
+</head>
+
+<body>
+    <div class="detailcontainer">
+        <div class="detailrow">
+            <div class="detailcol1">
+                <aside>
+                    <ul>
+                        <li><a href="home.html">🎨Overview</a></li>
+                        <li class="active"><a  class="active" href="payroll.html">📜Payroll</a></li>
+                        <li><a href="payslip.html">📜Payslip</a></li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="detailcol2">
+                <div class="detailcard1">
+                    <div class="card11">
+                        <p>Payroll Details</p>
+                    </div>
+                    <div class="card12">
+                        <button class="btn1">This Month</button>
+                    </div>
+                    <div class="card13"><button class="btn2">Download</button></div>
+                </div>
+
+
+ 
+
+                <div class="detailcard2">
+
+                    
+                        <form id="payroll_form1">
+                                 <div class="gridcontainer">
+                            <div class="item1">
+                                <label>Employee Name </label><br><input type="text" id="name1" required><br>
+                            </div>
+                            <div class="item1">
+                                <label>Employee Roll </label><br><input type="text" id="emp_roll1" required><br>
+                            </div>
+                            <div class="item1">
+                                <label>Employee ID </label><br><input type="number" id="id_number1" required><br>
+                            </div>
+                            <div class="item1">
+                                <label>Date </label><br><input type="date" id="date1" required><br>
+                            </div>
+                            <div class="item1">
+                                <label>Basic Salary </label><br><input type="number" id="salary1" required><br>
+                            </div>
+                            <div class="item1">
+                                <label>Total Salary </label><br><input type="number" id="total_salary1" ><br>
+                            </div>
+                            <div class="item1">
+                                <label>Number of Working Days </label><br><input type="number" id="working_days1" required><br>
+                            </div>
+                            <div class="item1">
+                                <label>Total Present Days </label><br><input type="number" id="present_days1" required><br>
+                            </div>
+                            <div class="item1">
+                                <label>Total Leave Days </label><br><input type="number" id="leave1" required><br>
+                            </div>
+                            <div class="item1">
+                                <label>Additions </label><br><input type="number" id="add1" ><br>
+                            </div>
+                            <div class="item1">
+                                <label>Deductions </label><br><input type="number" id="deductions1" ><br>
+                            </div>
+                            </div>
+                            <div class="gridcontainer2">
+                                <button class="btnsubmit" type="submit">Submit Payroll</button>
+                                <button class="btncancel" type="">Cancel</button>
+                            </div>
+                        </form>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div> 
+
+
+
+    <!-- <form id="payroll-form">
+    <label>Employee Name: <input type="text" id="name" required></label><br>
+    <label>Employee ID: <input type="text" id="id" required></label><br>
+    <label>Basic Salary: <input type="number" id="salary" required></label><br>
+    <label>Deductions: <input type="number" id="deductions" required></label><br><br>
+    <button type="submit">Generate Payslip</button>
+  </form> -->
+
+    <script>
+    document.getElementById('payroll_form1').onsubmit = function(e) {
+      e.preventDefault();
+      const data = {
+        name: document.getElementById('name1').value,
+        id: Number(document.getElementById('id_number1').value),
+        role: document.getElementById('emp_roll1').value,
+        date: document.getElementById('date1').value,
+        salary: Number(document.getElementById('salary1').value),
+        additions: Number(document.getElementById('add1').value),
+        deductions: Number(document.getElementById('deductions1').value),
+      };
+      localStorage.setItem('payslipData1', JSON.stringify(data));
+      window.location.href = 'payslip.html';
+    };
+    </script>
+</body>
+
+</html>

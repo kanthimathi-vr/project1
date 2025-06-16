@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay slip Main page</title>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "quicksand", sans-serif;
+           
+            font-weight: 600;
+        }
+        a{text-decoration: none;color: white;}
+
+        .homerow {
+            display: flex;
+            gap: 0px;
+        }
+
+        .homecol1 {
+            width: 15%;
+            background-color: #455A64;
+            padding: 10px;
+            line-height: 2.5;
+        }
+
+        ul {
+            list-style-type: none;
+            color: white;
+        }
+
+        .active {
+            color: #F8CC14
+        }
+
+        .homecol2 {
+            width: 85%;
+            background-color: white
+        }
+
+        .homenew {
+            background-color: #FEEBA8;
+            padding: 10px;
+        }
+
+        .homecard1 {
+            background-color: #FEEBA8;
+            border-radius: 10px;
+            margin: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .card11 {
+            width: 50%;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .card12 {
+            width: 25%;
+            margin-top: 5px;
+            margin-top: 10px;
+        }
+
+        .card13 {
+            width: 10%;
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+
+        .bell {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        .photo {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+
+        .card14 {
+            width: 15%;
+        }
+
+        .homecard2 {
+            display: flex;
+            gap: 10px;
+            margin: 15px;
+        }
+
+        .card21 {
+            background-color: #F8CC14;
+            margin: 5px;
+            padding: 2%;
+            display: flex;
+            gap: 10px;
+            border-radius: 10px;
+            font-size: 22px;
+            height: 100px;
+            width: 23%;
+        }
+
+        p {
+            width: 65%;
+            font-weight: 600;
+            text-wrap: wrap;
+        }
+
+        .image {
+            border-radius: 100%;
+            background-color: #455A64;
+            width: 45px;
+            height: 65px;
+            object-fit: contain;
+            filter: invert();
+        }
+
+        .homecard3 {
+            display: flex;
+            gap: 40px;
+            width: 80%;
+            margin: 15px;
+            margin-left: 50px;
+        }
+
+        .card31 {
+            width: 50%;
+        }
+
+        .card32 {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .calen {
+            background-color: #f9dd7a;
+            border-radius: 15px;
+        }
+
+        #calendar {
+            width: 320px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #f9dd7a;
+            border-radius: 15px;
+        }
+
+        #calendar th,
+        #calendar td {
+            border: 0px solid;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* #calendar th {} */
+
+        .nav-buttons {
+            margin: 10px;
+            margin-left: 60px;
+            padding: 10px;
+
+        }
+
+        .nav-buttons button {
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 100%;
+            border: 1px solid red;
+            background-color: #FEEBA8;
+            margin-left: 60px;
+        }
+
+        #month-year {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .selected {
+            background-color: #F8CC14 !important;
+            color: white;
+            border-radius: 100%;
+        }
+
+        .items {
+            padding: 10px;
+            background-color: #fcb981;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            border-radius: 10px;
+        }
+
+        .item1 {
+            display: flex;
+            border: 1px solid;
+            margin: 5px;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .day1 {
+            width: 80%;
+        }
+
+        .day2 {
+            width: 20%;
+        }
+
+        .smal {
+            font-size: 18px;
+        }
+
+        @media(min-width:320px){
+          
+            .homerow{flex-direction: column;width: 100%;}
+            .homecol1{width: 98%;font-size: 24px;padding: 10px;}
+            .homecol2{width: 98%;}
+            .homecard1{display: flex;flex-direction: column;margin: 0px;
+               font-size: 26px;}
+            .card11{width: 100%;}
+            .card12{width: 100%;}
+            .card13{width: 100%;margin-left: 100px;}
+            .card14{width: 100%;}
+            input{width: 70%;margin-left: 20px;height: 40px;font-size: 24px;}
+            .photo{margin-left: 80px;width: 100px;height: 100px;}
+
+            .homecard2{flex-direction: column;
+                margin-left: 0px;}
+             .card21 { margin: 10px;
+            padding: 20px;
+            display: flex;
+            gap: 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            height: 100px;
+            width: 95%;
+        }
+        .image{width: 50px;height: 50px;}
+        
+        .homecard3{flex-direction: column;gap: 25px;margin: 10px;margin-left: 20px;font-size: 16px;}
+        p{font-size: 24px;}
+        .card31{width: 100%;}
+        .card32{width: 100%;}
+        .calen {
+           
+            border-radius: 15px;
+            border: 2px solid;
+        }
+        
+        #calendar {
+            width: 230px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #f9dd7a;
+            border-radius: 5px;
+        }
+
+        #calendar th,
+        #calendar td {
+            border: 0px solid;
+            padding: 1px;
+            width: 1px;
+            height: 1px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        #month-year{font-size: 16px;margin-left: 0px;padding: 0px;}
+         .nav-buttons {
+            margin: 1px;
+            margin-left: 6px;
+            padding: 3px;
+            font-size: 18px;
+
+        }
+         .nav-buttons button {
+            padding: 1px 5px;
+            font-size: 13px;
+            border-radius: 100%;
+            border: 1px solid red;
+            background-color: #FEEBA8;
+            margin-left: 6px;
+        }
+
+        /* .card32{font-size: 22px;} */
+        span{white-space: nowrap;}
+
+        .items{padding: 15px;width: 100%;}
+        .item1{font-size: 10px;gap: 12px;width: 100%;}
+        .day1{width: 100%;}
+        .day2{width: 100%;}
+        .smal{font-size: 18px;}
+        }
+        @media(min-width:720px){
+            body{font-size: 24px;}
+               .homerow{flex-direction: column;
+                gap: 5px;width: 97%;}
+            .homecol1{width: 98%;font-size: 26px;
+                padding: 5px;font-size: 18px;}
+          
+            .homecol2{ width: 98%;gap: 5px;}
+            .card11{width: 30%;}
+            .card12{width: 25%;}
+            input{width: 70%;}
+            .card13{width: 10%;margin-left: 2px;}
+            .card14{width: 10%;}
+
+            .homecard1{display: flex;flex-direction: row;width: 98%;
+                flex-wrap: wrap;margin-left: 10px; gap: 1px;}
+           
+            .homenew{width: 98%;margin-left: 10px;}
+            .photo{margin-left: 20px;width: 50px;height: 50px;margin-top: 10px;}
+
+            .homecard2{flex-direction: row; flex-wrap: wrap; margin-left: 30px;gap: 10px;width: 80%;}
+             .card21 {
+           
+            margin: 3px;
+            padding: 10px;
+            display: flex;
+            gap: 2px;
+            border-radius: 5px;
+            font-size: 18px;
+            height: 100px;
+            width: 45%;
+        }
+        .card21 p{font-size: 18px;}
+        .image{width: 50px;height: 50px;}
+        
+        .homecard3{flex-direction: column;gap: 50px;margin: 2px;margin-left: 0px;font-size: 16px;}
+          .calen {
+           
+            border-radius: 5px;
+        }
+        
+        #calendar {
+            width: 150px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #f9dd7a;
+            border-radius: 5px;
+        }
+
+        #calendar th,
+        #calendar td {
+            border: 0px solid;
+            padding: 5px;
+            width: 5px;
+            height: 5px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #month-year{font-size: 22px;margin-left: 120px;padding: 10px;}
+         .nav-buttons {
+            margin: 1px;
+            margin-left: 6px;
+            padding: 3px;
+            font-size: 18px;
+
+        }
+         .nav-buttons button {
+            padding: 1px 5px;
+            font-size: 13px;
+            border-radius: 100%;
+            border: 1px solid red;
+            background-color: #FEEBA8;
+            margin-left: 6px;
+        }
+        span{white-space: nowrap;}
+     
+        .item1{display: flex;gap: 2px;}
+        .day1{width: 60%;}
+
+        
+        }
+        @media(min-width:1020px){
+             .homerow {
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+            width: 96%        }
+
+        .homecol1 {
+            width: 15%;
+            background-color: #455A64;
+            padding: 10px;
+            line-height: 2.5;
+        }
+
+        ul {
+            list-style-type: none;
+            color: white;
+        }
+
+        .active {
+            color: #F8CC14
+        }
+
+        .homecol2 {
+            width: 85%;
+            background-color: white;
+        }
+
+        .homenew {
+            background-color: #FEEBA8;
+            padding: 10px;
+            width: 95%;
+            margin-left: 10px;
+        }
+
+        .homecard1 {
+            background-color: #FEEBA8;
+            border-radius: 10px;
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+            width: 95%;
+        }
+
+        .card11 {
+            width: 40%;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .card12 {
+            width: 25%;
+            margin-top: 5px;
+            margin-top: 10px;
+        }
+
+        .card13 {
+            width: 10%;
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+
+        .bell {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        .photo {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+
+        .card14 {
+            width: 15%;
+        }
+
+        .homecard2 {
+            
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin: 5px;
+            width: 97%;
+        }
+
+        .card21 {
+            background-color: #F8CC14;
+            margin: 0px;
+            padding: 1%;
+            display: flex;
+            gap: 5px;
+            border-radius: 10px;
+            font-size: 16px;
+            height: 100px;
+            width: 23%;
+        }
+
+        p {
+            width: 50%;
+            font-weight: 600;
+            text-wrap: wrap;
+            font-size: 16px;
+        }
+
+        .image {
+            border-radius: 100%;
+            background-color: #455A64;
+            width: 35px;
+            height: 50px;
+            object-fit: contain;
+            filter: invert();
+        }
+
+        .homecard3 {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            width: 80%;
+            margin: 15px;
+            margin-left: 50px;
+        }
+
+        .card31 {
+            width: 50%;
+        }
+
+        .card32 {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .upcoming{
+            white-space: nowrap;
+
+        }
+
+        .calen {
+            background-color: #f9dd7a;
+            border-radius: 15px;
+        }
+
+        #calendar {
+            width: 120px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #f9dd7a;
+            border-radius: 15px;
+        }
+
+        #calendar th,
+        #calendar td {
+            border: 0px solid;
+            padding: 6px;
+            width: 5px;
+            height: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* #calendar th {} */
+
+        .nav-buttons {
+            margin: 10px;
+            margin-left: 0px;
+            padding: 10px;
+
+        }
+
+        .nav-buttons button {
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 100%;
+            border: 1px solid red;
+            background-color: #FEEBA8;
+            margin-left: 10px;
+        }
+
+        #month-year {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+            margin-left: 10px;
+            padding: 2px;
+        }
+
+        .selected {
+            background-color: #F8CC14 !important;
+            color: white;
+            border-radius: 100%;
+        }
+
+        .items {
+            padding: 10px;
+            background-color: #fcb981;
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            border-radius: 10px;
+        }
+
+        .item1 {
+            display: flex;
+            border: 1px solid;
+            margin: 5px;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .day1 {
+            width: 80%;
+        }
+
+        .day2 {
+            width: 20%;
+        }
+        .meet{white-space: wrap;}
+
+        .smal {
+            font-size: 18px;
+        }
+        }
+        @media(min-width:1440px){
+             .homerow {
+            display: flex;
+            flex-direction: row;
+            gap: 0px;
+            width: 98%;
+        }
+
+        .homecol1 {
+            width: 15%;
+            background-color: #455A64;
+            padding: 10px;
+            line-height: 2.5;
+        }
+
+        ul {
+            list-style-type: none;
+            color: white;
+        }
+
+        .active {
+            color: #F8CC14
+        }
+
+        .homecol2 {
+            width: 85%;
+            background-color: white
+        }
+
+        .homenew {
+            background-color: #FEEBA8;
+            padding: 10px;
+        }
+
+        .homecard1 {
+            background-color: #FEEBA8;
+            border-radius: 10px;
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            gap: 1px;
+            width: 95%;
+        }
+
+        .card11 {
+            width: 40%;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .card12 {
+            width: 25%;
+            margin-top: 5px;
+            margin-top: 10px;
+        }
+
+        .card13 {
+            width: 10%;
+            margin-top: 190x;
+            margin-left: 20px;
+        }
+
+        .bell {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        .photo {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+
+        .card14 {
+            width: 15%;
+        }
+
+        .homenew{margin-left: 10px;width: 95%;}
+        .homecard2 {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin: 15px;
+        }
+
+        .card21 {
+            background-color: #F8CC14;
+            margin: 5px;
+            padding: 2%;
+            display: flex;
+            gap: 10px;
+            border-radius: 10px;
+            font-size: 28px;
+            height: 100px;
+            width: 23%;
+        }
+        p {
+            font-size: 28px;
+            width: 65%;
+            font-weight: 600;
+            text-wrap: wrap;
+        }
+
+        .card21 p {
+            font-size: 28px;
+            width: 65%;
+            font-weight: 600;
+            text-wrap: wrap;
+        }
+
+        .image {
+            border-radius: 100%;
+            background-color: #455A64;
+            width: 45px;
+            height: 65px;
+            object-fit: contain;
+            filter: invert();
+        }
+
+        .homecard3 {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            width: 80%;
+            margin: 15px;
+            margin-left: 50px;
+        }
+
+        .card31 {
+            width: 50%;
+        }
+
+        .card32 {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .calen {
+            background-color: #f9dd7a;
+            border-radius: 15px;
+        }
+
+        #calendar {
+            width: 320px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #f9dd7a;
+            border-radius: 15px;
+        }
+
+        #calendar th,
+        #calendar td {
+            border: 0px solid;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* #calendar th {} */
+
+        .nav-buttons {
+            margin: 10px;
+            margin-left: 60px;
+            padding: 10px;
+
+        }
+
+        .nav-buttons button {
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 100%;
+            border: 1px solid red;
+            background-color: #FEEBA8;
+            margin-left: 10px;
+        }
+
+        #month-year {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .selected {
+            background-color: #F8CC14 !important;
+            color: white;
+            border-radius: 100%;
+        }
+
+        .items {
+            padding: 10px;
+            background-color: #fcb981;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            border-radius: 10px;
+        }
+
+        .item1 {
+            display: flex;
+            border: 1px solid;
+            margin: 5px;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .day1 {
+            width: 80%;
+        }
+
+        .day2 {
+            width: 20%;
+        }
+
+        .smal {
+            font-size: 18px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="homecontainer">
+        <div class="homerow">
+            <div class="homecol1">
+                <aside>
+                    <ul>
+                        <li class="active"><a href="home.html" class="active">🎨Overview</a></li>
+                        <li><a href="payroll.html">📜Payroll</a></li>
+                        <li><a href="payslip.html">📜Payslip</a></li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="homecol2">
+                <div class="homecard1">
+                    <div class="card11">
+                        <p>Good Morning!!!</p>
+                    </div>
+                    <div class="card12"><input type="text" placeholder="  search "></div>
+                    <div class="card13"><img src="./images/notification.png" class="bell" alt=""></div>
+                    <div class="card14"><img src="./images/Profile.png" class="photo" alt=""></div>
+
+
+
+                </div>
+                <div class="homenew">
+                    <div class="homecard2">
+                        <div class="card21"><img src="./images/Total.png" class="image" alt="total">
+                            <p>Total Employees</p>
+                        </div>
+                        <div class="card21"><img src="./images/no of leave.png" class="image" alt="contact">
+                            <p>Number of leave</p>
+                        </div>
+                        <div class="card21"><img src="./images/add.png" class="image" alt="contact+">
+                            <p>New Employee's</p>
+                        </div>
+                        <div class="card21"><img src="./images/holiday.png" class="image" alt="flight">
+                            <p>Holiday of this Year</p>
+                        </div>
+                    </div>
+                    <div class="homecard3">
+                        <div class="card31">
+                            <p>Calendar</p>
+
+                            <div class="calen">
+
+                                <div class="nav-buttons">
+                                    <span id="month-year"></span>
+                                    <button onclick="changeMonth(-1)">
+                                       <  </button>
+
+                                            <button onclick="changeMonth(1)"> > </button>
+                                </div>
+
+                                <table id="calendar">
+                                    <thead>
+                                        <tr>
+                                            <th>Sun</th>
+                                            <th>Mon</th>
+                                            <th>Tue</th>
+                                            <th>Wed</th>
+                                            <th>Thu</th>
+                                            <th>Fri</th>
+                                            <th>Sat</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="calendar-body"></tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+                        <div class="card32">
+                            <p class="upcoming">Upcoming Meetings <span style="color: red;margin-left:30px;">view all</span></p>
+
+                            <div class="items">
+                                <div class="item1">
+                                    <div class="day1">
+                                        <p class="meet">Client Meeting - 10.00 am</p>
+                                    </div>
+                                    <div class="day2">
+                                        <p>Wed</p>
+                                        <p class="smal">May17</p>
+                                    </div>
+                                </div>
+                                <div class="item1">
+                                    <div class="day1">
+                                        <p class="meet">Team Meeting - 11.00 am</p>
+                                    </div>
+                                    <div class="day2">
+                                        <p>Wed</p>
+                                        <p class="smal">May17</p>
+                                    </div>
+                                </div>
+                                <div class="item1">
+                                    <div class="day1">
+                                        <p class="meet">HR Interview -   2.00 pm</p>
+                                    </div>
+                                    <div class="day2">
+                                        <p>Mon</p>
+                                        <p class="smal">May17</p>
+                                    </div>
+                                </div>
+                                <div class="item1">
+                                    <div class="day1">
+                                        <p class="meet">Client Meeting - 4.00 pm</p>
+                                    </div>
+                                    <div class="day2">
+                                        <p>Mon</p>
+                                        <p class="smal">May17</p>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let currentDate = new Date();
+        let selectedCell = null;
+
+        function generateCalendar(year, month) {
+            const calendarBody = document.getElementById("calendar-body");
+            const monthYear = document.getElementById("month-year");
+            calendarBody.innerHTML = "";
+
+            const months = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+
+            monthYear.textContent = `${months[month]} ${year}`;
+
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            let date = 1;
+            for (let i = 0; i < 6; i++) {
+                let row = document.createElement("tr");
+                for (let j = 0; j < 7; j++) {
+                    let cell = document.createElement("td");
+                    if (i === 0 && j < firstDay) {
+                        cell.textContent = "";
+                    } else if (date > daysInMonth) {
+                        break;
+                    } else {
+                        cell.textContent = date;
+
+                        // Add click event
+
+                        cell.onclick = (function (d, cellRef) {
+                            return function () {
+                                if (selectedCell) {
+                                    selectedCell.classList.remove("selected");
+                                }
+                                cellRef.classList.add("selected");
+                                selectedCell = cellRef;
+
+                                alert(`You clicked: ${months[month]} ${d}, ${year}`);
+                            };
+                        })(date, cell);
+
+
+                        date++;
+                    }
+                    row.appendChild(cell);
+                }
+                calendarBody.appendChild(row);
+                if (date > daysInMonth) break;
+            }
+        }
+
+        function changeMonth(offset) {
+            currentDate.setMonth(currentDate.getMonth() + offset);
+            generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
+        }
+
+        // Initialize calendar with current month
+        generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
+
+    </script>
+</body>
+
+</html>
