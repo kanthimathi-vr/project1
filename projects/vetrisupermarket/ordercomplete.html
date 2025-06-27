@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body{  font-family: "Outfit", sans-serif;}
+        .ordercol1{display: flex;justify-content: center;align-items: center;}
+        .ordercompleteimg{width: 300px;height: 250px;object-fit: cover;}
+         /* .ordercol2{margin-left: 40%;} */
+        .big{font-size: 24px;font-weight: 600;letter-spacing: 2px;margin-left: 40%;}
+        .para{font-size: 22px;letter-spacing: 2px;margin-left: 35%;font-weight: 500;}
+        .card{display: flex;gap: 20px;background-color: #CEF0D2;
+            border-radius: 12px;margin-left: 20%;padding: 15px;width: 65%;}
+         .item1{width: 20%;} 
+         .downloadbtn{background-color: #F88E55;border: none; margin-top: 20px;height: 40px; border-radius: 5px;}
+         a{text-decoration: none;color: white;}
+    </style>
+</head>
+<body>
+    <div class="ordercontainer">
+        <div class="ordercol1"><img src="./images/completed.png" alt="" class="ordercompleteimg"></div>
+        <div class="ordercol2"><div class="col2"><p class="big">Your Order Completed</p>
+            </div><div class="col2"><p class="para">Thank You. Your Order has been received</p>
+        </div></div>
+        <div class="ordercol3">
+            <div class="card">
+                <div class="item1"><p><strong>Order ID</strong><br><span>145</span></p></div>
+                <div class="item1"><p><strong>Name:</strong><br> <span id="displayName"></span></p></div>
+                <div class="item1"><p><strong>Phone Number:</strong><br> <span id="displayPhone"></span></p></div>
+                <div class="item1"><p><strong>Email:</strong><br> <span id="displayEmail"></span></p></div>
+                <div class="item1"><button class="downloadbtn" onclick="downloadInvoice()"><a href="download.html" >Download Invoice</a></button></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+  document.getElementById("displayName").textContent = localStorage.getItem("name");
+  document.getElementById("displayPhone").textContent = localStorage.getItem("phone");
+  document.getElementById("displayEmail").textContent = localStorage.getItem("email");
+</script>
+</body>
+</html>

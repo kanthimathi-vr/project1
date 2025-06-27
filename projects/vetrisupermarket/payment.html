@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VETRI SUPER MARKET</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body{  font-family: "Outfit", sans-serif;}
+        .homerow{display: flex;gap: 40px;height: 100vh;}
+        .homecol1{width: 15%; padding: 30px; background-color: #CEF0D2;display: flex;flex-direction: column;gap: 15px;}
+        .vetrihead{margin: 20px;font-size: 24px;font-weight: bold;white-space: nowrap;}
+        .pic{ filter: brightness(0) saturate(100%);}
+        .pic1{ }
+        .homecard2{display: flex;gap: 15px;font-size: 22px;}
+        .homecard3{display: flex;gap: 10px;font-size: 22px;}
+        .homecol2{width: 75%;}
+
+        .homecard1{display: flex;}
+        .logo{width: 50px;height: 50px;object-fit: cover;border-radius: 100%;}
+        a{text-decoration: none;color: black;}
+        .orange{color: orangered;}
+
+        .paymentcol1{width: 40%;margin-left: 100px;}
+
+        .card1{display: flex; gap: 40px;}
+        .item2{margin-top: 50px;margin-left: 10px;width: 35%;}
+        
+        .draftbtn{height: 30px;background-color: #556AF8;border: none;
+             border-radius: 5px; color: white;width: 100%;}
+        .card2{display: flex;gap: 30px;}
+        .amount{border-radius: 5px;width: 45%; background-color: #F88E55;height: 50px;padding: 3%;text-align: center;}
+        .balance{border-radius: 5px; width: 45%;text-align: center; background-color: #EC9FFF;height: 50px;padding: 3%;}
+        
+        .card3{display: flex;gap: 30px;}
+        .item31{width: 45%;}
+        .cash{border: 2px solid blue;width: 80%;}
+        fieldset{border: 2px solid blue;}
+        .line1{display: flex;gap: 20px;}
+        .line2{display: flex;gap: 20px;}
+            .img2{background-color: yellow;border-radius: 100%;width: 30px;height: 30px;}
+            .img1{width: 25px;height: 25px ;object-fit: cover;margin: 3px;}
+        .card4{display: grid;grid-template-columns: repeat(2,1fr);gap: 20px;}
+        .card5{display: grid;grid-template-columns: repeat(2,1fr);}
+        .card6{
+            display: flex;gap: 30px;
+        }
+        .c6{width: 40%;}
+        .btnsave{height: 40px;width: 100%;background-color: #F88E55;color: white;border: none;border-radius: 6px;}
+        .btnpayment{height: 40px;width: 100%;background-color: #556AF8;color: white;border: none;border-radius: 8px;}
+        @media(min-width:320px){
+            .homerow{flex-direction: column;}
+            .homecol1{width: 100%;}
+            .homecol2{width: 100%;}
+            .paymentcol1{margin-left: 30px;width: 98%;}
+           
+        }
+        @media(min-width:620px){
+             .homerow{display: flex;flex-direction: row;}
+        .homecol1{width: 25%;}
+        .homecol2{width: 75%;}
+              }
+        @media(min-width:1020px){
+              .homerow{display: flex;flex-direction: row;}
+        .homecol1{width: 25%;}
+        .homecol2{width: 75%;}
+        .paymentcol1{margin-left: 80px;width: 50%;}
+           
+        }
+        @media(min-width:1440px){
+              .homerow{display: flex;flex-direction: row;}
+        .homecol1{width: 15%;}
+        .homecol2{width: 75%;}
+           
+
+        }
+    </style>
+</head>
+<body>
+    <div class="homecontainer">
+        <div class="homerow">
+            <div class="homecol1">
+                <div class="homecard1">
+                    <img src="./images/logo.avif" alt="" class="logo">
+                    <p class="vetrihead">Vetri Market</p>
+                </div>
+                <div class="homecard2">
+                    <div class="pic"><img src="./images/Home.png" class="homeimg" alt=""></div>
+                    <div class="pic"><a href="">Home</a></div>
+                </div>
+                <div class="homecard3">
+                        <div class="pic1"><img src="./images/Vector.png" class="productimg" alt=""></div>
+                    <div class="pic1"><a href="" class="orange">Products</a></div>
+                </div>
+            </div>
+            <div class="paymentcol1">
+                <div class="card1">
+                    <div class="item1">
+                        <p>DATE :12/7/2024</p>
+                        <p>TIME:5.30pm</p>
+                        <p>BILL NO: 764523</p>
+                    </div>
+                    <div class="item2"><button class="draftbtn">Draft</button></div>
+                </div><hr><br>
+                <div class="card2">
+                    <div class="amount"><p>Collected Amount<br>150</p></div>
+                    <div class=" balance"><p>Balance<br>0.00</p></div>
+                </div><br>
+                <div class="card3">
+                    <div class="item31">
+                        <div class="line1"><div class="img2"><img src="./images/cash.png" alt="" class="img1"></div><div class="cash">CASH </div></div>
+                      <br>  <div class="line2"><div class="img2"><img src="./images/card.png" alt="" class="img1"></div><div class="cash">CARD </div></div>
+                    </div>
+                    <div class="item32"><fieldset><legend>Received Amount</legend><p>150</p></fieldset></div>
+                </div><br>
+                <hr>
+                <div class="card4">
+                    <div class="item4">Sub Total</div>
+                    <div class="item4">130</div>
+                    <div class="item4">Tax</div>
+                    <div class="item4">30</div>
+                    <div class="item4">Round Off</div>
+                    <div class="item4">00</div>
+                </div>
+                <hr>
+                <div class="card5">   
+                     <div class="item4">Total Amount:</div>
+                    <div class="item4"><span id ="displayTotal">0.00</span></div>
+                </div><br>
+                <div class="card6">
+                    <div class="c6"><button class="btnsave">Save</button></div>
+                    <div class="c6"><a href="ordercomplete.html"><button class="btnpayment">Payment</button></a></div>
+                </div>
+            </div>
+    
+            
+
+
+             <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const total = localStorage.getItem("finalTotal") || "0.00";
+      document.getElementById("displayTotal").textContent = total;
+    });
+  </script>
+</body>
+</html>

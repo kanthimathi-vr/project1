@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VETRI SUPER MARKET</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Outfit", sans-serif;
+        }
+
+        .homerow {
+            display: flex;
+            gap: 40px;
+            height: 100vh;
+        }
+
+        .homecol1 {
+            width: 15%;
+            padding: 30px;
+            background-color: #CEF0D2;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .vetrihead {
+            margin: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .pic {
+            filter: brightness(0) saturate(100%);
+        }
+
+        .homecard2 {
+            display: flex;
+            gap: 15px;
+            font-size: 22px;
+        }
+
+        .homecard3 {
+            display: flex;
+            gap: 10px;
+            font-size: 22px;
+        }
+
+        .homecol2 {
+            width: 75%;
+        }
+
+        .homecard1 {
+            display: flex;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .orange {
+            color: orangered;
+        }
+
+
+        .homecard24 {
+            margin-top: 30px;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 80%;
+
+
+        }
+
+
+        thead {
+            border: 2px solid black;
+            border-radius: 10px;
+
+
+        }
+
+
+        .table th {
+            height: 15px;
+            padding: 1%;
+            font-weight: 800;
+            font-size: 18px;
+            border-right: 2px solid black;
+            color: #556AF8;
+        }
+
+        .table td {
+            border: none;
+            padding: 0;
+        }
+
+      
+
+        .row-item {
+            width: 75%;
+            
+            box-shadow: 0 10px 12px rgba(0, 0, 0, 0.12);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+
+        .row-item td {
+            padding: 14px 12px;
+            border: none;
+        }
+
+        .row-item td:last-child {
+            border-right: none;
+        }
+
+        .row-content tr:last-child td {
+            border-bottom: none;
+        }
+
+
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .quantity-control button {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 100%;
+            border: 1px solid;
+        }
+
+        .quantity-control input {
+            width: 50px;
+            text-align: center;
+            border: none;
+        }
+
+        .homecard25 {
+            display: flex;
+            margin-left: 330px;
+            gap: 40px;
+        }
+
+        .btn-next {
+            background-color: #556AF8;
+            font-size: 18px;
+            border: none;
+            height: 40px;
+            padding: 6px 12px;
+            color: white;
+            border-radius: 10px;
+            justify-content: center;
+        }
+
+        .cartimg {
+            background-color: #F88E55;
+            border-radius: 100%;
+            object-fit: cover;
+            width: 25px;
+        }
+
+        .add-btn {
+            border: none;
+            cursor: pointer;
+        }
+
+        @media(min-width:320px) {
+            .homerow {
+                flex-direction: column;
+            }
+
+            .homecol1 {
+                width: 100%;
+            }
+
+            .homecol2 {
+                width: 100%;
+            }
+            .homecard24{overflow-y: auto;}
+            .homecard25{margin-left: 100px;}
+
+        }
+
+        @media(min-width:620px) {
+            .homerow {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .homecol1 {
+                width: 25%;
+            }
+
+            .homecol2 {
+                width: 75%;
+            }
+        }
+
+        @media(min-width:1020px) {
+            .homerow {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .homecol1 {
+                width: 25%;
+            }
+
+            .homecol2 {
+                width: 75%;
+            }
+
+        }
+
+        @media(min-width:1440px) {
+            .homerow {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .homecol1 {
+                width: 15%;
+            }
+
+            .homecol2 {
+                width: 75%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="homecontainer">
+        <div class="homerow">
+            <div class="homecol1">
+                <div class="homecard1">
+                    <img src="./images/logo.avif" alt="" class="logo">
+                    <p class="vetrihead">Vetri Market</p>
+                </div>
+                <div class="homecard2">
+                    <div class="pic"><img src="./images/Home.png" class="homeimg" alt=""></div>
+                    <div class="pic"><a href="">Home</a></div>
+                </div>
+                <div class="homecard3">
+                    <div class="pic1"><img src="./images/Vector.png" class="productimg" alt=""></div>
+                    <div class="pic1"><a href="" class="orange">Products</a></div>
+                </div>
+            </div>
+            <div class="homecol2">
+
+                <div class="homecard24">
+                    <table class="table" id="productTable">
+                        <thead>
+                            <tr class="tableheading">
+                                <th>ITEM DETAILS</th>
+                                <th>QUANTITY</th>
+                                <th>RATE</th>
+                                <th>TAX</th>
+                                <th>AMOUNT</th>
+                                <th>ADD TO CART</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Row 1: Dairy Milk -->
+                            <tr class="row-item">
+                                <td>Dairy Milk</td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button class="decrease">−</button>
+                                        <input type="number" class="qty" value="1" min="0">
+                                        <button class="increase">+</button>
+                                    </div>
+                                </td>
+                                <td class="rate">100</td>
+                                <td class="tax">20</td>
+                                <td class="amount">0.00</td>
+                                <td><button class="add-btn"><img src="./images/Add to cart.png" class="cartimg"
+                                            alt=""></button></td>
+                            </tr>
+
+                            <!-- Row 2: Millet Noodles -->
+                            <tr class="row-item">
+                                <td>Millet Noodles</td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button class="decrease">−</button>
+                                        <input type="number" class="qty" value="1" min="0">kg
+                                        <button class="increase">+</button>
+                                    </div>
+                                </td>
+                                <td class="rate">30</td>
+                                <td class="tax">10</td>
+                                <td class="amount">0.00</td>
+                                <td><button class="add-btn"><img src="./images/Add to cart.png" class="cartimg"
+                                            alt=""></button></td>
+                            </tr>
+
+                            <!-- Row 3: Wheat Flour  -->
+                            <tr class="row-item">
+                                <td>Wheat Flour</td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button class="decrease">−</button>
+                                        <input type="number" class="qty" value="1" min="0">
+                                        <button class="increase">+</button>
+                                    </div>
+                                </td>
+                                <td class="rate">100</td>
+                                <td class="tax">20</td>
+                                <td class="amount">0.00</td>
+                                <td><button class="add-btn"><img src="./images/Add to cart.png" class="cartimg"
+                                            alt=""></button></td>
+                            </tr>
+
+                            <!-- Row 4: Maida  -->
+                            <tr class="row-item">
+                                <td>Maida</td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button class="decrease">−</button>
+                                        <input type="number" class="qty" value="1" min="0">
+                                        <button class="increase">+</button>
+                                    </div>
+                                </td>
+                                <td class="rate">30</td>
+                                <td class="tax">10</td>
+                                <td class="amount">0.00</td>
+                                <td><button class="add-btn"><img src="./images/Add to cart.png" class="cartimg"
+                                            alt=""></button></td>
+                            </tr>
+
+                            <!-- Row 5: Chilli Powder  -->
+                            <tr class="row-item">
+                                <td>Chilli Powder</td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button class="decrease">−</button>
+                                        <input type="number" class="qty" value="1" min="0">
+                                        <button class="increase">+</button>
+                                    </div>
+                                </td>
+                                <td class="rate">100</td>
+                                <td class="tax">20</td>
+                                <td class="amount">0.00</td>
+                                <td><button class="add-btn"><img src="./images/Add to cart.png" class="cartimg"
+                                            alt=""></button></td>
+                            </tr>
+
+                            <!-- Row 6: Briyani Masala  -->
+                            <tr class="row-item">
+                                <td>Briyani Masala</td>
+                                <td>
+                                    <div class="quantity-control">
+                                        <button class="decrease">−</button>
+                                        <input type="number" class="qty" value="1" min="0">
+                                        <button class="increase">+</button>
+                                    </div>
+                                </td>
+                                <td class="rate">30</td>
+                                <td class="tax">10</td>
+                                <td class="amount">0.00</td>
+                                <td><button class="add-btn"><img src="./images/Add to cart.png" class="cartimg"
+                                            alt=""></button></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4" style="text-align: right;"><strong>Total:</strong></td>
+                                <td id="final-total">₹0.00</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+
+                    <br>
+                     </div>
+                <div class="homecard25">
+                    <a href="payment.html" class="btn-next" onclick="saveTotal()">Next</a><br>
+                   <br>  <a href="download.html" class="btn-next" onclick="saveTotal()">download invoice</a> 
+
+                      </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Handle quantity buttons
+        document.querySelectorAll('.quantity-control').forEach(control => {
+            const input = control.querySelector('.qty');
+
+            control.querySelector('.increase').addEventListener('click', () => {
+                input.value = parseInt(input.value) + 1;
+            });
+
+            control.querySelector('.decrease').addEventListener('click', () => {
+                input.value = Math.max(0, parseInt(input.value) - 1);
+            });
+        });
+
+        // Add to Cart buttons
+        document.querySelectorAll('.add-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const row = button.closest('tr');
+                  const item = row.cells[0].textContent.trim();
+                const qty = parseInt(row.querySelector('.qty').value);
+                const rate = parseFloat(row.querySelector('.rate').textContent);
+                const tax = parseFloat(row.querySelector('.tax').textContent);
+                const amountCell = row.querySelector('.amount');
+
+                const amount = (qty * rate) + tax;
+                amountCell.textContent = `${amount.toFixed(2)}`;
+                  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Check if item already exists
+      const index = cart.findIndex(prod => prod.item === item);
+      if (index !== -1) {
+        cart[index] = { item, qty, rate, tax, amount };
+      } else {
+        cart.push({ item, qty, rate, tax, amount });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+  
+                 
+                
+                updateTotal();
+            });
+        });
+
+//           function saveCartAndTotal() {
+//     const cart = JSON.parse(localStorage.getItem('cart')) || [];
+//     const total = cart.reduce((sum, item) => sum + item.amount, 0);
+//     localStorage.setItem('cartTotal', total.toFixed(2));
+//   }
+        // Final total calculation
+        // function updateTotal() {
+        //     let total = 0;
+        //     document.querySelectorAll('.amount').forEach(cell => {
+        //         const val = parseFloat(cell.textContent.replace('$', '')) || 0;
+        //         total += val;
+        //     });
+        //     document.getElementById('final-total').textContent = `${total.toFixed(2)}`;
+        // }
+
+          // Calculate final total and save to localStorage
+  function updateTotal() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    //const total = cart.reduce((sum, item) => sum + item.amount, 0);
+     let total = 0;
+           document.querySelectorAll('.amount').forEach(cell => {
+                 const val = parseFloat(cell.textContent.replace('$', '')) || 0;
+                 total += val;
+             });
+    
+    document.getElementById('final-total').textContent = `₹${total.toFixed(2)}`;
+    localStorage.setItem('cartTotal', total.toFixed(2));
+  }
+
+  // Save total before going to next page
+  function saveTotal() {
+    updateTotal(); // Make sure total is updated
+  }
+
+
+    </script>
+
+<script>
+  function saveTotal() {
+    const total = document.getElementById('final-total').textContent;
+    localStorage.setItem("finalTotal", total);
+  }
+</script>
+
+
+
+</body>
+
+</html>

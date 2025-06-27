@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shadow-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  font-family: sans-serif;
+}
+
+.shadow-table th, .shadow-table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.row-item {
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+input.qty {
+  width: 60px;
+  text-align: center;
+}
+
+button.add-btn {
+  padding: 6px 12px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+   <table class="shadow-table">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Rate</th>
+      <th>Tax</th>
+      <th>Amount</th>
+      <th>Add to Cart</th>
+    </tr>
+  </thead>
+  <tbody id="cart-body">
+    <tr>
+      <td colspan="6">
+        <div class="row-content">
+          <table style="width: 100%;">
+            <tr class="row-item">
+              <td>Dairy Milk</td>
+              <td>
+                <div class="quantity-control">
+                  <button class="decrease">−</button>
+                  <input type="number" class="qty" value="1" min="0">
+                  <button class="increase">+</button>
+                </div>
+              </td>
+              <td class="rate">100</td>
+              <td>20</td>
+              <td class="amount">$0.00</td>
+              <td>
+                <button class="add-btn">
+                  <img src="./images/Add to cart.png" class="cartimg" alt="Add to Cart">
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4" style="text-align: right;"><strong>Total:</strong></td>
+      <td id="final-total">$0.00</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
+
+
+<script>
+  // Quantity control (+/-)
+  document.querySelectorAll('.quantity-control').forEach(control => {
+    const input = control.querySelector('input.qty');
+    const row = control.closest('tr');
+    const rate = parseFloat(row.querySelector('.rate').textContent);
+
+    control.querySelector('.increase').addEventListener('click', () => {
+      input.value = parseInt(input.value) + 1;
+    });
+
+    control.querySelector('.decrease').addEventListener('click', () => {
+      input.value = Math.max(0, parseInt(input.value) - 1);
+    });
+  });
+
+  // Add to cart logic
+  document.querySelectorAll('.add-btn').forEach(button => {
+    button.addEventListener('click', function () {
+      const row = this.closest('tr');
+      const qty = parseInt(row.querySelector('.qty').value);
+      const rate = parseFloat(row.querySelector('.rate').textContent);
+      const amountCell = row.querySelector('.amount');
+      const amount = qty * rate;
+
+      amountCell.textContent = `$${amount.toFixed(2)}`;
+      updateTotal();
+    });
+  });
+
+  function updateTotal() {
+    let total = 0;
+    document.querySelectorAll('.amount').forEach(cell => {
+      const val = parseFloat(cell.textContent.replace('$', '')) || 0;
+      total += val;
+    });
+    document.getElementById('final-total').textContent = `$${total.toFixed(2)}`;
+  }
+</script>
+
+</body>
+</html>
