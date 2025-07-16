@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the output of: print(2 ** 3)?",
+    "options": ["6", "8", "9", "5"],
+    "answer": "8"
+  },
+  {
+    "question": "Which keyword is used to define a function in Python?",
+    "options": ["function", "def", "define", "func"],
+    "answer": "def"
+  },
+  {
+    "question": "What is the output of: len('Python')?",
+    "options": ["5", "6", "7", "Error"],
+    "answer": "6"
+  },
+  {
+    "question": "Which of the following is a valid list in Python?",
+    "options": ["{1,2,3}", "(1,2,3)", "[1,2,3]", "<1,2,3>"],
+    "answer": "[1,2,3]"
+  },
+  {
+    "question": "How do you start a comment in Python?",
+    "options": ["//", "/*", "#", "<!--"],
+    "answer": "#"
+  },
+  {
+    "question": "What data type is the result of: 3 / 2?",
+    "options": ["int", "float", "double", "string"],
+    "answer": "float"
+  },
+  {
+    "question": "Which function is used to get user input in Python?",
+    "options": ["scanf()", "get()", "input()", "read()"],
+    "answer": "input()"
+  },
+  {
+    "question": "Which operator is used for floor division?",
+    "options": ["/", "//", "%", "**"],
+    "answer": "//"
+  },
+  {
+    "question": "Which keyword is used to loop over a sequence?",
+    "options": ["loop", "iterate", "for", "while"],
+    "answer": "for"
+  },
+  {
+    "question": "What is the output of: type(10)?",
+    "options": ["<class 'int'>", "<int>", "integer", "int"],
+    "answer": "<class 'int'>"
+  }
+]

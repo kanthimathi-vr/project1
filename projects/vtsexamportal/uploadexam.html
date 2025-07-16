@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetri Exam portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        *{ font-family: "Urbanist", sans-serif;margin: 0;padding: 0;box-sizing: border-box;}
+        .examrow1{display: flex;gap: 20px;}
+        .examcol1{width: 20%;border: 2px solid; background-color: #201F31;color: white; height: 100vh;}
+
+        .card1{display: flex; font-size: 24px;font-weight: 600; gap: 5px;background-color: white;color :#201F31}
+        .card2{display: flex;flex-direction: column;gap: 20px; padding: 20px; font-size: 22px;}
+        .card21{display: flex;gap: 10px;}
+
+        .img{filter: invert(100%);}
+        .c1, .logo{ display: flex; justify-content: center;  align-items: center; }
+
+          .examcol2{width: 80%;margin: 10px;padding: 1%;display: flex;flex-direction: column;gap: 15px;justify-content: center;}
+      
+        .head{font-weight: 600;}
+
+        .ecard4{ width: 80%; display: flex;flex-direction: column;gap: 20px;}
+        .e2{display: flex;flex-direction: row;align-items: center;justify-content: center; gap: 15px; border-radius: 12px;box-shadow: 0 0 2px black;height: 150px;}
+        .btnupload{background-color: #D8F275; box-shadow: 2px 2px 2px ; border-radius: 12px;border: none;padding: 3%;font-size: 18px;font-weight: 500;}
+    </style>
+</head>
+<body>
+    
+    <div class="examcontainer">
+        <div class="examrow1">
+            <div class="examcol1">
+                <div class="card1">
+                    <div class="logo"><img src="./images/" alt="logo"></div>
+                    <div class="head"><p>VTS Exam Portal</p></div>
+                </div>
+                <div class="card2">
+                    <div class="card21">
+                        <div class="c1" ><img src="./images/Overview.png"  class="img" alt=""></div>
+                        <div class="c1"><p>Overview</p></div>
+                    </div>
+                    <div class="card21">
+                         <div class="c1"><img src="./images/Design.png"  class="img" alt=""></div>
+                        <div class="c1"><p>Designing</p></div>
+                    </div>
+                    <div class="card21">
+                         <div class="c1"><img src="./images/development.jpg" class="img" alt=""></div>
+                        <div class="c1"><p>Development</p></div>
+                    </div>
+                     <div class="card21">
+                         <div class="c1"><img src="./images/Exam.png" class="img" alt=""></div>
+                        <div class="c1"><p>Exam</p></div>
+                    </div>
+                    <div class="card21">
+                         <div class="c1"><img src="./images/result.png" class="img" alt=""></div>
+                        <div class="c1"><p>Result</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="examcol2">
+                <div class="ecard4">
+                    <div class="e1"><p class="head">Upload Technical Question Paper</p></div>
+                    <div class="e2"><div class="e22"><input type="file"   id="fileInput" accept=".json"><br>
+                             <button onclick="uploadFile()"  class="btnupload">Upload</button></div>
+                    </div> </div>
+                <div class="ecard4">
+                    <div class="e1"><p class="head">Upload Practical Question Paper</p></div>
+                    <div class="e2"><div class="e22"><input type="file"   id="fileInput" accept=".json" ><br>
+                            <div class="e22"> <button onclick="uploadFile()" class="btnupload" >Upload</button></div></div>
+                    </div> </div>
+        </div>
+       
+    </div>
+
+
+
+
+     <script>
+    function uploadFile() {
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+
+      if (!file) {
+        alert("Please select a JSON file.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const questions = JSON.parse(e.target.result);
+          if (!Array.isArray(questions) || questions.length < 10) {
+            alert("File must contain at least 10 questions.");
+            return;
+          }
+          localStorage.setItem("questions", JSON.stringify(questions));
+          alert("Questions uploaded successfully. You can now start the exam.");
+        } catch (err) {
+          alert("Invalid JSON file: " + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+  </script>
+</body>
+</html>

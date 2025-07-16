@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetri Exam portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        *{ font-family: "Urbanist", sans-serif;margin: 0;padding: 0;box-sizing: border-box;}
+        .examrow1{display: flex;gap: 20px;}
+        .examcol1{width: 20%;border: 2px solid; background-color: #201F31;color: white; height: 100vh;}
+
+          a{text-decoration: none;color: white;}
+
+        .card1{display: flex; font-size: 24px;font-weight: 600; gap: 5px;background-color: white;color :#201F31}
+        .card2{display: flex;flex-direction: column;gap: 20px; padding: 20px; font-size: 22px;}
+        .card21{display: flex;gap: 10px;}
+
+        .img{filter: invert(100%);}
+        .c1, .logo{ display: flex; justify-content: center;  align-items: center; }
+
+        .examcol2{display: flex; padding: 3%; width: 60%;justify-content: space-between; }
+
+        .stuc2{width: 100%;}
+        .stucol1{display: flex; width: 100%; flex-direction: column;gap: 150px;}
+         .stuc1{ width: 35%;padding: 2%;gap: 30px; display: flex;flex-direction: row;  font-size: 24px;font-weight: 600; gap: 5px;background-color: white;color :#201F31; justify-content: space-between;align-items: center;}
+        .stuc1 .c1{display: flex;flex-direction: column;align-items:start;}
+        .small{font-size: 18px;font-weight: 400;}
+        .d1{display: flex; margin: 0;padding: 1%; align-items: center;justify-content: space-between;}
+        .bcol12{background-color: #D8F275; display: flex;flex-direction: column;gap: 10px; border-radius: 12px;}
+       .bcol2{background-color: #D8F275; display: flex;flex-direction: column;gap: 20px; border-radius: 12px;font-size: 20px ;}
+       
+       
+        .head{font-weight: 600;}
+
+          .btnupload{border-radius: 12px;border: none;padding: 3%;}
+        .d2{display: flex;align-items: self-start; justify-content: space-around; padding: 3%;box-shadow: 0 0 2px  black;margin-left:5%; margin-right: 5%; border-radius: 12px;}
+        .pro1{display: flex;flex-direction: column;align-items: center;padding: 2%;}
+        .stuc2{width: 100%;}
+        .progress-wrapper {
+  width: 300px;
+  padding: 10px;
+
+  border-radius: 8px;
+
+ 
+}
+
+.progress-item {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  
+}
+
+progress {
+  width: 100%;
+  height: 10px;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #afd02c;
+  border-radius: 10px;
+}
+   .calendar {
+      width: 320px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background:  #afd02c;
+      color: white;
+      padding: 10px 15px;
+    }
+
+    .calendar-header button {
+      background: white;
+      border: none;
+      color: #4CAF50;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .calendar-days, .calendar-dates {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+    }
+
+    .calendar-days div {
+      padding: 10px;
+      background: #f4f4f4;
+      font-weight: bold;
+    }
+
+    .calendar-dates div {
+      padding: 15px 0;
+      border: 1px solid #eee;
+    }
+
+    .today {
+      background-color:  #afd02c;
+      color: white;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    </style>
+</head>
+<body>
+    
+    <div class="examcontainer">
+        <div class="examrow1">
+            <div class="examcol1">
+                <div class="card1">
+                    <div class="logo"><img src="./images/" alt="logo"></div>
+                    <div class="head"><p>VTS Exam Portal</p></div>
+                </div>
+                <div class="card2">
+                    <div class="card21">
+                        <div class="c1" ><img src="./images/Overview.png"  class="img" alt=""></div>
+                        <div class="c1"><a href="studenthome.html"><p>Overview</p></a></div>
+                    </div>
+                    <div class="card21">
+                         <div class="c1"><img src="./images/Design.png"  class="img" alt=""></div>
+                        <div class="c1"><p>Designing</p></div>
+                    </div>
+                    <div class="card21">
+                         <div class="c1"><img src="./images/development.jpg" class="img" alt=""></div>
+                        <div class="c1"><p>Development</p></div>
+                    </div>
+                     <div class="card21">
+                         <div class="c1"><img src="./images/Exam.png" class="img" alt=""></div>
+                        <div class="c1"><a href="start.html"><p>Exam</p></a></div>
+                    </div>
+                    <div class="card21">
+                         <div class="c1"><img src="./images/result.png" class="img" alt=""></div>
+                        <div class="c1"><a href="result.html"><p>Result</p></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="examcol2">
+                <div class="stucol1">
+                    <div class="stuc1"> 
+                        <div class="c4"><img src="./images/Img 5.png" class="photoimg" alt=""></div>
+                         <div class="c1"><p>Welcome Kavya!!!</p><p class="small">It's Monday 10 May 2025</p></div>
+                 
+                </div>
+                    <div class="stuc2"><div class="bcol2">
+                        <div class="d1"><h4>Upcoming Exams</h4><button onclick="startExam()" class="btnupload">Start Exam</button></div>
+                        <div class="d2">
+                            <div class="d21"><p class="head">Figma Technical Questions</p><p>Duration : 30 minutes</p></div>
+                            <div class="d22"><p class="head">May15,2025</p><p>2:30pm</p></div>
+                                        
+                        </div>
+                        <div class="d2">
+                               <div class="d21"><p class="head">Figma Technical Questions</p><p>Duration : 30 minutes</p></div>
+                            <div class="d22"><p class="head">May15,2025</p><p>2:30pm</p></div>
+                              
+                        </div>
+                    </div></div>
+                </div>
+              
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+ <script>
+    function startExam() {
+      const questions = localStorage.getItem("questions");
+      if (!questions) {
+        alert("No questions found. Please upload the file first.");
+        return;
+      }
+      window.location.href = "page1.html";
+    }
+  </script>
+
+
+</body>
+</html>
