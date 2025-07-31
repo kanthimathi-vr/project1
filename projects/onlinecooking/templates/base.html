@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Online cooking class{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+{% block styles %}{% endblock %}
+</head>
+<body  style="background-color: #fef5ec;">
+
+<!-- ✅ Navbar -->
+<nav class="navbar navbar-expand-lg  bg-pink">
+    <div class="container left1">
+        <!-- Logo -->
+        <a class="navbar-brand" href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='images/Group 42.png') }}" alt="Logo" width="250" height="150" class="d-inline-block align-text-top">
+           
+        </a>
+
+        <!-- Toggler for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav me-auto ml-5 mb-2 mb-lg-0">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('home') }}">HOME</a>
+                </li>
+
+                <!-- About -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about') }}">ABOUT</a>
+                </li>
+
+                <!-- Programs Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-bs-toggle="dropdown">
+                        PROGRAMS
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ url_for('program1') }}">Bakery Business Accelerator Program</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('program2') }}">Cloud Kitchen Accelerator</a></li>
+                    </ul>
+                </li>
+
+                <!-- Courses Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{{ url_for('courses') }}" id="coursesDropdown" role="button" data-bs-toggle="dropdown">
+                        COURSES
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ url_for('course1') }}">Course 1</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('course2') }}">Course 2</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('course3') }}">Course 3</a></li>
+                    </ul>
+                </li>
+                <!-- CONTACT -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('contact') }}">CONTACT</a>
+                </li>
+            </ul>
+
+               
+            <!-- Login button on the right -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="btn btn-outline-danger btn-danger ms-lg-4 loginbtn" href="{{ url_for('login') }}">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ✅ Page content -->
+<div class="container mt-4">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- Start: Call-to-Action Section -->
+<section class="cta-section py-5 text-center" >
+    <div class="container position-relative">
+         <!-- View Courses Button -->
+        <a href="{{ url_for('enroll') }}"
+           class="btn btn-danger px-5 py-2 fw-bold fs-3"
+           style="border-radius: 30px;">
+            VIEW COURSES
+        </a>
+
+        <!-- Message Button -->
+        <a href="{{ url_for('contact') }}"
+           title="Chat or Message Us"
+           class="position-absolute"
+           style="top: 50%; right: 40px; transform: translateY(-50%); z-index: 1000;text-decoration: none;">
+            <i class="fa-solid fa-message fa-2xl" style="color: #18620e;"></i>
+                   ✍🏻
+                 </a>
+    </div>
+</section>
+
+
+<footer class="mt-5 bg-primary text-white py-5" style="background-color: #ee8169 !important; border-top-left-radius: 40px; border-top-right-radius: 40px; font-size: 18px;">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- Logo -->
+            <div class="col-md-3 mb-4">
+                <img src="{{ url_for('static', filename='images/Group 42.png') }}" alt="Flavour Theory Logo" class="img-fluid">
+            </div>
+
+            <!-- Navigation -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold text-uppercase">Home</h6>
+                <ul class="list-unstyled">
+                    <li><a href="{{ url_for('about') }}" class="text-white text-decoration-none d-block">About Us</a></li>
+                    <li><a href="{{ url_for('program1') }}" class="text-white text-decoration-none d-block">Programs</a></li>
+                    <li><a href="{{ url_for('courses') }}" class="text-white text-decoration-none d-block">Courses</a></li>
+                </ul>
+            </div>
+
+            <!-- Courses -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold text-uppercase">Courses</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none d-block">The Good Gut Program</a></li>
+                    <li><a href="#" class="text-white text-decoration-none d-block">Food Look Good</a></li>
+                    <li><a href="#" class="text-white text-decoration-none d-block">Start Your Business From Home - Non Veg & Veg</a></li>
+                    <li><a href="#" class="text-white text-decoration-none d-block">Start Your Food Business From Home - Veg Only</a></li>
+                    <li><a href="#" class="text-white text-decoration-none d-block">Immunity Booster Recipes</a></li>
+                    <li><a href="#" class="text-white text-decoration-none d-block">India’s Favourites</a></li>
+                    <li><a href="#" class="text-white text-decoration-none d-block">Vegetarian's Delight</a></li>
+                    <li><a href="#" class="text-white text-decoration-none d-block">Garnishing & Plating</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold text-uppercase">Contact</h6>
+                <address>
+                    📍 Flavour Theory Academy<br>
+                    1234, Olive Street, Chennai-021
+                </address>
+                <p><i class="bi bi-envelope"></i> 
+                    <a href="mailto:Info@Flovertheoryacademy.com" class="text-white text-decoration-none">📩 Info@Flovertheoryacademy.com</a>
+                </p>
+                <p><i class="bi bi-telephone"></i>☎︎ 044-987 6785 5677</p>
+
+                <h6 class="fw-bold text-uppercase mt-4">Follow Us</h6>
+                <div>
+                    <a href="#" style="text-decoration: none;" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i>🎯</a>
+                    <a href="#" style="text-decoration: none;" class="text-white me-3 fs-5"><i class="bi bi-google"></i>🌎</a>
+                    <a href="#"  style="text-decoration: none;" class="text-white me-3 fs-5"><i class="bi bi-facebook"></i>ⓕ</a>
+                    <a href="#"  style="text-decoration: none;" class="text-white fs-5"><i class="bi bi-youtube"></i>▶️</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS (for dropdowns/toggle) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
